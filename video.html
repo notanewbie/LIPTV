@@ -1,0 +1,429 @@
+<style type="text/css">
+body {
+font-family: "San Francisco", "Helvetica Neue", "Helvetica", sans-serif
+}
+img {
+width:7vh;
+height:auto;
+}
+#Desc {
+position:fixed;
+right:40%;
+top:0%;
+height:30%;
+z-index:-10;
+width:60%;
+font-size:5vh;
+}
+#Player {
+position:fixed;
+left:66%;
+top:0%;
+height:30%;
+z-index:-10;
+width:34%;
+}
+#ShowPlayer {
+position:fixed;
+left:0%;
+right:50%;
+top:10%;
+width:100%;
+z-index:-10;
+}
+#Now {
+position:fixed;
+left:0%;
+right:50%;
+top:0%;
+width:100%;
+z-index:-9;
+height:10%;
+font-size:7vh;
+max-font-size:8vh;
+min-font-size:8vh;
+text-align:center;
+visibility:visible;
+}
+#HideNow {
+position:fixed;
+left:0%;
+right:50%;
+top:0%;
+width:100%;
+z-index:-9;
+height:10%;
+font-size:8vh;
+text-align:center;
+visibility:hidden;
+}
+table {
+z-index:10;
+position:absolute;
+top:31%;
+width:100%;
+}
+
+#X {
+position:absolute;
+left:2%;
+top:2%;
+visibility:hidden;
+}
+#HideX {
+position:absolute;
+left:2%;
+top:2%;
+visibility:hidden;
+animation-name: hide;
+animation-duration: 1s;
+}
+#ShowX {
+position:absolute;
+left:2%;
+top:2%;
+visibility: visible;
+animation-name: show;
+animation-duration: 1s;
+}
+#Show_ID {
+position:absolute;
+left:40%;
+top:0%;
+height:20%;
+visibility:visible;
+}
+@keyframes hide {
+    0% {
+    visibility: visible;
+    opacity:1;
+    }
+    100% {
+    visibility: hidden;
+    opacity:0;
+    }
+}
+@keyframes show {
+    0% {
+    visibility:hidden;
+    opacity:0;
+    }
+    100% {
+    visibility:visible;
+    opacity:1;
+    }
+}
+@keyframes play {
+    0% {
+    position:fixed;
+	left:66%;
+	top:0%;
+	height:30%;
+	z-index:-10;
+	width:34%;
+    }
+    100% {
+    position:fixed;
+	right:61%;
+	top:10%;
+	width:100%;
+	z-index:-10;
+    }
+}
+@keyframes stop {
+    0% {
+    position:fixed;
+	left:0%;
+	right:50%;
+	top:10%;
+	width:100%;
+	height:100%;
+	z-index:-10;
+    }
+    100% {
+    position:fixed;
+	left:66%;
+	top:0%;
+	height:30%;
+	z-index:-10;
+	width:34%;
+    }
+}
+#Polish {
+visibility:visible;
+animation-name: show;
+animation-duration: 1s;
+}
+#PolishOut {
+visibility: hidden;
+animation-name: hide;
+animation-duration: 1s;
+}
+</style>
+<html>
+<body>
+<table id="Polish">
+<tr><td id="Date">Channel</td>
+<td>Right Now</td>
+<td>Up Next</td>
+</tr>
+<tr><td><a href="javascript:void(0)"><img src="http://www.adweek.com/tvnewser/files/2012/08/abcnews_generic.jpg?red=tn" onclick="Play(0,this.src)"></a>ABC News</td><td>On Now</td><td>Up Next</td></tr>
+<tr><td><a href="javascript:void(0)"><img src="https://yt3.ggpht.com/-EaXKoD-b0b4/AAAAAAAAAAI/AAAAAAAAAAA/7IIw2ghBD9Q/s900-c-k-no/photo.jpg" onclick="Play(1,this.src)"></a>CBSN</td><td>On Now</td><td>Up Next</td></tr>
+<tr><td><a href="javascript:void(0)"><img src="https://pbs.twimg.com/profile_images/471729036733841408/6TWe80vf_400x400.jpeg" onclick="Play(2,this.src)"></a>Newsmax TV</td><td>On Now</td><td>Up Next</td></tr>
+<tr><td><a href="javascript:void(0)"><img src="http://www.thisweekinphoto.com/wp-content/uploads/2010/07/twit-logo.jpg" onclick="Play(3,this.src)"></a>TWiT</td><td>On Now</td><td>Up Next</td></tr>
+</tr>
+<tr>
+</tr>
+</table>
+<div id="HideNow" style="background-color: aqua;"><center>Now Playing</center></div>
+<div id="Player">
+<center>
+<video controls="controls" width=100% height=90% min-width=80% min-height=80% max-width=100% max-height=80% autoplay id="Player">
+  <source src="this.m3u8" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+</center>
+</div>
+<div id="Show_ID">
+</div>
+<div id="X">
+<a href="javascript:Hide(0)"><img src="http://www.pixempire.com/images/preview/menu-button-icon.jpg" width=30px height=30px /></a>
+</div>
+<div id="Desc" style="visibility: visible"><b>Loading...</b><br />Loading Program Description Module...</br></div>
+</body>
+</html>
+<script type="text/javascript">
+//For if LoadFilelib.js is not downloaded or otherwise unavailable.
+function loadFile(fileName) {
+	var txtFile;
+        if (window.XMLHttpRequest)
+	  {// code for IE7+, Firefox, Chrome, Opera, Safari
+	  txtFile = new XMLHttpRequest();
+	  }
+	else
+	  {// code for IE6, IE5
+	  txtFile = new ActiveXObject("Microsoft.XMLHTTP");
+	  }
+	txtFile.open("GET",fileName,false);
+	txtFile.send();
+	var txtDoc=txtFile.responseText;
+	return txtDoc
+}
+</script>
+<script type="text/javascript" src="LoadFilelib.js"></script>
+<script type="text/javascript">
+document.title = "LIPTV"
+var i = -1
+//div = document.getElementsByTagName("div");
+//div[2].style.visibility="visible";
+//Stations = Channel URLs
+Stations =
+["http://abclive.abcnews.com/i/abc_live4@136330/index_1200_av-b.m3u8",
+"http://cbsnewshd-lh.akamaihd.net/i/CBSN_2@199302/index_360_av-b.m3u8",
+"http://ooyalahd2-f.akamaihd.net/i/newsmax02_delivery@119568/index_1728_av-p.m3u8",
+"http://64.185.191.180/cdn-live-s1/_definst_/twit/live/low/playlist.m3u8"]
+//alert()
+//Channels = Channel Names
+Channels =
+["ABC News",
+"CBSN",
+"Newsmax TV",
+"TWiT"]
+ChanSite =
+["http://abcnews.go.com/live",
+"http://feeds.cbsn.cbsnews.com/1.2/rundown/",
+"http://www.locatetv.com/listings/newsmax-tv"]
+div = document.getElementsByTagName("div");
+div[3].setAttribute("id", "X")
+Play(0,"http://www.adweek.com/tvnewser/files/2012/08/abcnews_generic.jpg?red=tn");
+function Play(I,src) {
+i = I
+//alert(Stations[i].split(";")[1])
+source = document.getElementsByTagName("source");
+div = document.getElementsByTagName("div");
+div[4].style.visibility = "hidden";
+table = document.getElementsByTagName("table");
+video = document.getElementsByTagName("video");
+source = document.getElementsByTagName("source");
+HTML = document.getElementsByTagName("html");
+if(source[0].src != Stations[i]) {
+video[0].setAttribute("oncanplay", "this.play()");
+table[0].setAttribute("id", "PolishOut");
+div[3].setAttribute("id", "ShowX")
+div[0].setAttribute("id", "Now")
+//video[0].style.animationName = "show";
+//video[0].style.animationDuration = "1s";
+//video[0].style.visibility = "visible";
+video[0].setAttribute("id", "ShowPlayer");
+video[0].style.animationName = "play";
+video[0].style.animationDuration = "1s";
+video[0].style.zIndex = 20;
+source[0].src=Stations[i]
+div[2].style.animationName = "show";
+div[2].style.animationDuration = "1s";
+div[2].style.visibility = "visible";
+HTML[0].style.background = "url(" + src + ")";
+HTML[0].style.backgroundSize = "cover";
+S = loadFile(ChanSite[i])
+if(i == 0) {
+Sh = S.split('<span class="link-text">')
+Sho = Sh[27].split('</span>')
+Show = Sho[0];
+div[0].innerHTML = Channels[i]
+//alert(Show)
+}
+if(i == 1) {
+Sh = S.split('"type":"live","headline":"')
+Sho = Sh[1].split('"')
+div[0].innerHTML = Sho[0]
+document.title = Sho[0] + " on " + Channels[i]
+}
+if(i == 2) {
+Sh = S.split('<a class="pickable" ')
+Sho = Sh[1].split('>')
+Show = Sho[1].split('<')[0]
+div[0].innerHTML = Show
+document.title = Show + " on " + Channels[i]
+}
+if(i > 2) {
+div[0].innerHTML = Channels[i]
+document.title = Channels[i]
+}
+video[0].load()
+div[0].style.visibility = "visible";
+}
+else {
+video[0].setAttribute("oncanplay", "this.play()");
+table[0].setAttribute("id", "PolishOut");
+div[3].setAttribute("id", "ShowX")
+div[0].setAttribute("id", "Now")
+//video[0].style.animationName = "show";
+//video[0].style.animationDuration = "1s";
+//video[0].style.visibility = "visible";
+video[0].setAttribute("id", "ShowPlayer");
+video[0].style.animationName = "play";
+video[0].style.animationDuration = "1s";
+video[0].style.zIndex = 20;
+video[0].play();
+div[2].style.animationName = "show";
+div[2].style.animationDuration = "1s";
+div[2].style.visibility = "visible";
+HTML[0].style.background = "url(" + src + ")";
+HTML[0].style.backgroundSize = "cover";
+S = loadFile(ChanSite[i])
+if(i == 0) {
+Sh = S.split('<span class="link-text">')
+Sho = Sh[27].split('</span>')
+Show = Sho[0];
+div[0].innerHTML = Channels[i]
+//alert(Show)
+}
+if(i == 1) {
+Sh = S.split('"type":"live","headline":"')
+Sho = Sh[1].split('"')
+div[0].innerHTML = Sho[0]
+document.title = Sho[0] + " on " + Channels[i]
+}
+if(i == 2) {
+Sh = S.split('<a class="pickable" ')
+Sho = Sh[1].split('>')
+Show = Sho[1].split('<')[0]
+div[0].innerHTML = Show
+document.title = Show + " on " + Channels[i]
+}
+if(i > 2) {
+div[0].innerHTML = Channels[i]
+document.title = Channels[i]
+}
+div[0].style.visibility = "visible";
+}
+}
+
+function Hide(Hid) {
+if(Hid > -1) {
+HTML[0].style.background = "url()";
+source = document.getElementsByTagName("source");
+div = document.getElementsByTagName("div");
+div[4].style.visibility = "visible";
+table = document.getElementsByTagName("table");
+video = document.getElementsByTagName("video");
+div[3].setAttribute("id", "HideX")
+
+table[0].setAttribute("id", "Polish");
+//source[0].setAttribute("src", "");
+//video[0].style.animationName = "hide";
+//video[0].style.animationDuration = "1s";
+//video[0].style.visibility = "hidden";
+video[0].setAttribute("id", "Player");
+video[0].style.animationName = "stop";
+video[0].style.animationDuration = "1s";
+//video[0].pause();
+video[0].setAttribute("oncanplay", "");
+video[0].style.zIndex = -10;
+//div[1].innerHTML = "";
+div[2].style.animationName = "hide";
+div[2].style.animationDuration = "1s";
+div[2].style.visibility = "hidden";
+document.title = "LIPTV"
+div[0].setAttribute("id", "Now")
+div[0].style.visibility = "hidden";
+}
+}
+function Update() {
+td = document.getElementsByTagName("td");
+
+
+
+
+
+S = loadFile(ChanSite[0])
+Sh = S.split('<span class="link-text">')
+Sho = Sh[27].split('</span>')
+Show = Sho[0];
+td[4].innerHTML = Show;
+td[5].innerHTML = "TBD";
+if(i == 0) {
+div[0].innerHTML = Show;
+div[4].innerHTML = "<b>ABCNews.com</b>"
+div[4].innerHTML = div[4].innerHTML + "<br />ABC News is the news division of the American Broadcasting Company (ABC), owned by the Disney Media Networks division of the Walt Disney Company.";
+}
+//td[6].innerHTML = "";
+//td[7].innerHTML = "";
+
+S = loadFile(ChanSite[1])
+Sh = S.split('"type":"live","headline":"')
+Sho = Sh[1].split('"')
+Show = Sho[0]
+td[7].innerHTML = Sho[0];
+if(i == 1) {
+div[0].innerHTML = Show;
+div[4].innerHTML = "<b>" + Show; + "</b>"
+div[4].innerHTML = div[4].innerHTML + "<br />CBSN is an internet television news channel operated by the CBS News and CBS Interactive divisions of CBS Corporation which launched on November 6, 2014.";
+}
+Sho = Sh[1].split('"headline":"')
+Show = Sho[1].split('"')[0]
+td[8].innerHTML = Show;
+//td[10].innerHTML = "";
+
+S = loadFile(ChanSite[2])
+Sh = S.split('<a class="pickable" ')
+Sho = Sh[1].split('>')
+Show = Sho[1].split('<')[0]
+td[10].innerHTML = Show;
+if(i == 2) {
+Des = Sh[1].split(Show + "</a><p>")
+Desc = Des[1].split("</p></div></li>")
+div[4].innerHTML = "<b>" + Show + "</b>";
+div[4].innerHTML = div[4].innerHTML + "<br />" + Desc[0];
+div[0].innerHTML = Show;
+}
+Sho = Sh[2].split('>')
+Show = Sho[1].split('<')[0]
+td[11].innerHTML = Show;
+
+
+}
+setInterval(Update,5000)
+Update()
+
+</script>

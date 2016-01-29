@@ -1,0 +1,491 @@
+<style type="text/css">
+body {
+font-family: "San Francisco", "Helvetica Neue", "Helvetica", sans-serif
+}
+#Player {
+position:fixed;
+left:43%;
+right:50%;
+top:94%;
+width:100%
+}
+
+#X {
+position:absolute;
+left:90%;
+top:10%;
+visibility:hidden;
+}
+#HideX {
+position:absolute;
+left:90%;
+top:10%;
+visibility:hidden;
+animation-name: hide;
+animation-duration: 1s;
+}
+#ShowX {
+position:absolute;
+left:90%;
+top:10%;
+visibility: visible;
+animation-name: show;
+animation-duration: 1s;
+}
+#Show_ID {
+position:absolute;
+left:40%;
+top:0%;
+height:20%;
+visibility:visible;
+}
+@keyframes hide {
+    0% {
+    visibility: visible;
+    opacity:1;
+    }
+    100% {
+    visibility: hidden;
+    opacity:0;
+    }
+}
+@keyframes show {
+    0% {
+    visibility:hidden;
+    opacity:0;
+    }
+    100% {
+    visibility:visible;
+    opacity:1;
+    }
+}
+#Polish {
+visibility:visible;
+animation-name: show;
+animation-duration: 1s;
+}
+#PolishOut {
+visibility: hidden;
+animation-name: hide;
+animation-duration: 1s;
+}
+</style>
+<html>
+<body>
+<table id="Polish">
+<tr><td><a href="javascript:void(0)"><img src="http://rokradio.com/wp-content/uploads/2015/10/rok-radio-logo-rgb-96x96.jpg" width=100px height=100px onclick="Play(0,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://www.otrnow.com/pics2/otrnow-w-sm.gif" width=100px height=100px onclick="Play(1,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="https://radionostalgiaonline.files.wordpress.com/2011/02/otr1.jpg" width=100px height=100px onclick="Play(2,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://www.otrnow.com/crimetime/CRIMETIME300.png" width=100px height=100px onclick="Play(3,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://cdn-radiotime-logos.tunein.com/s134595q.png" width=100px height=100px onclick="Play(4,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://theiotrs.com/images/radio.gif" width=100px height=100px onclick="Play(5,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="https://philspicks.files.wordpress.com/2013/02/espn-radio-logo.jpg" width=100px height=100px onclick="Play(6,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://cf.juggle-images.com/matte/white/280x280/espn-com-1-logo-primary.jpg" width=100px height=100px onclick="Play(7,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://mapposity.com/images/ProjectMain_ESPN_RightNow_480.jpg" width=100px height=100px onclick="Play(8,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="https://dioscafichotodopoderoso.files.wordpress.com/2010/04/espn_logo.jpg" width=100px height=100px onclick="Play(9,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0012/1398/brand.gif" width=100px height=100px onclick="Play(10,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://cache.ultiworld.com/wordpress/wp-content/uploads/2013/05/ESPNU.png" width=100px height=100px onclick="Play(11,this.src)"></a></td>
+</tr>
+<tr>
+<td>Crime & Suspense Channel</td>
+<td>OTRNow</td>
+<td>Radio Nostalgia Online</td>
+<td>Crimetime</td>
+<td>Theater 13</td>
+<td>The Internet-Old Time Radio Station</td>
+<td>ESPN Radio</td>
+<td>ESPN Talk Show Podcasts 24/7</td>
+<td>ESPN Today In Sports</td>
+<td>ESPN Simulcast</td>
+<td>ESPN2 Simulcast</td>
+<td>ESPNU Simulcast</td>
+</tr>
+<tr><td><a href="javascript:void(0)"><img src="http://images.all-free-download.com/images/graphiclarge/espnews_64480.jpg" width=100px height=100px onclick="Play(12,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/90/SEC_new_logo.png/150px-SEC_new_logo.png" width=100px height=100px onclick="Play(13,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://1.bp.blogspot.com/_GGxwApVdtWM/TEIB-_ulIFI/AAAAAAAAAZg/Az3_Uep1ve8/s1600/Texas+Longhorns+Sports+Network.jpg" width=100px height=100px onclick="Play(14,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/47/FOX_Sports_Radio_Network_100_width.png/1177px-FOX_Sports_Radio_Network_100_width.png" width=100px height=100px onclick="Play(15,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://media.pennlive.com/sports_impact/photo/12062485-large.png" width=100px height=100px onclick="Play(16,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://affiliates.foxnewsradio.com/Graphics/FNR300x300.jpg" width=100px height=100px onclick="Play(17,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://www.afr.net/media/1270/afrtalk_800x450.jpg" width=100px height=100px onclick="Play(18,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://img3.wikia.nocookie.net/__cb20140910201936/logopedia/images/4/47/CNN_International_logo_2014.png" width=100px height=100px onclick="Play(19,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="https://pbs.twimg.com/profile_images/2331194971/b9gp5azskovowpumcngq.png" width=100px height=100px onclick="Play(20,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://www.digitaljournal.com/img/9/9/5/4/2/4/i/2/2/8/o/Sean_Hannity.jpg" width=100px height=100px onclick="Play(21,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://woodlandslifestylesandhomes.com/wordpress/wp-content/uploads/2010/09/f-Laura-Ingraham-910-a.jpg" width=100px height=100px onclick="Play(22,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://www.truthrevolt.org/sites/default/files/styles/metatag_image_defalut/public/field/image/articles/levin.jpg?itok=mI4DHu5Z" width=100px height=100px onclick="Play(23,this.src)"></a></td>
+</tr>
+<tr>
+<td>ESPNews Simulcast</td>
+<td>SEC Radio Network</td>
+<td>Longhorn IMG Radio Network</td>
+<td>Fox Sports Radio</td>
+<td>CBS Sports Radio</td>
+<td>Fox News Talk</td>
+<td>AFR Talk</td>
+<td>CNN</td>
+<td>CBS Radio News</td>
+<td>Sean Hannity 24/7</td>
+<td>Laura Ingraham Show 24/7</td>
+<td>Mark Levin 24/7</td>
+</tr>
+<tr><td><a href="javascript:void(0)"><img src="http://cdn-radiotime-logos.tunein.com/s236695q.png" width=100px height=100px onclick="Play(24,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://tse4.mm.bing.net/th?id=OIP.Mc62ad04199d69ce5eb6382caaa2d6a00o0&pid=15.1" width=100px height=100px onclick="Play(25,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://cdn-radiotime-logos.tunein.com/s159474q.png" width=100px height=100px onclick="Play(26,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://cdn-radiotime-logos.tunein.com/s194505q.png" width=100px height=100px onclick="Play(27,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://media-cache-ec0.pinimg.com/736x/9c/a7/75/9ca7752f6656d397ee0acfa597cd915c.jpg" width=100px height=100px onclick="Play(28,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://cms.klove.com/images/socialnetworking/FacebookThumbnailKlove.jpg" width=100px height=100px onclick="Play(29,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://cdn-radiotime-logos.tunein.com/s225732q.png" width=100px height=100px onclick="Play(30,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://www.aim.org/wp-content/uploads/2012/05/afr1.jpg" width=100px height=100px onclick="Play(31,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://www.bing.com/th?id=A7192180d04eb1b5ec82d84ecf3a8c8c5&w=270&h=270&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&pid=16.1" width=100px height=100px onclick="Play(32,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://cdn-radiotime-logos.tunein.com/s242211q.png" width=100px height=100px onclick="Play(33,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://cdn-radiotime-logos.tunein.com/s212508q.png" width=100px height=100px onclick="Play(34,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://cdn-radiotime-logos.tunein.com/s191550q.png" width=100px height=100px onclick="Play(35,this.src)"></a></td>
+</tr>
+<tr>
+<td>GLOW</td>
+<td>Rapzilla</td>
+<td>Radio iShine</td>
+<td>The Boom Channel</td>
+<td>Air1</td>
+<td>K-LOVE</td>
+<td>Vertical</td>
+<td>AFR Music</td>
+<td>Shine FM</td>
+<td>Heartland Country</td>
+<td>The Organic Channel</td>
+<td>Retro Rock</td>
+</tr>
+<tr><td><a href="javascript:void(0)"><img src="http://cdn-radiotime-logos.tunein.com/s96786q.png" width=100px height=100px onclick="Play(36,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://a4.mzstatic.com/us/r1000/079/Purple/dd/31/f7/mzl.wwdtwpsv.png" width=100px height=100px onclick="Play(37,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://iphone.ranking-apps.com/images/0040a0/597581874_512.png" width=100px height=100px onclick="Play(38,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="https://pbs.twimg.com/profile_images/487684625754357760/o-NsZHg7_400x400.jpeg" width=100px height=100px onclick="Play(39,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://cdn-radiotime-logos.tunein.com/s129131q.png" width=100px height=100px onclick="Play(40,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="https://img-ccrd.iheart.com/media/mlib/727/2015/09/default/colin_cowherd_0_1441673283.jpg" width=100px height=100px onclick="Play(41,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://www.tblzstatic.com/wp-content/uploads/2013/10/1391_422284514557705_484651069_n.jpg" width=100px height=100px onclick="Play(42,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="http://cdn-radiotime-logos.tunein.com/s30611q.png" width=100px height=100px onclick="Play(43,this.src)"></a></td>
+<td><a href="javascript:void(0)"><img src="https://kqradio.files.wordpress.com/2015/06/8a6f5-11377520_1877560119135841_1763051033_n.jpg" width=100px height=100px onclick="Play(44,this.src)"></a></td>
+</tr>
+<tr>
+<td>Moody Bible Radio</td>
+<td>BBN</td>
+<td>Family Life Radio</td>
+<td>Bott Radio Network</td>
+<td>20th Century Radio</td>
+<td>The Herd 24/7</td>
+<td>The Blaze Radio Network</td>
+<td>His Radio</td>
+<td>Beats1</td>
+</tr>
+</table>
+<div id="Player">
+<audio controls autoplay="autoplay" style="visibility: hidden;" onerror="Hide(0)" onpause="Hide(0)" oncanplay="this.play()">
+<source type="audio/mpeg" onpause="Hide()" onerror="Hide()" autoplay="autoplay" oncanplay="this.play()">
+</audio>
+</div>
+<div id="Show_ID">
+</div>
+<div id="X">
+<a href="javascript:Hide(0)"><img src="https://cdn0.iconfinder.com/data/icons/cosmo-player/40/button_delete_1-512.png" width=20px height=20px /></a>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+//For if LoadFilelib.js is not downloaded or otherwise unavailable.
+function loadFile(fileName) {
+	var txtFile;
+        if (window.XMLHttpRequest)
+	  {// code for IE7+, Firefox, Chrome, Opera, Safari
+	  txtFile = new XMLHttpRequest();
+	  }
+	else
+	  {// code for IE6, IE5
+	  txtFile = new ActiveXObject("Microsoft.XMLHTTP");
+	  }
+	txtFile.open("GET",fileName,false);
+	txtFile.send();
+	var txtDoc=txtFile.responseText;
+	return txtDoc
+}
+</script>
+<script type="text/javascript" src="LoadFilelib.js"></script>
+<script type="text/javascript">
+document.title = "LegalStream Radio"
+var i = -1
+//div = document.getElementsByTagName("div");
+//div[2].style.visibility="visible";
+//Stations = Channel URLs
+Stations =
+["http://s1.viastreaming.net:9165/;",
+"http://www.live365.com/play/otrnowrp",
+"http://71.80.138.105:8002/listen",
+"http://www.live365.com/play/otrnow",
+"http://66.55.143.197:6066/",
+"http://209.105.250.69:8477/",
+"http://us-east.edge-1.cis.abacast.net/direct/espn-network-48",
+"http://tunein.streamguys1.com/ESPNTV",
+"http://tunein.streamguys1.com/ESPNTodayInSports",
+"http://54.205.52.210/espn-espntvmp3-48",
+"http://54.211.121.157/espn-espntv2-48",
+"http://espnu.akacast.akamaistream.net/7/313/126490/v1/espn.akacast.akamaistream.net/espnu",
+"http://espn-news.akacast.akamaistream.net/7/44/126490/v1/espn.akacast.akamaistream.net/espn-news",
+"http://tunein.streamguys1.com/ESPNSEC",
+"http://tunein.streamguys1.com/texas",
+"http://prn-foxsports-ic-pri.akacast.akamaistream.net/7/205/5833/v1/auth.akacast.akamaistream.net/prn_foxsports_ic_pri",
+"http://4333.live.streamtheworld.com:3690/CBSSPORTS_SC",
+"http://184.73.127.62/foxnewsradio-foxnewsaac-ibc2",
+"http://mediaserver3.afa.net:8000/talkhigh.mp3",
+"http://tunein.streamguys1.com/cnn",
+"http://1451.live.streamtheworld.com:3690/CBSNEWS_SC",
+"http://prn-hannity-ic-pri.ng.akacast.akamaistream.net/7/811/60538/v1/auth.akacast.akamaistream.net/prn_hannity_ic_pri",
+"http://noxsolutions.mp3.miisolutions.net/nox/laura",
+"http://4293.live.streamtheworld.com/MARK_LEVINAAC",
+"http://162.13.25.174/2casyebmb",
+"http://listen.radionomy.com/rapzilla",
+"http://162.13.25.174/2q2gvgzkb",
+"http://162.13.25.174/urw14a2kb",
+"http://emf.mp3.miisolutions.net/a1/air1_itunes",
+"http://emf.mp3.miisolutions.net/kl/klove_itunes",
+"http://162.13.25.174/2b5w4a2kb",
+"http://mediaserver3.afa.net:8000/inspo.mp3",
+"http://1862.live.streamtheworld.com/SHINEFMAAC_SC",
+"http://162.13.25.174/k1c54a2kb",
+"http://stream.radiojar.com/u5cd55wkb",
+"http://s6.total-streaming.com:9100/",
+"http://primary.moodyradiostream.org/network-high.aac",
+"http://bbnmedia-lh.akamaihd.net/i/BibleBroadcasting_Englishios@87472/master.m3u8",
+"http://stream.us.gslb.liquidcompass.net/MYFLRIRAAC",
+"http://sc1.christiannetcast.com:9058/;",
+"http://audioartsradio.com:6006/;",
+"http://playlists.ihrhls.com/c1/6973/playlist.m3u8",
+"http://8723.live.streamtheworld.com/BLZE_1AAC.aac",
+"http://209.85.88.199:1111/;",
+"http://178.32.149.10:8119/listen.pls?sid=1"]
+//alert()
+//Channels = Channel Names
+Channels =
+["Crime & Suspense Channel",
+"OTRNow",
+"Radio Nostalgia Online",
+"Crimetime",
+"Theater 13",
+"The Internet Old-Time Radio Station",
+"ESPN Radio",
+"ESPN Talk Show Podcasts 24/7",
+"ESPN Today In Sports",
+"ESPN Simulcast",
+"ESPN2 Simulcast",
+"ESPNU Simulcast",
+"ESPNews Simulcast",
+"SEC Radio Network",
+"Longhorn IMG Radio Network",
+"Fox Sports Radio",
+"CBS Sports Radio",
+"Fox News Talk",
+"AFR Talk",
+"CNN Simulcast",
+"CBS Radio News",
+"Sean Hannity 24/7",
+"Laura Ingraham Show 24/7",
+"Mark Levin 24/7",
+"GLOW",
+"Rapzilla",
+"Radio iShine",
+"The Boom Channel",
+"Air1",
+"K-LOVE",
+"Vertical",
+"AFR Music",
+"Shine FM",
+"Heartland Country",
+"The Organic Channel",
+"Retro Rock",
+"Moody Bible Radio",
+"BBN",
+"Family Life Radio",
+"Bott Radio Network",
+"20th Century Radio",
+"The Herd 24/7",
+"The Blaze Radio Network",
+"His Radio",
+"Beats1"]
+div = document.getElementsByTagName("div");
+div[2].setAttribute("id", "X")
+function Play(i,src) {
+//alert(Stations[i].split(";")[1])
+source = document.getElementsByTagName("source");
+div = document.getElementsByTagName("div");
+table = document.getElementsByTagName("table");
+audio = document.getElementsByTagName("audio");
+source = document.getElementsByTagName("source");
+HTML = document.getElementsByTagName("html");
+audio[0].setAttribute("oncanplay", "this.play()");
+table[0].setAttribute("id", "PolishOut");
+div[2].setAttribute("id", "ShowX")
+audio[0].style.animationName = "show";
+audio[0].style.animationDuration = "1s";
+audio[0].style.visibility = "visible";
+div[1].style.animationName = "show";
+div[1].style.animationDuration = "1s";
+div[1].style.visibility = "visible";
+HTML[0].style.background = "url(" + src + ")";
+HTML[0].style.backgroundSize = "cover";
+if(i > -1) {
+audio[0].style.visibility="visible";
+if(i == 23) {
+audio[0].innerHTML = "<source crossorigin='http://player.streamtheworld.com/_players/citadel/?sid=2059' type='audio/mpeg' onpause='Hide(0)' onerror='Hide(0)' src='" + Stations[i] + "'>"
+}
+else {
+audio[0].innerHTML = "<source type='audio/mpeg' onpause='Hide(0)' onerror='Hide(0)' src='" + Stations[i] + "'>";
+}
+if(i == 9) {
+Filee = loadFile("http://espn.go.com/espntv/onair/index")
+File = Filee.split('li class="row">')
+Fil = File[1].split('<div class="cell-padding">')
+Fi = Fil[1].split("<span")
+//alert(File[1])
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(i == 10) {
+Filee = loadFile("http://espn.go.com/espntv/onair/index")
+File = Filee.split('li class="row">')
+Fil = File[2].split('<div class="cell-padding">')
+Fi = Fil[1].split("<span")
+//alert(Fi[0])
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(i == 11) {
+Filee = loadFile("http://espn.go.com/espntv/onair/index")
+File = Filee.split('li class="row">')
+Fil = File[6].split('<div class="cell-padding">')
+Fi = Fil[1].split("<span")
+//alert(Fi[0])
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(i == 12) {
+Filee = loadFile("http://espn.go.com/espntv/onair/index")
+File = Filee.split('li class="row">')
+Fil = File[3].split('<div class="cell-padding">')
+Fi = Fil[1].split("<span")
+//alert(Fi[0])
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(i == 6) {
+File = loadFile("http://espn.go.com/espnradio/")
+Fil = File.split('<div class="col-left" >')
+Fi = Fil[1].split(">")
+F = Fi[1].split("</a")
+//alert(Fi[0])
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + F[0]
+}
+else if(i == 15) {
+File = loadFile("http://www.foxsportsradio.com/main.html")
+Fil = File.split("'playbar:onair';\">")
+Fi = Fil[2].split("</a>")
+//alert(Fi[0])
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(i == 16) {
+File = loadFile("http://tunein.com/radio/CBS-Sports-Radio-s188593/")
+Fil = File.split('class="title">')
+Fi = Fil[1].split("</h3>")
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(i == 17) {
+File = loadFile("http://tunein.com/radio/FOX-News-Talk-s20431/")
+Fil = File.split('class="title">')
+Fi = Fil[1].split("</h3>")
+//alert(Fi[0])
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(i == 18) {
+File = loadFile("http://tunein.com/radio/AFR-Talk-917-s131400/")
+Fil = File.split('class="title">')
+Fi = Fil[1].split("</h3>")
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(i == 19) {
+File = loadFile("http://tunein.com/radio/CNN-s20407/")
+Fil = File.split('class="title">')
+Fi = Fil[1].split("</h3>")
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(i == 28) {
+File = loadFile("http://tunein.com/radio/Air1-Radio-907-s33843/")
+Fil = File.split('class="title">')
+Fi = Fil[1].split("</h3>")
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(i == 31) {
+File = loadFile("http://tunein.com/radio/AFR-(Music--Teaching)-883-s68040/")
+Fil = File.split('class="title">')
+Fi = Fil[1].split("</h3>")
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(i == 32) {
+File = loadFile("http://tunein.com/radio/951-SHINE-FM-s22336/")
+Fil = File.split('class="title">')
+Fi = Fil[1].split("</h3>")
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(i == 36) {
+File = loadFile("http://tunein.com/radio/Moody-Radio-Network-s96786/")
+Fil = File.split('class="title">')
+Fi = Fil[1].split("</h3>")
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(i == 38) {
+File = loadFile("http://tunein.com/radio/Family-Life-Radio-885-s87397/")
+Fil = File.split('class="title">')
+Fi = Fil[1].split("</h3>")
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(i == 42) {
+File = loadFile("http://www.theblaze.com/radio/")
+Fil = File.split('<strong class="now-playing">Now Playing</strong><h1>')
+Fi = Fil[1].split("</h1>")
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(i == 44) {
+File = loadFile("http://twitrss.me/twitter_user_to_rss/?user=beats1plays")
+Fil = File.split('<title>')
+Fi = Fil[2].split("http")
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + Fi[0]
+}
+else if(Stations[i].split(";")[1] == "") {
+//alert(Stations[i].split(";")[1] + "played.html")
+File = loadFile(Stations[i].split(";")[0] + "played.html")
+Fil = File.split("<tr>")
+cast = Fil[6].split("<td>")[2]
+div[1].innerHTML = "<img align='center' src='" + src + "' height='300px' id='display'><br />Now Playing on " + Channels[i] + "<br /> " + cast
+}
+else {
+div[1].innerHTML = "<center><img align='center' src='" + src + "' height='300px' id='display'></center><br /><center>" + Channels[i] + "</center>"
+}
+}
+document.title = "Now Playing: " + Channels[i]
+}
+
+function Hide(i) {
+if(i > -1) {
+HTML[0].style.background = "url()";
+source = document.getElementsByTagName("source");
+div = document.getElementsByTagName("div");
+table = document.getElementsByTagName("table");
+audio = document.getElementsByTagName("audio");
+div[2].setAttribute("id", "HideX")
+
+table[0].setAttribute("id", "Polish");
+source[0].setAttribute("src", "");
+audio[0].style.animationName = "hide";
+audio[0].style.animationDuration = "1s";
+audio[0].style.visibility = "hidden";
+audio[0].pause();
+audio[0].setAttribute("oncanplay", "");
+//div[1].innerHTML = "";
+div[1].style.animationName = "hide";
+div[1].style.animationDuration = "1s";
+div[1].style.visibility = "hidden";
+document.title = "LegalStream Radio"
+}
+}
+
+</script>

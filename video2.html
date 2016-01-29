@@ -1,0 +1,45 @@
+<style type="text/css">
+.hidden { visibility: hidden; }
+.unhidden { visibility: visible; }
+
+video {
+position:absolute;
+left: -900%;
+}
+</style>
+<html>
+<video autoplay controls id="video" allowfullscreen onclick="FullScreen()" style="visibility: hidden;" onpause="this.setAttribute('style','visibility:hidden'); this.webkitExitFullscreen()"></video>
+<table width=100%>
+<tr><td><a href="javascript:null()" onclick="TuneTo(1)"><img src="http://pbs.twimg.com/profile_images/658688193651277824/Kv_cNNub_normal.png" width="50%"></a></td></tr>
+</table>
+</html>
+<script type="text/javascript">
+function FullScreen() {
+var video = document.getElementById("video");
+
+if (video.requestFullscreen) {
+	video.requestFullscreen();
+} else if (video.webkitRequestFullscreen) {
+	video.webkitRequestFullscreen();
+} else if (i.mozRequestFullScreen) {
+	video.mozRequestFullScreen();
+} else if (i.msRequestFullscreen) {
+	video.msRequestFullscreen();
+}
+}
+
+Channel1 = "http://abclive.abcnews.com/i/abc_live4@136330/index_1200_av-b.m3u8"
+Channel1Name = "ABC News"
+Channel2 = "http://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_700_av-b.m3u8"
+Channel2Name = "CBSN"
+
+function TuneTo(num) {
+if (num == 1) {
+video.src=Channel1
+video.load()
+video.setAttribute('style','visibility:visible')
+video.play()
+FullScreen()
+}
+}
+</script>

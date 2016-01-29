@@ -1,0 +1,60 @@
+<style type="text/css">
+#video {
+position: fixed;
+top: 0%;
+visibility:hidden;
+}
+#video-on {
+position:inherit;
+top: 0%;
+height:80%;
+visibility:visible;
+text-align:center;
+margin-right: auto;
+margin-left: auto;
+display: block;
+z-index: 20;
+}
+</style>
+<html>
+<video controls id="video" allowfullscreen onpause="TuneFrom()"></video>
+<table align="center">
+<tr>
+<td><a href="javascript:TuneTo(1)"><img src="ABC News.jpg" width="200px"></img></a></td><td><a href="javascript:TuneTo(2)"><img src="CBSN.png" width="200px"></img></a></td><td><a href="javascript:TuneTo(3)"><img src="Newsmax TV.png" width="200px"></img></a></td>
+</tr>
+<tr><td><h2 align="center">ABC News</h2></td><td><h2 align="center">CBSN</h2></td><td><h2 align="center">Newsmax TV</h2></td></tr>
+</table>
+</html>
+<script type="text/javascript">
+var Channels
+ABC_News = "http://abclive.abcnews.com/i/abc_live4@136330/index_1200_av-b.m3u8"
+CBSN = "http://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_700_av-b.m3u8"
+Newsmax_TV = "http://ooyalahd2-f.akamaihd.net/i/newsmax02_delivery@119568/index_1728_av-p.m3u8"
+var video = document.getElementById("video");
+video.src = ABC_News
+function TuneTo(num) {
+if(num == 1) {
+video.src = ABC_News
+video.load()
+video.play()
+video.id = "video-on"
+}
+if(num == 2) {
+video.src = CBSN
+video.load()
+video.play()
+video.id = "video-on"
+}
+if(num == 3) {
+video.src = Newsmax_TV
+video.load()
+video.play()
+video.id = "video-on"
+}
+}
+function TuneFrom() {
+video.pause()
+video.id = "video"
+video.webkitExitFullscreen();
+}
+</script>
