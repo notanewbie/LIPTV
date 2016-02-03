@@ -18,11 +18,14 @@ z-index: 20;
 </style>
 <html>
 <video controls id="video" allowfullscreen onpause="TuneFrom()"></video>
+<div align="center"><h3><b>News</b></h3></div>
 <table align="center">
 <tr>
-<td><a href="javascript:TuneTo(1)"><img src="ABC News.jpg" width="200px"></img></a></td><td><a href="javascript:TuneTo(2)"><img src="CBSN.png" width="200px"></img></a></td><td><a href="javascript:TuneTo(3)"><img src="Newsmax TV.png" width="200px"></img></a></td>
+<td align="center"><a href="javascript:TuneTo(1)"><img src="ABC News.jpg" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(2)"><img src="CBSN.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(3)"><img src="Newsmax TV.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(4)"><img src="Shift by msnbc.jpeg" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(5)"><img src="France 24.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(6)"><img src="RT News.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(7)"><img src="CBN News.jpeg" style="height: 5vh"></img></a></td>
 </tr>
-<tr><td><h2 align="center">ABC News</h2></td><td><h2 align="center">CBSN</h2></td><td><h2 align="center">Newsmax TV</h2></td></tr>
+<tr><td><h2 align="center">ABC News</h2></td><td><h2 align="center">CBSN</h2></td><td><h2 align="center">Newsmax TV</h2></td><td><h2 align="center">Shift by msnbc</h2></td><td><h2 align="center">France 24</h2></td><td><h2 align="center">RT News</h2></td><td><h2 align="center">CBN News</h2></td></tr>
+<tr><td align="center"><a href="javascript:TuneTo(8)"><img src="Fox News Talk.jpg" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(9)"><img src="NBC News.png" style="height: 5vh"></img></a></td></tr>
+<tr><td><h2 align="center">Fox News Talk</h2></td><td><h2 align="center">NBC News</h2></td></tr>
 </table>
 </html>
 <script type="text/javascript">
@@ -30,6 +33,12 @@ var Channels
 ABC_News = "http://abclive.abcnews.com/i/abc_live4@136330/index_1200_av-b.m3u8"
 CBSN = "http://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_700_av-p.m3u8"
 Newsmax_TV = "http://ooyalahd2-f.akamaihd.net/i/newsmax02_delivery@119568/index_1728_av-p.m3u8"
+Shift_by_msnbc = "http://msnbc2prod-lh.akamaihd.net/i/msnbc2_live01@9615/index_1200_av-b.m3u8"
+France_24 = "http://f24hls-i.akamaihd.net/hls/live/221193/F24_EN_LO_HLS/master_1200.m3u8"
+RT_News = "https://rt-a.akamaihd.net/ch_01@325605/480p.m3u8"
+CBN_News = "http://bcliveuniv-lh.akamaihd.net/i/news_1@194050/index_900_av-b.m3u8"
+Fox_News_Talk = "http://fnurtmp-f.akamaihd.net/i/FNRADIOHDS_1@92141/index_1000_av-p.m3u8"
+NBC_News = "http://nbcnews-lh.akamaihd.net/i/nbc_live11@183427/index_1200_av-b.m3u8"
 var video = document.getElementById("video");
 video.src = ABC_News
 function TuneTo(num) {
@@ -47,6 +56,42 @@ video.id = "video-on"
 }
 if(num == 3) {
 video.src = Newsmax_TV
+video.load()
+video.play()
+video.id = "video-on"
+}
+if(num == 4) {
+video.src = Shift_by_msnbc
+video.load()
+video.play()
+video.id = "video-on"
+}
+if(num == 5) {
+video.src = France_24
+video.load()
+video.play()
+video.id = "video-on"
+}
+if(num == 6) {
+video.src = RT_News
+video.load()
+video.play()
+video.id = "video-on"
+}
+if(num == 7) {
+video.src = CBN_News
+video.load()
+video.play()
+video.id = "video-on"
+}
+if(num == 8) {
+video.src = Fox_News_Talk
+video.load()
+video.play()
+video.id = "video-on"
+}
+if(num == 9) {
+video.src = NBC_News
 video.load()
 video.play()
 video.id = "video-on"
