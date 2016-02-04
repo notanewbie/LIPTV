@@ -3,23 +3,31 @@
 position: fixed;
 top: 0%;
 visibility:hidden;
+max-width: 100%;
 }
 #video-on {
 position:inherit;
 top: 0%;
-height:75%;
+height:80%;
 visibility:visible;
 text-align:center;
 margin-right: auto;
 margin-left: auto;
 display: block;
 z-index: 20;
+max-width: 100%;
+}
+h2 {
+font-size: 3vh;
+}
+img {
+max-width: 10vw
 }
 </style>
 <html>
 <video controls id="video" allowfullscreen onpause="TuneFrom()"></video>
-<div align="center"><h3><b>News</b></h3></div>
-<table align="center">
+<div align="center"><h2><b>News</b></h2></div>
+<table align="center" style="max-width: 100%">
 <tr>
 <td align="center"><a href="javascript:TuneTo(1)"><img src="ABC News.jpg" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(2)"><img src="CBSN.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(3)"><img src="Newsmax TV.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(4)"><img src="Shift by msnbc.jpeg" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(5)"><img src="France 24.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(6)"><img src="RT News.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(7)"><img src="CBN News.jpeg" style="height: 5vh"></img></a></td>
 </tr>
