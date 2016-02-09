@@ -19,15 +19,65 @@ max-width: 100%;
 h2 {
 font-size: 1.3vw;
 }
-img {
-min-width: 2vw;
-max-width: 20vw;
-}
 table {
-position: absolute;
+position: fixed;
 bottom: 0%;
 max-height: 20%;
 line-height: 2.1vh;
+}
+#table-1 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: toFive;
+animation-duration: 1s;
+left: -80%;
+}
+#table-2 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: toHDN;
+animation-duration: 1s;
+left: -160%;
+}
+#table-3 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: toTech;
+animation-duration: 1s;
+left: -230%;
+}
+#table-1-2 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: BacktoFive;
+animation-duration: 1s;
+left: -0%;
+}
+#table-2-2 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: BacktoHDN;
+animation-duration: 1s;
+left: -80%;
+}
+#table-3-2 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: BacktoTech;
+animation-duration: 1s;
+left: -160%;
 }
 td {
 min-width: 20vw;
@@ -44,25 +94,138 @@ min-width: 2vw;
 max-width: 30vw;
 }
 }
+@keyframes toFive {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: 0%;
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -80%
+}
+}
+@keyframes toHDN {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -80%;
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -160%
+}
+}
+@keyframes toTech {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -160%;
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -230%
+}
+}
+@keyframes BacktoFive {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -80%
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: 0%;
+}
+}
+@keyframes BacktoHDN {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -160%
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -80%;
+}
+}
+@keyframes BacktoTech {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -230%
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -160%;
+}
+}
+#LeftPic {
+position: fixed;
+left: 0px;
+bottom: 0px;
+height: 20vh;
+z-index: 1;
+}
+#RightPic {
+position: fixed;
+right: 0px;
+bottom: 0px;
+height: 20vh;
+z-index: 1;
+}
 </style>
 <html>
 <video controls id="video" allowfullscreen onpause="TuneFrom()"></video>
-<table style="max-height:20%">
+<a href="javascript:MoveLeft()"><img src="Left.png" id="LeftPic"></a>
+<a href="javascript:MoveRight()"><img src="Right.png" id="RightPic"></a>
+<table style="max-height:20%" id="table">
 <tr><th rowspan=2><h2 align="center">News</h2></th>
 <td align="center"><a href="javascript:TuneTo(1)"><img src="ABC News.jpg" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(2)"><img src="CBSN.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(3)"><img src="Newsmax TV.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(4)"><img src="Shift by msnbc.jpeg" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(5)"><img src="France 24.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(6)"><img src="RT News.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(7)"><img src="CBN News.jpeg" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(8)"><img src="Fox News Talk.jpg" style="height: 5vh"></img></a></td>
 <th rowspan=2><h2 align="center">HD News</h2></th>
 <td align="center"><a href="javascript:TuneTo(901)"><img src="ABC News HD.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(902)"><img src="CBSNHD.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(903)"><img src="Newsmax TV.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(904)"><img src="Shift by msnbc HD.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(906)"><img src="RT News.png" style="height: 5vh"></img></a></td>
 <th rowspan=2><h2 align="center">Tech</h2></th>
-<td align="center"><a href="javascript:TuneTo(10)"><img src="TWiT.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(11)"><img src="TWiT.png" style="height: 5vh"></img></a></td>
+<td align="center"><a href="javascript:TuneTo(10)"><img src="TWiT.png" style="height: 5vh"></img></a></td><td align="center"><a href="javascript:TuneTo(11)"><img src="TWiT.png" style="height: 5vh"></img></a></td><td></td>
 </tr>
 <tr width=30><td width=30><h2 align="center"><a href="javascript:TuneTo(1)">1-1 ABC News Digital 1</a><br /><a href="javascript:TuneTo(1.2)">1-2 ABC News Digital 2</a><br /><a href="javascript:TuneTo(1.3)">1-3 ABC News Digital 3</a><br /><a href="javascript:TuneTo(1.2)">1-4 ABC News Digital 4</a><br /><a href="javascript:TuneTo(1.5)">1-5 ABC News Digital 5</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(2)">2 CBSN</h2></td><td><h2 align="center"><a href="javascript:TuneTo(3)">3 Newsmax TV</h2></td><td><h2 align="center"><a href="javascript:TuneTo(4)">4 Shift by msnbc<br /><a href="javascript:TuneTo(4.2)">4-2 msnbc Live Event<br /><a href="javascript:TuneTo(4.3)">4-3 NBC News Live Event</h2></td><td><h2 align="center"><a href="javascript:TuneTo(5)">5 France 24</h2></td><td><h2 align="center"><a href="javascript:TuneTo(6)">6 RT News</h2></td><td><h2 align="center"><a href="javascript:TuneTo(7)">7 CBN News</h2></td><td><h2 align="center"><a href="javascript:TuneTo(8)">8 Fox News Talk</h2></td>
 <td><h2 align="center"><a href="javascript:TuneTo(901)">901 ABC News HD<br /><a href="javascript:TuneTo(901.2)">901-2 ABC News Digital 2</a><br /><a href="javascript:TuneTo(901.3)">901-3 ABC News Digital 3</a><br /><a href="javascript:TuneTo(901.4)">901-4 ABC News Digital 4</a><br /><a href="javascript:TuneTo(901.5)">901-5 ABC News Digital 5</a></h2></h2></td><td><h2 align="center"><a href="javascript:TuneTo(902)">902 CBSNHD</h2></td><td><h2 align="center"><a href="javascript:TuneTo(903)">903 Newsmax TV HD</h2></td><td><h2 align="center"><a href="javascript:TuneTo(904)">904 Shift by msnbc HD<br /><a href="javascript:TuneTo(904.2)">904-2 msnbc Live Event</a><br /><a href="javascript:TuneTo(904.3)">904-3 NBC News Live Event</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(906)">906 RT News HD</h2></td>
-<td><h2 align="center"><a href="javascript:TuneTo(10)">10 TWiT</h2></td><td><h2 align="center"><a href="javascript:TuneTo(11)">11 TWiT alt</h2></td>
+<td><h2 align="center"><a href="javascript:TuneTo(10)">10 TWiT</h2></td><td><h2 align="center"><a href="javascript:TuneTo(11)">11 TWiT alt</h2></td><td></td>
 </tr>
 </table>
 </html>
 <script type="text/javascript">
 var Channels
+var pos = 0;
 ABC_News = "http://abclive.abcnews.com/i/abc_live1@136327/index_1200_av-b.m3u8"
 ABC_News_HD = "http://abclive.abcnews.com/i/abc_live1@136327/index_2500_av-b.m3u8"
 ABC_News_2 = "http://abclive.abcnews.com/i/abc_live2@136328/index_1200_av-b.m3u8"
@@ -263,5 +426,43 @@ video.pause()
 video.id = "video"
 video.webkitExitFullscreen();
 }
+var table = document.getElementsByTagName("table");
+table = table[0]
 TuneTo(1);
+function MoveLeft() {
+change = 0;
+if(pos == 3 && change == 0) {
+table.id = "table-3-2";
+pos = pos - 1
+change = 1
+}
+if(pos == 2 && change == 0) {
+table.id = "table-2-2";
+pos = pos - 1
+change = 1
+}
+if(pos == 1 && change == 0) {
+table.id = "table-1-2";
+pos = pos - 1
+change = 1
+}
+}
+function MoveRight() {
+change = 0;
+if(pos == 2 && change == 0) {
+table.id = "table-3";
+pos = 3
+change = 1
+}
+if(pos == 1 && change == 0) {
+table.id = "table-2";
+pos = 2
+change = 1
+}
+if(pos == 0 && change == 0) {
+table.id = "table-1";
+pos = 1
+change = 1
+}
+}
 </script>
