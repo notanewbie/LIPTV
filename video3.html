@@ -206,7 +206,7 @@ z-index: 1;
 </style>
 <html>
 <div><embed src="" id="video" autoplay onplay="this.id='video-on'" onstop="this.id='video'"></embed></div>
-<video controls id="video" allowfullscreen onpause="TuneFrom()" type="video/vnd.mpegurl" onerror="NonHTML5()"></video>
+<video controls id="video" allowfullscreen onpause="TuneFrom()" type="video/vnd.mpegurl" onerror="NonHTML5(); PlayVideo(this.src)"></video>
 <a href="javascript:MoveLeft()"><img src="Left.png" id="LeftPic"></a>
 <a href="javascript:MoveRight()"><img src="Right.png" id="RightPic"></a>
 <table style="max-height:20%" id="table">
@@ -260,7 +260,7 @@ var Div = document.getElementsByTagName("div");
 Div = Div[0]
 //var video = document.getElementsByTagName("embed");
 video = video[0]
-Tag = "embed"
+Tag = "video"
 PlayVideo(TWiT)
 function PlayVideo(url) {
 NonEmbed()
