@@ -239,6 +239,8 @@ z-index: 1;
 </table>
 </html>
 <script type="text/javascript">
+var table = document.getElementsByTagName("table");
+table = table[0]
 var Browser
 App = navigator.appVersion
 if(App.indexOf("Firefox") > -1) {
@@ -450,8 +452,6 @@ video.pause()
 video.id = "video"
 video.webkitExitFullscreen();
 }
-var table = document.getElementsByTagName("table");
-table = table[0]
 function MoveLeft() {
 change = 0;
 if(pos == 3 && change == 0) {
