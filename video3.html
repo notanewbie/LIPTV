@@ -25,7 +25,7 @@ position:fixed;
 top: 0%;
 left: 0%;
 right: 0%;
-height:80%;
+height:70%;
 width:100%;
 visibility:visible;
 margin:0 auto;
@@ -209,8 +209,19 @@ z-index: 1;
 }
 </style>
 <html>
-<div><embed src="" id="video" autoplay onplay="this.id='video-on'" onstop="this.id='video'"></embed></div>
-<video src = "http://abclive.abcnews.com/i/abc_live1@136327/index_1200_av-b.m3u8" controls id="video" allowfullscreen onpause="TuneFrom()" type="application/x-mpegurl" onerror="NonHTML5(); PlayVideo(this.src); console.error('Error playing stream ' + this.src + '.')"></video>
+<div>
+<object classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921" width="640" height="360" id="vlc" events="True">
+  <param name="MRL" value="" />
+  <param name="ShowDisplay" value="True" />
+  <param name="AutoLoop" value="False" />
+  <param name="AutoPlay" value="False" />
+  <param name="Volume" value="50" />
+  <param name="toolbar" value="true" />
+  <param name="StartTime" value="0" />
+<embed src="" id="video" autoplay onplay="this.id='embed-on'" onstop="this.id='video'"></embed>
+</object>
+</div>
+<video src = "http://abclive.abcnews.com/i/abc_live1@136327/index_1200_av-b.m3u8" controls id="video" allowfullscreen onpause="TuneFrom()" type="application/x-mpegurl" onerror="NonHTML5(); PlayVideo(this.src); console.error('Error playing stream ' + this.src + ' with HTML5.')"></video>
 <a href="javascript:MoveLeft()"><img src="Left.png" id="LeftPic"></a>
 <a href="javascript:MoveRight()"><img src="Right.png" id="RightPic"></a>
 <table style="max-height:20%" id="table">
@@ -228,6 +239,7 @@ z-index: 1;
 </table>
 </html>
 <script type="text/javascript">
+var Browser
 App = navigator.appVersion
 if(App.indexOf("Firefox") > -1) {
 Browser = "Firefox"
@@ -240,6 +252,9 @@ Browser = "Safari"
 }
 else if(App.indexOf("MSIE") > -1) {
 Browser = "MSIE"
+}
+else {
+Browser = "Unknown"
 }
 var Channels
 var pos = 0;
@@ -300,18 +315,26 @@ function PlayVideo(url) {
 StatusReport()
 console.log("HLS URL is " + url + ".")
 i = 0
-//NonEmbed()
+if(Browser == "Safari") {
+NonEmbed()
+}
+else {
+NonHTML5()
+}
 if(Tag == "video" && i == 0 && Browser != "Safari") {
-Div.innerHTML = "<embed src=\"" + url + "\" id=\"embed-on\" autoplay onplay=\"this.id='video-on'\" onstop=\"this.id='video'\" type=\"application/x-vlc-plugin\"></embed>";
+console.log("Currently using VLC Embed.")
+Div.id="embed-on"
+Div.innerHTML = "<embed src=\"" + url + "\" id=\"embed-on\" autoplay onplay=\"this.id='embed-on'\" onstop=\"this.id='video'\" onpause=\"this.id='video'\" type=\"application/x-vlc-plugin\" onerror=\"console.error('Error playing stream '" + url + " in VLC embed.')\" events='true'></embed>";
 video.id = "video"
 Tag = "embed"
 i = 1
 }
-if(Browser == "Safari"){
+else if(Browser == "Safari") {
 i = 0
 Tag = "embed"
 }
 if(Tag == "embed" && i == 0) {
+console.log("Error")
 video.src = url
 video.load()
 video.play()
@@ -325,7 +348,7 @@ if(Browser != "Safari") {
 video.id = "video"
 video = document.getElementsByTagName("embed");
 video = video[0]
-video.id = "video-on"
+video.id = "embed-on"
 }
 else {
 video.play;
