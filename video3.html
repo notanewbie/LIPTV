@@ -1,6 +1,7 @@
 <style type="text/css">
 #Icon {
-max-height: 2vw;
+min-height: 2vw;
+max-height: .5vh;
 }
 #video {
 position: fixed;
@@ -13,7 +14,7 @@ position:fixed;
 top: 0%;
 left: 0%;
 right: 0%;
-height:80%;
+height:70%;
 visibility:visible;
 margin:0 auto;
 text-align: center;
@@ -31,7 +32,7 @@ margin:0 auto;
 text-align: center;
 }
 h2 {
-font-size: 1.3vw;
+font-size: 3vh;
 }
 table {
 position: fixed;
@@ -227,6 +228,19 @@ z-index: 1;
 </table>
 </html>
 <script type="text/javascript">
+App = navigator.appVersion
+if(App.indexOf("Firefox") > -1) {
+Browser = "Firefox"
+}
+else if(App.indexOf("Chrome") > -1) {
+Browser = "Chrome"
+}
+else if(App.indexOf("Safari") > -1) {
+Browser = "Safari"
+}
+else if(App.indexOf("MSIE") > -1) {
+Browser = "MSIE"
+}
 var Channels
 var pos = 0;
 ABC_News = "http://abclive.abcnews.com/i/abc_live1@136327/index_1200_av-b.m3u8"
@@ -264,15 +278,38 @@ Div = Div[0]
 //var video = document.getElementsByTagName("embed");
 video = video[0]
 Tag = "embed"
+function StatusReport() {
+console.log("  --  ")
+console.log("Status: Browser is " + Browser + ".")
+if(Div.id == "video") {
+console.log("VLC embed is hidden.")
+}
+else{
+console.log("VLC embed is shown.")
+}
+if(video.id == "video") {
+console.log("HTML5 Video is hidden.")
+}
+else{
+console.log("HTML5 Video is shown.")
+}
+}
+StatusReport();
 PlayVideo(TWiT)
 function PlayVideo(url) {
+StatusReport()
+console.log("HLS URL is " + url + ".")
 i = 0
-NonEmbed()
-if(Tag == "video" && i == 0) {
+//NonEmbed()
+if(Tag == "video" && i == 0 && Browser != "Safari") {
 Div.innerHTML = "<embed src=\"" + url + "\" id=\"embed-on\" autoplay onplay=\"this.id='video-on'\" onstop=\"this.id='video'\" type=\"application/x-vlc-plugin\"></embed>";
 video.id = "video"
 Tag = "embed"
 i = 1
+}
+if(Browser == "Safari"){
+i = 0
+Tag = "embed"
 }
 if(Tag == "embed" && i == 0) {
 video.src = url
@@ -284,10 +321,17 @@ i = 1
 }
 }
 function NonHTML5() {
+if(Browser != "Safari") {
 video.id = "video"
 video = document.getElementsByTagName("embed");
 video = video[0]
 video.id = "video-on"
+}
+else {
+video.play;
+Tag = "embed"
+video.id = "video-on"
+}
 }
 function NonEmbed() {
 video.id = "video"
