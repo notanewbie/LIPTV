@@ -258,6 +258,7 @@ Browser = "MSIE"
 else {
 Browser = "Unknown"
 }
+alert(Browser)
 var Channels
 var pos = 0;
 ABC_News = "http://abclive.abcnews.com/i/abc_live1@136327/index_1200_av-b.m3u8"
@@ -320,9 +321,14 @@ i = 0
 if(Browser == "Safari") {
 NonEmbed()
 }
-else {
+if(Browser == "Unknown") {
 NonHTML5()
 }
+else {
+NonHTML5()
+Tag = "video"
+}
+Tag = "video"
 if(Tag == "video" && i == 0 && Browser != "Safari") {
 console.log("Currently using VLC Embed.")
 Div.id="embed-on"
@@ -335,8 +341,9 @@ else if(Browser == "Safari") {
 i = 0
 Tag = "embed"
 }
-if(Tag == "embed" && i == 0) {
-console.log("Error")
+else if(Tag == "embed" && i == 0 && Browser == "Safari") {
+if(Browser == "Safari") {
+video = document.getElementsByTagName("video");
 video.src = url
 video.load()
 video.play()
@@ -345,12 +352,14 @@ Tag = "video"
 i = 1
 }
 }
+}
 function NonHTML5() {
 if(Browser != "Safari") {
 video.id = "video"
 video = document.getElementsByTagName("embed");
 video = video[0]
 video.id = "embed-on"
+console.log("Embed On!")
 }
 else {
 video.play;
