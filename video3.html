@@ -258,7 +258,6 @@ Browser = "MSIE"
 else {
 Browser = "Unknown"
 }
-alert(Browser)
 var Channels
 var pos = 0;
 ABC_News = "http://abclive.abcnews.com/i/abc_live1@136327/index_1200_av-b.m3u8"
@@ -341,9 +340,10 @@ else if(Browser == "Safari") {
 i = 0
 Tag = "embed"
 }
-else if(Tag == "embed" && i == 0 && Browser == "Safari") {
+if(Tag == "embed" && i == 0 && Browser == "Safari") {
 if(Browser == "Safari") {
 video = document.getElementsByTagName("video");
+video = video[0]
 video.src = url
 video.load()
 video.play()
