@@ -67,6 +67,24 @@ animation-name: toTech;
 animation-duration: 1s;
 left: -230%;
 }
+#table-4 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: toHDTech;
+animation-duration: 1s;
+left: -300%;
+}
+#table-5 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: toChrist;
+animation-duration: 1s;
+left: -370%;
+}
 #table-1-2 {
 position: fixed;
 bottom: 0%;
@@ -93,6 +111,24 @@ line-height: 2.1vh;
 animation-name: BacktoTech;
 animation-duration: 1s;
 left: -160%;
+}
+#table-4-3 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: BacktoHDTech;
+animation-duration: 1s;
+left: -230%;
+}
+#table-5-4 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: BacktoChrist;
+animation-duration: 1s;
+left: -300%;
 }
 td {
 min-width: 20vw;
@@ -145,6 +181,38 @@ line-height: 2.1vh;
 left: -230%
 }
 }
+@keyframes toHDTech {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -230%;
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -300%
+}
+}
+@keyframes toChrist {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -300%;
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -370%
+}
+}
 @keyframes BacktoFive {
 from {
 position: fixed;
@@ -193,6 +261,38 @@ line-height: 2.1vh;
 left: -160%;
 }
 }
+@keyframes BacktoHDTech {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -300%
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -230%;
+}
+}
+@keyframes BacktoChrist {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -370%
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -300%;
+}
+}
 #LeftPic {
 position: fixed;
 left: 0px;
@@ -230,11 +330,17 @@ z-index: 1;
 <th rowspan=2><h2 align="center">HD News</h2></th>
 <td align="center"><a href="javascript:TuneTo(901)"><img src="ABC News HD.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(902)"><img src="CBSNHD.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(903)"><img src="Newsmax TV.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(904)"><img src="Shift by msnbc HD.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(906)"><img src="RT News.png" id="Icon"></img></a></td>
 <th rowspan=2><h2 align="center">Tech</h2></th>
-<td align="center"><a href="javascript:TuneTo(10)"><img src="TWiT.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(11)"><img src="TWiT.png" id="Icon"></img></a></td><td></td>
+<td align="center"><a href="javascript:TuneTo(10)"><img src="TWiT.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(11)"><img src="TWiT.png" id="Icon"></img></a></td>
+<th rowspan=2><h2 align="center">HD Tech</h2></th>
+<td align="center"><a href="javascript:TuneTo(910)"><img src="TWiT.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(911)"><img src="TWiT.png" id="Icon"></img></a></td>
+<th rowspan=2><h2 align="center">Christianity</h2></th>
+<td align="center"><a href="javascript:TuneTo(20)"><img src="AFA Channel.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(21)"><img src="TBN.png" id="Icon"></img></a></td><td></td>
 </tr>
-<tr width=30><td width=30><h2 align="center"><a href="javascript:TuneTo(1)">1-1 ABC News Digital 1</a><br /><a href="javascript:TuneTo(1.2)">1-2 ABC News Digital 2</a><br /><a href="javascript:TuneTo(1.3)">1-3 ABC News Digital 3</a><br /><a href="javascript:TuneTo(1.2)">1-4 ABC News Digital 4</a><br /><a href="javascript:TuneTo(1.5)">1-5 ABC News Digital 5</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(2)">2 CBSN</h2></td><td><h2 align="center"><a href="javascript:TuneTo(3)">3 Newsmax TV</h2></td><td><h2 align="center"><a href="javascript:TuneTo(4)">4 Shift by msnbc<br /><a href="javascript:TuneTo(4.2)">4-2 msnbc Live Event<br /><a href="javascript:TuneTo(4.3)">4-3 NBC News Live Event</h2></td><td><h2 align="center"><a href="javascript:TuneTo(5)">5 France 24</h2></td><td><h2 align="center"><a href="javascript:TuneTo(6)">6 RT News</h2></td><td><h2 align="center"><a href="javascript:TuneTo(7)">7 CBN News</h2></td><td><h2 align="center"><a href="javascript:TuneTo(8)">8 Fox News Talk</h2></td>
+<tr><td width=30><h2 align="center"><a href="javascript:TuneTo(1)">1-1 ABC News Digital 1</a><br /><a href="javascript:TuneTo(1.2)">1-2 ABC News Digital 2</a><br /><a href="javascript:TuneTo(1.3)">1-3 ABC News Digital 3</a><br /><a href="javascript:TuneTo(1.2)">1-4 ABC News Digital 4</a><br /><a href="javascript:TuneTo(1.5)">1-5 ABC News Digital 5</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(2)">2 CBSN</h2></td><td><h2 align="center"><a href="javascript:TuneTo(3)">3 Newsmax TV</h2></td><td><h2 align="center"><a href="javascript:TuneTo(4)">4 Shift by msnbc<br /><a href="javascript:TuneTo(4.2)">4-2 msnbc Live Event<br /><a href="javascript:TuneTo(4.3)">4-3 NBC News Live Event</h2></td><td><h2 align="center"><a href="javascript:TuneTo(5)">5 France 24</h2></td><td><h2 align="center"><a href="javascript:TuneTo(6)">6 RT News</h2></td><td><h2 align="center"><a href="javascript:TuneTo(7)">7 CBN News</h2></td><td><h2 align="center"><a href="javascript:TuneTo(8)">8 Fox News Talk</h2></td>
 <td><h2 align="center"><a href="javascript:TuneTo(901)">901 ABC News HD<br /><a href="javascript:TuneTo(901.2)">901-2 ABC News Digital 2</a><br /><a href="javascript:TuneTo(901.3)">901-3 ABC News Digital 3</a><br /><a href="javascript:TuneTo(901.4)">901-4 ABC News Digital 4</a><br /><a href="javascript:TuneTo(901.5)">901-5 ABC News Digital 5</a></h2></h2></td><td><h2 align="center"><a href="javascript:TuneTo(902)">902 CBSNHD</h2></td><td><h2 align="center"><a href="javascript:TuneTo(903)">903 Newsmax TV HD</h2></td><td><h2 align="center"><a href="javascript:TuneTo(904)">904 Shift by msnbc HD<br /><a href="javascript:TuneTo(904.2)">904-2 msnbc Live Event</a><br /><a href="javascript:TuneTo(904.3)">904-3 NBC News Live Event</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(906)">906 RT News HD</h2></td>
-<td><h2 align="center"><a href="javascript:TuneTo(10)">10 TWiT</h2></td><td><h2 align="center"><a href="javascript:TuneTo(11)">11 TWiT alt</h2></td><td></td>
+<td><h2 align="center"><a href="javascript:TuneTo(10)">10 TWiT</h2></td><td><h2 align="center"><a href="javascript:TuneTo(11)">11 TWiT alt</h2></td>
+<td><h2 align="center"><a href="javascript:TuneTo(10)">910 TWiT HD</h2></td><td><h2 align="center"><a href="javascript:TuneTo(911)">911 TWiT alt HD</h2></td>
+<td><h2 align="center"><a href="javascript:TuneTo(20)">20 AFA Channel</h2></td><td><h2 align="center"><a href="javascript:TuneTo(21)">21 TBN</h2></td>
 </tr>
 </table>
 </html>
@@ -289,6 +395,8 @@ TWiT = "http://64.185.191.180/cdn-live-s1/_definst_/twit/live/low/playlist.m3u8"
 TWiT_HD = "http://64.185.191.180/cdn-live-s1/_definst_/twit/live/high/playlist.m3u8"
 TWiT_alt = "http://209.131.99.99/twit/live/low"
 TWiT_alt_HD = "http://209.131.99.99/twit/live/high"
+AFA = "http://66.210.221.113:1935/AFA Channel Video/livestream2/playlist.m3u8"
+TBN = "http://acaooyalahd2-lh.akamaihd.net/i/TBN01_delivery@186239/index_1728_av-p.m3u8"
 var video = document.getElementsByTagName("video");
 var Div = document.getElementsByTagName("div");
 Div = Div[0]
@@ -453,7 +561,19 @@ if(num == 10) {
 PlayVideo(TWiT)
 }
 if(num == 11) {
+PlayVideo(TWiT_alt)
+}
+if(num == 910) {
 PlayVideo(TWiT)
+}
+if(num == 911) {
+PlayVideo(TWiT_alt)
+}
+if(num == 20) {
+PlayVideo(AFA)
+}
+if(num == 21) {
+PlayVideo(TBN)
 }
 }
 function TuneFrom() {
@@ -463,6 +583,16 @@ video.webkitExitFullscreen();
 }
 function MoveLeft() {
 change = 0;
+if(pos == 5 && change == 0) {
+table.id = "table-5-4";
+pos = pos - 1
+change = 1
+}
+if(pos == 4 && change == 0) {
+table.id = "table-4-3";
+pos = pos - 1
+change = 1
+}
 if(pos == 3 && change == 0) {
 table.id = "table-3-2";
 pos = pos - 1
@@ -481,6 +611,16 @@ change = 1
 }
 function MoveRight() {
 change = 0;
+if(pos == 4 && change == 0) {
+table.id = "table-5";
+pos = 5
+change = 1
+}
+if(pos == 3 && change == 0) {
+table.id = "table-4";
+pos = 4
+change = 1
+}
 if(pos == 2 && change == 0) {
 table.id = "table-3";
 pos = 3
