@@ -349,7 +349,10 @@ var table = document.getElementsByTagName("table");
 table = table[0]
 var Browser
 App = navigator.appVersion
-if(App.indexOf("Firefox") > -1) {
+if(App.indexOf("Edge") > -1) {
+Browser = "Safari"
+}
+else if(App.indexOf("Firefox") > -1) {
 Browser = "Firefox"
 }
 else if(App.indexOf("Chrome") > -1) {
