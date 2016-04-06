@@ -85,15 +85,6 @@ animation-name: toChrist;
 animation-duration: 1s;
 left: -370%;
 }
-#table-6 {
-position: fixed;
-bottom: 0%;
-max-height: 20%;
-line-height: 2.1vh;
-animation-name: toMoreChrist;
-animation-duration: 1s;
-left: -440%;
-}
 #table-1-2 {
 position: fixed;
 bottom: 0%;
@@ -138,15 +129,6 @@ line-height: 2.1vh;
 animation-name: BacktoChrist;
 animation-duration: 1s;
 left: -300%;
-}
-#table-6-5 {
-position: fixed;
-bottom: 0%;
-max-height: 20%;
-line-height: 2.1vh;
-animation-name: BacktoMoreChrist;
-animation-duration: 1s;
-left: -370%;
 }
 td {
 min-width: 20vw;
@@ -231,22 +213,6 @@ line-height: 2.1vh;
 left: -370%
 }
 }
-@keyframes toMoreChrist {
-from {
-position: fixed;
-bottom: 0%;
-max-height: 20%;
-line-height: 2.1vh;
-left: -370%;
-}
-to {
-position: fixed;
-bottom: 0%;
-max-height: 20%;
-line-height: 2.1vh;
-left: -440%
-}
-}
 @keyframes BacktoFive {
 from {
 position: fixed;
@@ -327,22 +293,6 @@ line-height: 2.1vh;
 left: -300%;
 }
 }
-@keyframes BacktoMoreChrist {
-from {
-position: fixed;
-bottom: 0%;
-max-height: 20%;
-line-height: 2.1vh;
-left: -440%
-}
-to {
-position: fixed;
-bottom: 0%;
-max-height: 20%;
-line-height: 2.1vh;
-left: -370%;
-}
-}
 #LeftPic {
 position: fixed;
 left: 0px;
@@ -384,16 +334,13 @@ z-index: 1;
 <th rowspan=2><h2 align="center">HD Tech</h2></th>
 <td align="center"><a href="javascript:TuneTo(910)"><img src="TWiT.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(911)"><img src="TWiT.png" id="Icon"></img></a></td>
 <th rowspan=2><h2 align="center">Christianity</h2></th>
-<td align="center"><a href="javascript:TuneTo(20)"><img src="AFA Channel.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(21)"><img src="TBN.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(24)"><img src="TCT.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(25)"><img src="TCT Family.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(26)"><img src="TCT Kids.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(27)"><img src="NRB Network.jpg" id="Icon"></img></a></td>
-<th rowspan=2><h2 align="center">Music</h2></th>
-<td align="center"><a href="javascript:TuneTo(30)"><img src="JUCE TV.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(31)"><img src="JUCE TV Russia.jpeg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(32)"><img src="CHHTV.png" id="Icon"></img></a></td>
+<td align="center"><a href="javascript:TuneTo(20)"><img src="AFA Channel.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(21)"><img src="TBN.png" id="Icon"></img></a></td><td></td>
 </tr>
 <tr><td width=30><h2 align="center"><a href="javascript:TuneTo(1)">1-1 ABC News Digital 1</a><br /><a href="javascript:TuneTo(1.2)">1-2 ABC News Digital 2</a><br /><a href="javascript:TuneTo(1.3)">1-3 ABC News Digital 3</a><br /><a href="javascript:TuneTo(1.2)">1-4 ABC News Digital 4</a><br /><a href="javascript:TuneTo(1.5)">1-5 ABC News Digital 5</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(2)">2 CBSN</h2></td><td><h2 align="center"><a href="javascript:TuneTo(3)">3 Newsmax TV</h2></td><td><h2 align="center"><a href="javascript:TuneTo(4)">4 Shift by msnbc<br /><a href="javascript:TuneTo(4.2)">4-2 msnbc Live Event<br /><a href="javascript:TuneTo(4.3)">4-3 NBC News Live Event</h2></td><td><h2 align="center"><a href="javascript:TuneTo(5)">5 France 24</h2></td><td><h2 align="center"><a href="javascript:TuneTo(6)">6 RT News</h2></td><td><h2 align="center"><a href="javascript:TuneTo(7)">7 CBN News</h2></td><td><h2 align="center"><a href="javascript:TuneTo(8)">8 Fox News Talk</h2></td>
 <td><h2 align="center"><a href="javascript:TuneTo(901)">901 ABC News HD<br /><a href="javascript:TuneTo(901.2)">901-2 ABC News Digital 2</a><br /><a href="javascript:TuneTo(901.3)">901-3 ABC News Digital 3</a><br /><a href="javascript:TuneTo(901.4)">901-4 ABC News Digital 4</a><br /><a href="javascript:TuneTo(901.5)">901-5 ABC News Digital 5</a></h2></h2></td><td><h2 align="center"><a href="javascript:TuneTo(902)">902 CBSNHD</h2></td><td><h2 align="center"><a href="javascript:TuneTo(903)">903 Newsmax TV HD</h2></td><td><h2 align="center"><a href="javascript:TuneTo(904)">904 Shift by msnbc HD<br /><a href="javascript:TuneTo(904.2)">904-2 msnbc Live Event</a><br /><a href="javascript:TuneTo(904.3)">904-3 NBC News Live Event</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(906)">906 RT News HD</h2></td>
 <td><h2 align="center"><a href="javascript:TuneTo(10)">10 TWiT</h2></td><td><h2 align="center"><a href="javascript:TuneTo(11)">11 TWiT alt</h2></td>
 <td><h2 align="center"><a href="javascript:TuneTo(10)">910 TWiT HD</h2></td><td><h2 align="center"><a href="javascript:TuneTo(911)">911 TWiT alt HD</h2></td>
-<td><h2 align="center"><a href="javascript:TuneTo(20)">20 AFA Channel</h2></td><td><h2 align="center"><a href="javascript:TuneTo(21)">21 TBN</h2></td><td><h2 align="center"><a href="javascript:TuneTo(24)">24 TCT</h2></td><td><h2 align="center"><a href="javascript:TuneTo(25)">25 TCT Family</h2></td><td><h2 align="center"><a href="javascript:TuneTo(26)">26 TCT Kids</h2></td><td><h2 align="center"><a href="javascript:TuneTo(27)">27 NRB Network</h2></td>
-<td><h2 align="center"><a href="javascript:TuneTo(30)">30 JUCE TV</h2></td><td><h2 align="center"><a href="javascript:TuneTo(31)">31 JUCE TV Russia</h2></td><td><h2 align="center"><a href="javascript:TuneTo(32)">32 Christian Hip Hop Television</h2></td>
+<td><h2 align="center"><a href="javascript:TuneTo(20)">20 AFA Channel</h2></td><td><h2 align="center"><a href="javascript:TuneTo(21)">21 TBN</h2></td>
 </tr>
 </table>
 </html>
@@ -453,13 +400,6 @@ TWiT_alt = "http://209.131.99.99/twit/live/low"
 TWiT_alt_HD = "http://209.131.99.99/twit/live/high"
 AFA = "http://66.210.221.113:1935/AFA Channel Video/livestream2/playlist.m3u8"
 TBN = "http://acaooyalahd2-lh.akamaihd.net/i/TBN01_delivery@186239/index_1728_av-p.m3u8"
-TCT = "http://acaooyalahd2-lh.akamaihd.net/i/TBN02_delivery@186240/index_1728_av-p.m3u8"
-TCT_Family = "http://bcoveliveios-i.akamaihd.net:80/hls/live/206632/1997976452001/TCTHDHLS/TCTHDHLS_Live_1200/TCTHDHLS_Live_1200.m3u8"
-TCT_Kids = "http://bcoveliveios-i.akamaihd.net:80/hls/live/206632/1997976452001/FamilyHLS/FamilyHLS_Live_600/FamilyHLS_Live_600.m3u8"
-NRB = "http://uni6rtmp.tulix.tv/nrbnetwork/myStream.sdp/playlist.m3u8"
-JUCE = "http://acaooyalahd2-lh.akamaihd.net/i/TBN03_delivery@186241/index_1728_av-p.m3u8"
-JUCE_RU = "http://acaooyalahd2-lh.akamaihd.net/i/TBN11_delivery@186249/index_1600_av-b.m3u8"
-CHHTV = "http://telvuehls_t01997-i.akamaihd.net/hls/live/218552/T01997-2/playlist.m3u8"
 var video = document.getElementsByTagName("video");
 var Div = document.getElementsByTagName("div");
 Div = Div[0]
@@ -638,27 +578,6 @@ PlayVideo(AFA)
 if(num == 21) {
 PlayVideo(TBN)
 }
-if(num == 24) {
-PlayVideo(TCT)
-}
-if(num == 25) {
-PlayVideo(TCT_Family)
-}
-if(num == 26) {
-PlayVideo(TCT_Kids)
-}
-if(num == 27) {
-PlayVideo(NRB)
-}
-if(num == 30) {
-PlayVideo(JUCE)
-}
-if(num == 31) {
-PlayVideo(JUCE_RU)
-}
-if(num == 32) {
-PlayVideo(CHHTV)
-}
 }
 function TuneFrom() {
 video.pause()
@@ -667,11 +586,6 @@ video.webkitExitFullscreen();
 }
 function MoveLeft() {
 change = 0;
-if(pos == 6 && change == 0) {
-table.id = "table-6-5";
-pos = pos - 1
-change = 1
-}
 if(pos == 5 && change == 0) {
 table.id = "table-5-4";
 pos = pos - 1
@@ -700,11 +614,6 @@ change = 1
 }
 function MoveRight() {
 change = 0;
-if(pos == 5 && change == 0) {
-table.id = "table-6";
-pos = 6
-change = 1
-}
 if(pos == 4 && change == 0) {
 table.id = "table-5";
 pos = 5
