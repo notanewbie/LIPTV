@@ -94,6 +94,15 @@ animation-name: toMoreChrist;
 animation-duration: 1s;
 left: -440%;
 }
+#table-7 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: toMusic;
+animation-duration: 1s;
+left: -510%;
+}
 #table-1-2 {
 position: fixed;
 bottom: 0%;
@@ -147,6 +156,15 @@ line-height: 2.1vh;
 animation-name: BacktoMoreChrist;
 animation-duration: 1s;
 left: -370%;
+}
+#table-7-6 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: BacktoMusic;
+animation-duration: 1s;
+left: -440%;
 }
 td {
 min-width: 20vw;
@@ -247,6 +265,22 @@ line-height: 2.1vh;
 left: -440%
 }
 }
+@keyframes toMusic {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -440%;
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -510%
+}
+}
 @keyframes BacktoFive {
 from {
 position: fixed;
@@ -341,6 +375,22 @@ bottom: 0%;
 max-height: 20%;
 line-height: 2.1vh;
 left: -370%;
+}
+}
+@keyframes BacktoMusic {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -510%
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -440%;
 }
 }
 #LeftPic {
@@ -667,6 +717,11 @@ video.webkitExitFullscreen();
 }
 function MoveLeft() {
 change = 0;
+if(pos == 7 && change == 0) {
+table.id = "table-7-6";
+pos = pos - 1
+change = 1
+}
 if(pos == 6 && change == 0) {
 table.id = "table-6-5";
 pos = pos - 1
@@ -700,6 +755,11 @@ change = 1
 }
 function MoveRight() {
 change = 0;
+if(pos == 6 && change == 0) {
+table.id = "table-7";
+pos = 7
+change = 1
+}
 if(pos == 5 && change == 0) {
 table.id = "table-6";
 pos = 6
