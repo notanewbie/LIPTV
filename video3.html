@@ -1,4 +1,8 @@
 <style type="text/css">
+#hidden {
+position: fixed;
+bottom: 100%
+}
 div {
 z-index: 1
 }
@@ -45,6 +49,17 @@ visibility:visible;
 margin:0 auto;
 text-align: center;
 max-width: 100%;
+}
+#video-full {
+position:fixed;
+top: 0%;
+left: 0%;
+right: 0%;
+height:100%;
+visibility:visible;
+margin:0 auto;
+text-align: center;
+width: 100%;
 }
 #embed-on {
 position:fixed;
@@ -703,10 +718,12 @@ z-index: 1;
 <embed src="" id="video" autoplay onplay="this.id='embed-on'" onstop="this.id='video'"></embed>
 </object>
 </div>
-<div id="menu"><a href="hideshow()"><img src="grid.png" id="menuicon"></a></div>
+<div id="menu"><a href="javascript:hideshow()"><img src="grid.png" id="menuicon"></a></div>
 <video src = "http://abclive.abcnews.com/i/abc_live1@136327/index_1200_av-b.m3u8" controls id="video" allowfullscreen onpause="TuneFrom()" type="application/x-mpegurl" onerror="NonHTML5(); PlayVideo(this.src); console.error('Error playing stream ' + this.src + ' with HTML5.')"></video>
+<arrows>
 <a href="javascript:MoveLeft()"><img src="Left.png" id="LeftPic"></a>
 <a href="javascript:MoveRight()"><img src="Right.png" id="RightPic"></a>
+</arrows>
 <table style="max-height:20%" id="table">
 <tr><th rowspan=2><h2 align="center">News</h2></th>
 <td align="center"><a href="javascript:TuneTo(1)"><img src="ABC News.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(2)"><img src="CBSN.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(3)"><img src="Newsmax TV.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(4)"><img src="Shift by msnbc.jpeg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(5)"><img src="France 24.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(6)"><img src="RT News.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(7)"><img src="CBN News.jpeg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(8)"><img src="Fox News Talk.jpg" id="Icon"></img></a></td>
@@ -748,7 +765,11 @@ z-index: 1;
 </table>
 </html>
 <script type="text/javascript">
+var show = 1
 var table = document.getElementsByTagName("table");
+var arrows = document.getElementsByTagName("table");
+right_arrow = document.getElementById("RightPic")
+left_arrow = document.getElementById("LeftPic")
 table = table[0]
 var Browser
 App = navigator.appVersion
@@ -1207,6 +1228,24 @@ if(pos == 0 && change == 0) {
 table.id = "table-1";
 pos = 1
 change = 1
+}
+}
+function hideshow() {
+if(show == 1) {
+tableid = table.id
+table.id = "hidden"
+videoid = video.id
+video.id = "video-full"
+left_arrow.id = "hidden"
+right_arrow.id = "hidden"
+show = 0
+}
+else {
+table.id = tableid
+video.id = videoid
+left_arrow.id = "LeftPic"
+right_arrow.id = "RightPic"
+show = 1
 }
 }
 </script>
