@@ -7,31 +7,63 @@ div {
 z-index: 1
 }
 body {
-background-color: black;
-color: white;
+background-color: white;
+color: black;
 }
 a:link {
-color: white;
+color: black;
 text-decoration: none;
 }
 a:visited {
-color: white;
+color: black;
 text-decoration: none;
 }
 a:hover {
-color: white;
+color: black;
 text-decoration: none;
 }
 a:active {
-color: white;
+color: black;
 text-decoration: none;
 }
 #menuicon {
 height: 8vh;
 }
+@media screen and ( min-width: 850px ) {
 #Icon {
-min-height: 2vw;
-max-height: .5vh;
+max-height: 5vh;
+min-height: 10px;
+}
+h2 {
+font-size: 3vh;
+}
+}
+@media screen and ( max-width: 850px ) {
+#Icon {
+max-height: .2vh;
+min-height: 5vh;
+}
+h2 {
+font-size: 2vh;
+}
+}
+@media screen and ( min-width: 800px ) and ( max-width: 850px ){
+#Icon {
+max-height: .2vh;
+min-height: 3vh;
+}
+h2 {
+font-size: 2vh;
+}
+}
+@media screen and (min-width: 200px) and (max-width: 850px){
+#Icon {
+max-height: .2vh;
+min-height: 2vh;
+}
+h2 {
+font-size: 1vh;
+}
 }
 #video {
 position: fixed;
@@ -44,7 +76,7 @@ position:fixed;
 top: 0%;
 left: 0%;
 right: 0%;
-height:70%;
+height:90%;
 visibility:visible;
 margin:0 auto;
 text-align: center;
@@ -66,14 +98,22 @@ position:fixed;
 top: 0%;
 left: 0%;
 right: 0%;
-height:70%;
+height:90%;
 width:100%;
 visibility:visible;
 margin:0 auto;
 text-align: center;
 }
-h2 {
-font-size: 3vh;
+#embed-on {
+position:fixed;
+top: 0%;
+left: 0%;
+right: 0%;
+height:100%;
+width:100%;
+visibility:visible;
+margin:0 auto;
+text-align: center;
 }
 #menu {
 position: fixed;
@@ -195,6 +235,42 @@ animation-name: toMoreHDSports;
 animation-duration: 1s;
 left: -860%;
 }
+#table-13 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: toMoreStuff;
+animation-duration: 1s;
+left: -930%;
+}
+#table-14 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: toEvenMoreStuff;
+animation-duration: 1s;
+left: -1000%;
+}
+#table-15 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: toMuchMoreStuff;
+animation-duration: 1s;
+left: -1070%;
+}
+#table-16 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: toEvenMuchMoreStuff;
+animation-duration: 1s;
+left: -1140%;
+}
 #table-1-2 {
 position: fixed;
 bottom: 0%;
@@ -302,6 +378,42 @@ line-height: 2.1vh;
 animation-name: BacktoMoreHDSports;
 animation-duration: 1s;
 left: -790%;
+}
+#table-13-12 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: BacktoMoreStuff;
+animation-duration: 1s;
+left: -860%;
+}
+#table-14-13 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: BacktoEvenMoreStuff;
+animation-duration: 1s;
+left: -930%;
+}
+#table-15-14 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: BacktoMuchMoreStuff;
+animation-duration: 1s;
+left: -1000%;
+}
+#table-16-15 {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+animation-name: BacktoEvenMuchMoreStuff;
+animation-duration: 1s;
+left: -1070%;
 }
 td {
 min-width: 20vw;
@@ -498,6 +610,70 @@ line-height: 2.1vh;
 left: -860%
 }
 }
+@keyframes toMoreStuff {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -860%;
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -930%
+}
+}
+@keyframes toEvenMoreStuff {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -930%;
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -1000%
+}
+}
+@keyframes toMuchMoreStuff {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -1000%;
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -1070%
+}
+}
+@keyframes toEvenMuchMoreStuff {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -1070%;
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -1140%
+}
+}
 @keyframes BacktoFive {
 from {
 position: fixed;
@@ -690,6 +866,70 @@ line-height: 2.1vh;
 left: -790%;
 }
 }
+@keyframes BacktoMoreStuff {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -930%
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -860%;
+}
+}
+@keyframes BacktoEvenMoreStuff {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -1000%
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -930%;
+}
+}
+@keyframes BacktoMuchMoreStuff {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -1070%
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -1000%;
+}
+}
+@keyframes BacktoEvenMuchMoreStuff {
+from {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -1140%
+}
+to {
+position: fixed;
+bottom: 0%;
+max-height: 20%;
+line-height: 2.1vh;
+left: -1070%;
+}
+}
 #LeftPic {
 position: fixed;
 left: 0px;
@@ -726,9 +966,9 @@ z-index: 1;
 </arrows>
 <table style="max-height:20%" id="table">
 <tr><th rowspan=2><h2 align="center">News</h2></th>
-<td align="center"><a href="javascript:TuneTo(1)"><img src="ABC News.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(2)"><img src="CBSN.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(3)"><img src="Newsmax TV.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(4)"><img src="Shift by msnbc.jpeg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(5)"><img src="France 24.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(6)"><img src="RT News.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(7)"><img src="CBN News.jpeg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(8)"><img src="Fox News Talk.jpg" id="Icon"></img></a></td>
+<td align="center"><a href="javascript:TuneTo(1)"><img src="ABC News.jpg" id="Icon"></img></a></td><td><a href="javascript:TuneTo(1.2)"><img src="ABC News.jpg" id="Icon"></img></a></td><td><a href="javascript:TuneTo(1.3)"><img src="ABC News.jpg" id="Icon"></img></a></td><td><a href="javascript:TuneTo(1.4)"><img src="ABC News.jpg" id="Icon"></img></a></td><td><a href="javascript:TuneTo(1.5)"><img src="ABC News.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(2)"><img src="CBSN.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(3)"><img src="Newsmax TV.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(4)"><img src="Shift by msnbc.jpeg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(4.2)"><img src="msnbc.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(4.3)"><img src="NBC News.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(5)"><img src="France 24.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(6)"><img src="RT News.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(7)"><img src="CBN News.jpeg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(8)"><img src="Fox News Talk.jpg" id="Icon"></img></a></td>
 <th rowspan=2><h2 align="center">HD News</h2></th>
-<td align="center"><a href="javascript:TuneTo(901)"><img src="ABC News HD.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(902)"><img src="CBSNHD.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(903)"><img src="Newsmax TV.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(904)"><img src="Shift by msnbc HD.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(906)"><img src="RT News.png" id="Icon"></img></a></td>
+<td align="center"><a href="javascript:TuneTo(901)"><img src="ABC News HD.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(901.2)"><img src="ABC News HD.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(901.3)"><img src="ABC News HD.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(901.4)"><img src="ABC News HD.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(901.5)"><img src="ABC News HD.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(902)"><img src="CBSNHD.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(903)"><img src="Newsmax TV.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(904)"><img src="Shift by msnbc.jpeg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(904.2)"><img src="msnbc.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(904.3)"><img src="NBC News.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(906)"><img src="RT News.png" id="Icon"></img></a></td>
 <th rowspan=2><h2 align="center">Tech</h2></th>
 <td align="center"><a href="javascript:TuneTo(10)"><img src="TWiT.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(11)"><img src="TWiT.png" id="Icon"></img></a></td>
 <th rowspan=2><h2 align="center">HD Tech</h2></th>
@@ -749,18 +989,6 @@ z-index: 1;
 <td align="center"><a href="javascript:TuneTo(60)"><img src="ACC Network.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(61)"><img src="SEC on CBS.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(62)"><img src="SEC on CBS.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(63)"><img src="SEC on CBS.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(64)"><img src="CBS College Basketball.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(65)"><img src="CBS College Basketball.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(66)"><img src="106.7 The Fan.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(67)"><img src="105.7 The Fan.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(68)"><img src="ESPN3.jpeg" id="Icon"></img></a></td>
 <th rowspan=2><h2 align="center">HD Sports</h2></th>
 <td align="center"><a href="javascript:TuneTo(964)"><img src="CBS College Basketball.jpg" id="Icon"></img></a></td>
-</tr>
-<tr><td width=30><h2 align="center"><a href="javascript:TuneTo(1)">1-1 ABC News Digital 1</a><br /><a href="javascript:TuneTo(1.2)">1-2 ABC News Digital 2</a><br /><a href="javascript:TuneTo(1.3)">1-3 ABC News Digital 3</a><br /><a href="javascript:TuneTo(1.2)">1-4 ABC News Digital 4</a><br /><a href="javascript:TuneTo(1.5)">1-5 ABC News Digital 5</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(2)">2 CBSN</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(3)">3 Newsmax TV</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(4)">4 Shift by msnbc</a><br /><a href="javascript:TuneTo(4.2)">4-2 msnbc Live Event</a><br /><a href="javascript:TuneTo(4.3)">4-3 NBC News Live Event</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(5)">5 France 24</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(6)">6 RT News</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(7)">7 CBN News</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(8)">8 Fox News Talk</a></h2></td>
-<td><h2 align="center"><a href="javascript:TuneTo(901)">901 ABC News HD</a><br /><a href="javascript:TuneTo(901.2)">901-2 ABC News Digital 2</a><br /><a href="javascript:TuneTo(901.3)">901-3 ABC News Digital 3</a><br /><a href="javascript:TuneTo(901.4)">901-4 ABC News Digital 4</a><br /><a href="javascript:TuneTo(901.5)">901-5 ABC News Digital 5</a></h2></h2></td><td><h2 align="center"><a href="javascript:TuneTo(902)">902 CBSNHD</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(903)">903 Newsmax TV HD</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(904)">904 Shift by msnbc HD</a><br /><a href="javascript:TuneTo(904.2)">904-2 msnbc Live Event</a><br /><a href="javascript:TuneTo(904.3)">904-3 NBC News Live Event</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(906)">906 RT News HD</a></h2></td>
-<td><h2 align="center"><a href="javascript:TuneTo(10)">10 TWiT</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(11)">11 TWiT alt</a></h2></td>
-<td><h2 align="center"><a href="javascript:TuneTo(10)">910 TWiT HD</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(911)">911 TWiT alt HD</a></h2></td>
-<td><h2 align="center"><a href="javascript:TuneTo(20)">20 AFA Channel</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(21)">21 TBN</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(24)">24 TCT</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(25)">25 TCT Family</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(26)">26 TCT Kids</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(27)">27 NRB Network</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(925)">925 Daystar HD</a></h2></td>
-<td><h2 align="center"><a href="javascript:TuneTo(30)">30 JUCE TV</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(31)">31 JUCE TV Russia</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(32)">32 Christian Hip Hop Television</a></h2></td>
-<td><h2 align="center"><a href="javascript:TuneTo(40)">40 Yes TV</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(71)">71 BYUTV</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(72)">72 BYUTV</a></h2></td>
-<td><h2 align="center"><a href="javascript:TuneTo(971)">971 BYUTVHD</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(972)">972 BYUTV International HD</a></h2></td>
-<td><h2 align="center"><a href="javascript:TuneTo(50)">50 Bloomberg</a></h2></td>
-<td><h2 align="center"><a href="javascript:TuneTo(60)">60 ACC Network</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(61)">61 SEC on CBS</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(62)">62 SEC on CBS 2</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(63)">63 SEC on CBS 3</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(64)">64 CBS College Basketball</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(65)">65 CBS College Basketball 2</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(66)">66 106.7 The Fan</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(67)">67 105.7 The Fan</a></h2></td><td><h2 align="center"><a href="javascript:TuneTo(68)">68 ESPN3</a></h2></td>
-<td><h2 align="center"><a href="javascript:TuneTo(964)">964 CBS College Basketball HD</a></h2></td>
 </tr>
 </table>
 </html>
@@ -1015,10 +1243,10 @@ if(num == 11) {
 PlayVideo(TWiT_alt)
 }
 if(num == 910) {
-PlayVideo(TWiT)
+PlayVideo(TWiT_HD)
 }
 if(num == 911) {
-PlayVideo(TWiT_alt)
+PlayVideo(TWiT_alt_HD)
 }
 if(num == 20) {
 PlayVideo(AFA)
@@ -1106,6 +1334,26 @@ video.webkitExitFullscreen();
 }
 function MoveLeft() {
 change = 0;
+if(pos == 16 && change == 0) {
+table.id = "table-16-15";
+pos = pos - 1
+change = 1
+}
+if(pos == 15 && change == 0) {
+table.id = "table-15-14";
+pos = pos - 1
+change = 1
+}
+if(pos == 14 && change == 0) {
+table.id = "table-14-13";
+pos = pos - 1
+change = 1
+}
+if(pos == 13 && change == 0) {
+table.id = "table-13-12";
+pos = pos - 1
+change = 1
+}
 if(pos == 12 && change == 0) {
 table.id = "table-12-11";
 pos = pos - 1
@@ -1169,6 +1417,26 @@ change = 1
 }
 function MoveRight() {
 change = 0;
+if(pos == 15 && change == 0) {
+table.id = "table-16";
+pos = 16
+change = 1
+}
+if(pos == 14 && change == 0) {
+table.id = "table-15";
+pos = 15
+change = 1
+}
+if(pos == 13 && change == 0) {
+table.id = "table-14";
+pos = 14
+change = 1
+}
+if(pos == 12 && change == 0) {
+table.id = "table-13";
+pos = 13
+change = 1
+}
 if(pos == 11 && change == 0) {
 table.id = "table-12";
 pos = 12
@@ -1235,7 +1503,12 @@ if(show == 1) {
 tableid = table.id
 table.id = "hidden"
 videoid = video.id
+if(video.id != "embed-on") {
 video.id = "video-full"
+}
+else if(video.id == "embed-on") {
+video.id = "embed-full"
+}
 left_arrow.id = "hidden"
 right_arrow.id = "hidden"
 show = 0
