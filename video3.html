@@ -1,4 +1,30 @@
 <style type="text/css">
+div {
+z-index: 1
+}
+body {
+background-color: black;
+color: white;
+}
+a:link {
+color: white;
+text-decoration: none;
+}
+a:visited {
+color: white;
+text-decoration: none;
+}
+a:hover {
+color: white;
+text-decoration: none;
+}
+a:active {
+color: white;
+text-decoration: none;
+}
+#menuicon {
+height: 8vh;
+}
 #Icon {
 min-height: 2vw;
 max-height: .5vh;
@@ -33,6 +59,12 @@ text-align: center;
 }
 h2 {
 font-size: 3vh;
+}
+#menu {
+position: fixed;
+right: 5%;
+top: 5%;
+z-index: 1
 }
 table {
 position: fixed;
@@ -671,6 +703,7 @@ z-index: 1;
 <embed src="" id="video" autoplay onplay="this.id='embed-on'" onstop="this.id='video'"></embed>
 </object>
 </div>
+<div id="menu"><a href="hideshow()"><img src="grid.png" id="menuicon"></a></div>
 <video src = "http://abclive.abcnews.com/i/abc_live1@136327/index_1200_av-b.m3u8" controls id="video" allowfullscreen onpause="TuneFrom()" type="application/x-mpegurl" onerror="NonHTML5(); PlayVideo(this.src); console.error('Error playing stream ' + this.src + ' with HTML5.')"></video>
 <a href="javascript:MoveLeft()"><img src="Left.png" id="LeftPic"></a>
 <a href="javascript:MoveRight()"><img src="Right.png" id="RightPic"></a>
