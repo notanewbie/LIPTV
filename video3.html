@@ -1,4 +1,10 @@
 <style type="text/css">
+#white {
+background-color: white;
+}
+#black {
+background-color: black;
+}
 #hidden {
 position: fixed;
 bottom: 100%
@@ -29,42 +35,28 @@ text-decoration: none;
 #menuicon {
 height: 8vh;
 }
-@media screen and ( min-width: 1000px ) {
+
 #Icon {
-max-height: 5vh;
-min-height: 10px;
-}
-h2 {
-font-size: 3vh;
-}
-}
-@media screen and ( max-width: 1000px ) {
-#Icon {
-max-height: 9vh;
-min-height: 5vh;
+max-width: 4vw;
+min-width: .1vw;
 }
 h2 {
 font-size: 2vh;
 }
-}
-@media screen and ( min-width: 800px ) and ( max-width: 850px ){
-#Icon {
-max-height: 7vh;
-min-height: 3vh;
-}
-h2 {
-font-size: 2vh;
+
+
+@media screen and (min-width: 650px) {
+td {
+min-width: 19vw;
 }
 }
-@media screen and (min-width: 200px) and (max-width: 800px){
-#Icon {
-max-height: 9vh;
-min-height: 2vh;
-}
-h2 {
-font-size: 1vh;
+@media screen and (max-width: 650px) {
+td {
+min-width: 18.5vw;
 }
 }
+
+
 #video {
 position: fixed;
 top: 100%;
@@ -486,9 +478,6 @@ line-height: 2.1vh;
 animation-name: BacktoEvenMuchMuchMuchMuchMuchMoreStuff;
 animation-duration: 1s;
 left: -1350%;
-}
-td {
-min-width: 20vw;
 }
 @keyframes toFive {
 from {
@@ -1178,7 +1167,7 @@ z-index: 1;
 <th rowspan=2><h2 align="center">HD Christianity</h2></th>
 <td align="center"><a href="javascript:TuneTo(925)"><img src="Daystar.gif" id="Icon"></img></a></td>
 <th rowspan=2><h2 align="center">Music</h2></th>
-<td align="center"><a href="javascript:TuneTo(30)"><img src="JUCE TV.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(31)"><img src="JUCE TV Russia.jpeg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(32)"><img src="CHHTV.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(73)"><img src="vevo.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(74)"><img src="vevo2.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(75)"><img src="vevo2.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(76)"><img src="RadioU.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(77)"><img src="Spirit.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(78)"><img src="Family.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(79)"><img src="Rap.png" id="Icon"></img></a></td>
+<td align="center"><a href="javascript:TuneTo(30)"><img src="JUCE TV.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(31)"><img src="JUCE TV Russia.jpeg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(32)"><img src="CHHTV.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(73)"><img src="vevo.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(74)"><img src="vevo2.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(75)"><img src="vevo3.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(76)"><img src="RadioU.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(77)"><img src="Spirit.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(78)"><img src="Family.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(79)"><img src="Rap.png" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(80)"><img src="KHZTV.png" id="Icon"></img></a></td>
 <th rowspan=2><h2 align="center">Entertainment</h2></th>
 <td align="center"><a href="javascript:TuneTo(40)"><img src="Yes TV.jpg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(71)"><img src="byutv.jpeg" id="Icon"></img></a></td><td align="center"><a href="javascript:TuneTo(72)"><img src="byutvi.png" id="Icon"></img></a></td>
 <th rowspan=2><h2 align="center">Entertainment HD</h2></th>
@@ -1291,6 +1280,7 @@ RadioU = "http://cdn.rbm.tv/rightbrainmedia-live-109/_definst_/smil:radioutv_all
 Spirit = "http://cdn.rbm.tv/rightbrainmedia-live-109/_definst_/smil:spirit_all.smil/playlist.m3u8"
 Family = "http://54.225.64.228:1935/live/roku2/playlist.m3u8"
 Rap = "http://edge2.tikilive.com:1935/unrestricted_tikilive/36008/amlst:amKEQ2Y2gYN4/playlist.m3u8"
+KHZTV = "http://rbc.streamguys.com/khztv/khztv/playlist.m3u8"
 var video = document.getElementsByTagName("video");
 var Div = document.getElementsByTagName("div");
 Div = Div[0]
@@ -1586,6 +1576,9 @@ PlayVideo(Family)
 if(num == 79) {
 PlayVideo(Rap)
 }
+if(num == 80) {
+PlayVideo(KHZTV)
+}
 }
 function TuneFrom() {
 video.pause()
@@ -1812,6 +1805,7 @@ video.id = "embed-full"
 left_arrow.id = "hidden"
 right_arrow.id = "hidden"
 show = 0
+document.body.id = "black"
 }
 else {
 table.id = tableid
@@ -1819,6 +1813,7 @@ video.id = videoid
 left_arrow.id = "LeftPic"
 right_arrow.id = "RightPic"
 show = 1
+document.body.id = "white"
 }
 }
 </script>
