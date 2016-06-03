@@ -34,6 +34,33 @@ text-decoration: none;
 }
 #menuicon {
 height: 8vh;
+animation-name: FadeBack;
+animation-duration: 1s;
+opacity:.5
+}
+#menuicon:hover {
+height: 8vh;
+animation-name: Void;
+animation-duration: 1s;
+opacity:1
+}
+@keyframes Void {
+50% {
+opacity:1
+}
+100% {
+opacity:1
+}
+}
+
+@keyframes FadeBack {
+50% {
+opacity:1
+
+}
+100% {
+opacity:.5
+}
 }
 
 #Icon {
