@@ -1208,6 +1208,7 @@ z-index: 1;
 </tr>
 </table>
 </html>
+<script src="https://raw.githubusercontent.com/notanewbie/getCookie/master/getCookie.js"></script>
 <script type="text/javascript">
 var show = 1
 var table = document.getElementsByTagName("table");
@@ -1392,7 +1393,10 @@ video = document.getElementsByTagName("video");
 video = video[0]
 video.id = "video-on"
 }
+TuneTo(parseInt(getCookie("liptvnum")))
 function TuneTo(num) {
+document.cookie="liptvnum=" + num
+console.log(getCookie("liptvnum"))
 if(num == 1) {
 PlayVideo(ABC_News)
 }
