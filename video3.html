@@ -1,4 +1,16 @@
 <style type="text/css">
+#Flip {
+position: fixed;
+right: 15%;
+top: 5%;
+z-index: 1;
+background-color: white;
+outline-style: solid;
+outline-color: black;
+outline-width: 1vw;
+font-family: generic-family;
+font-size: 7vh
+}
 #white {
 background-color: white;
 }
@@ -1178,6 +1190,7 @@ z-index: 1;
 <embed src="" id="video" autoplay onplay="this.id='embed-on'" onstop="this.id='video'"></embed>
 </object>
 </div>
+<a href="javascript:FlipChannel()"><div id="Flip">Flip</div></a>
 <div id="menu"><a href="javascript:hideshow()"><img src="grid.png" id="menuicon"></a></div>
 <video src = "http://abclive.abcnews.com/i/abc_live1@136327/index_1200_av-b.m3u8" controls id="video" allowfullscreen onpause="TuneFrom()" type="application/x-mpegurl" onerror="NonHTML5(); PlayVideo(this.src); console.error('Error playing stream ' + this.src + ' with HTML5.')"></video>
 <arrows>
@@ -1841,5 +1854,8 @@ right_arrow.id = "RightPic"
 show = 1
 document.body.id = "white"
 }
+}
+function FlipChannel() {
+TuneTo(Math.floor(Math.random() * 81))
 }
 </script>
