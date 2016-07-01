@@ -1,23 +1,93 @@
 <style type="text/css">
-#WholeGuide {
+#FirstSquare-hidden {
+display:block;
 position: fixed;
-background-color: black
-opacity: 50%
-top: -100000px
+top: -1000vh;
+left: 10vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 35%;
+width: 25%;
+}
+#FirstSquare {
+display:block;
+position: fixed;
+top: 15vh;
+left: 10vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 35%;
+width: 25%;
+}
+#FirstImage-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 25%;
+width: 25%;
+}
+#FirstImage {
+display:block;
+position: fixed;
+top: 15vh;
+left: 10vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 25%;
+width: 25%;
+}
+#FirstText-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+height: 25%;
+width: 25%;
+}
+#FirstText {
+display:block;
+position: fixed;
+top: 40vh;
+left: 10vw;
+z-index: 2;
+color: black;
+height: 25%;
+width: 25%;
+}
+#WholeGuide {
+display:block;
+position: fixed;
+top:0px;
+left:300%;
+width: 100%;
+height: 100%;
+background-image: url(50.png);
+z-index: 0
 }
 #WholeGuide-show {
+display:block;
 position: fixed;
-background-color: black
-opacity: 50%
-width: 100%
-height: 80%
-bottom: 0px
+top:0px;
+left:0%;
+width: 100%;
+height: 100%;
+background-image: url(50.png);
+z-index: 1
 }
 #Guide {
 position: fixed;
 right: 30%;
 top: 5%;
-z-index: 1;
+z-index: 2;
 background-color: white;
 outline-style: solid;
 outline-color: black;
@@ -29,7 +99,7 @@ font-size: 7vh
 position: fixed;
 right: 15%;
 top: 5%;
-z-index: 1;
+z-index: 2;
 background-color: white;
 outline-style: solid;
 outline-color: black;
@@ -71,16 +141,20 @@ color: black;
 text-decoration: none;
 }
 #menuicon {
+position: fixed;
+top: 5vh;
 height: 8vh;
 animation-name: FadeBack;
 animation-duration: 1s;
-opacity:.5
+z-index: 2;
+opacity:.5;
 }
 #menuicon:hover {
 height: 8vh;
 animation-name: Void;
 animation-duration: 1s;
-opacity:1
+opacity:1;
+z-index: 2;
 }
 @keyframes Void {
 50% {
@@ -180,9 +254,9 @@ text-align: center;
 position: fixed;
 right: 5%;
 top: 5%;
-z-index: 1
+z-index: 2
 }
-table {
+#table {
 position: fixed;
 bottom: 0%;
 max-height: 20%;
@@ -1220,8 +1294,18 @@ z-index: 1;
 <a href="javascript:FlipChannel()"><div id="Flip">Flip</div></a>
 <div id="menu"><a href="javascript:hideshow()"><img src="grid.png" id="menuicon"></a></div>
 <video src = "http://abclive.abcnews.com/i/abc_live1@136327/index_1200_av-b.m3u8" controls id="video" allowfullscreen onpause="TuneFrom()" type="application/x-mpegurl" onerror="NonHTML5(); PlayVideo(this.src); console.error('Error playing stream ' + this.src + ' with HTML5.')"></video>
+
+<div id="WholeGuide">
+<div id="FirstSquare-hidden">
+<img src="http://www.newscaststudio.com/wp-content/uploads/2008/12/cnn.jpg" id="FirstImage-hidden"></img>
+<div id="FirstText-hidden">
+Here Is Something.<br />
+Here Is Something. Else.
+</div>
+</div>
+</div>
+
 <arrows>
-<div id="WholeGuide"></div>
 <a href="javascript:MoveLeft()"><img src="Left.png" id="LeftPic"></a>
 <a href="javascript:MoveRight()"><img src="Right.png" id="RightPic"></a>
 </arrows>
@@ -1251,7 +1335,7 @@ var table = document.getElementsByTagName("table");
 var arrows = document.getElementsByTagName("table");
 right_arrow = document.getElementById("RightPic")
 left_arrow = document.getElementById("LeftPic")
-table = table[0]
+table = table
 var Browser
 App = navigator.appVersion
 if(App.indexOf("Edge") > -1) {
@@ -1862,7 +1946,7 @@ BigGuide = document.getElementById("WholeGuide")
 BigGuideShown = document.getElementById("WholeGuide-show")
 function hideshow() {
 if(show == 1) {
-tableid = table.id
+tableid = table[0].id
 table.id = "hidden"
 videoid = video.id
 if(video.id != "embed-on") {
@@ -1877,6 +1961,7 @@ show = 0
 document.body.id = "black"
 }
 else {
+console.log(tableid)
 table.id = tableid
 video.id = videoid
 left_arrow.id = "LeftPic"
@@ -1890,12 +1975,34 @@ console.log(show)
 function ShowGuide() {
 BigGuide = document.getElementById("WholeGuide")
 BigGuideShown = document.getElementById("WholeGuide-show")
+FirstSquare = document.getElementById("FirstSquare-hidden")
+FirstSquareShown = document.getElementById("FirstSquare")
+
+FirstImage = document.getElementById("FirstImage-hidden")
+FirstImageShown = document.getElementById("FirstImage")
+
 if(BigGuide != null) {
 BigGuide.id = "WholeGuide-show"
 show = 1
 }
 if(BigGuideShown != null) {
 BigGuideShown.id = "WholeGuide"
+show = 0
+}
+if(FirstSquareShown != null) {
+FirstSquareShown.id = "FirstSquare-hidden"
+show = 1
+}
+if(FirstSquare != null) {
+FirstSquare.id = "FirstSquare"
+show = 0
+}
+if(FirstImageShown != null) {
+FirstImageShown.id = "FirstImage-hidden"
+show = 1
+}
+if(FirstImage != null) {
+FirstImage.id = "FirstImage"
 show = 0
 }
 hideshow()
