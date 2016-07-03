@@ -1335,7 +1335,7 @@ var table = document.getElementsByTagName("table");
 var arrows = document.getElementsByTagName("table");
 right_arrow = document.getElementById("RightPic")
 left_arrow = document.getElementById("LeftPic")
-table = table
+table = table[0]
 var Browser
 App = navigator.appVersion
 if(App.indexOf("Edge") > -1) {
@@ -1735,6 +1735,7 @@ video.id = "video"
 video.webkitExitFullscreen();
 }
 function MoveLeft() {
+alert(pos)
 change = 0;
 if(pos == 20 && change == 0) {
 table.id = "table-20-19";
