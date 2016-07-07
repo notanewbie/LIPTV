@@ -1,5 +1,5 @@
 <style type="text/css">
-#FirstSquare-hidden {
+#ThirdSquare-hidden {
 display:block;
 position: fixed;
 top: -1000vh;
@@ -10,11 +10,140 @@ background-color: white;
 height: 35%;
 width: 25%;
 }
+#ThirdSquare {
+display:block;
+position: fixed;
+top: 15vh;
+left: 70vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 35%;
+width: 25%;
+}
+#ThirdImage-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 25%;
+width: 25%;
+}
+#ThirdImage {
+display:block;
+position: fixed;
+top: 15vh;
+left: 70vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 25%;
+width: 25%;
+}
+#ThirdText-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+height: 25%;
+width: 25%;
+}
+#ThirdText {
+display:block;
+position: fixed;
+top: 40vh;
+left: 70vw;
+z-index: 2;
+color: black;
+height: 25%;
+width: 25%;
+}
+
+#SecondSquare-hidden {
+display:block;
+position: fixed;
+top: -1000vh;
+left: 10vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 35%;
+width: 25%;
+}
+#SecondSquare {
+display:block;
+position: fixed;
+top: 15vh;
+left: 37vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 35%;
+width: 25%;
+}
+#SecondImage-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 25%;
+width: 25%;
+}
+#SecondImage {
+display:block;
+position: fixed;
+top: 15vh;
+left: 37vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 25%;
+width: 25%;
+}
+#SecondText-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+height: 25%;
+width: 25%;
+}
+#SecondText {
+display:block;
+position: fixed;
+top: 40vh;
+left: 37vw;
+z-index: 2;
+color: black;
+height: 25%;
+width: 25%;
+}
+#FirstSquare-hidden {
+display:block;
+position: fixed;
+top: -1000vh;
+left: 5vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 35%;
+width: 25%;
+}
 #FirstSquare {
 display:block;
 position: fixed;
 top: 15vh;
-left: 10vw;
+left: 5vw;
 z-index: 3;
 color: black;
 background-color: white;
@@ -36,7 +165,7 @@ width: 25%;
 display:block;
 position: fixed;
 top: 15vh;
-left: 10vw;
+left: 5vw;
 z-index: 2;
 color: black;
 background-color: white;
@@ -47,7 +176,7 @@ width: 25%;
 display:block;
 position: fixed;
 top: 1000vh;
-left: 10vw;
+left: 5vw;
 z-index: 2;
 color: black;
 height: 25%;
@@ -57,7 +186,7 @@ width: 25%;
 display:block;
 position: fixed;
 top: 40vh;
-left: 10vw;
+left: 5vw;
 z-index: 2;
 color: black;
 height: 25%;
@@ -1303,6 +1432,20 @@ Here Is Something.<br />
 Here Is Something. Else.
 </div>
 </div>
+<div id="SecondSquare-hidden">
+<img src="http://www.newscaststudio.com/wp-content/uploads/2008/12/cnn.jpg" id="SecondImage-hidden"></img>
+<div id="SecondText-hidden">
+Here Is Something.<br />
+Here Is Something. Else.
+</div>
+</div>
+<div id="ThirdSquare-hidden">
+<img src="http://www.newscaststudio.com/wp-content/uploads/2008/12/cnn.jpg" id="ThirdImage-hidden"></img>
+<div id="ThirdText-hidden">
+Here Is Something.<br />
+Here Is Something. Else.
+</div>
+</div>
 </div>
 
 <arrows>
@@ -1947,7 +2090,7 @@ BigGuide = document.getElementById("WholeGuide")
 BigGuideShown = document.getElementById("WholeGuide-show")
 function hideshow() {
 if(show == 1) {
-tableid = table[0].id
+tableid = table.id
 table.id = "hidden"
 videoid = video.id
 if(video.id != "embed-on") {
@@ -1982,6 +2125,27 @@ FirstSquareShown = document.getElementById("FirstSquare")
 FirstImage = document.getElementById("FirstImage-hidden")
 FirstImageShown = document.getElementById("FirstImage")
 
+FirstText = document.getElementById("FirstText-hidden")
+FirstTextShown = document.getElementById("TextImage")
+
+SecondSquare = document.getElementById("SecondSquare-hidden")
+SecondSquareShown = document.getElementById("SecondSquare")
+
+SecondImage = document.getElementById("SecondImage-hidden")
+SecondImageShown = document.getElementById("SecondImage")
+
+SecondText = document.getElementById("SecondText-hidden")
+SecondTextShown = document.getElementById("SecondText")
+
+ThirdSquare = document.getElementById("ThirdSquare-hidden")
+ThirdSquareShown = document.getElementById("ThirdSquare")
+
+ThirdImage = document.getElementById("ThirdImage-hidden")
+ThirdImageShown = document.getElementById("ThirdImage")
+
+ThirdText = document.getElementById("ThirdText-hidden")
+ThirdTextShown = document.getElementById("ThirdText")
+
 if(BigGuide != null) {
 BigGuide.id = "WholeGuide-show"
 show = 1
@@ -2004,6 +2168,62 @@ show = 1
 }
 if(FirstImage != null) {
 FirstImage.id = "FirstImage"
+show = 0
+}
+if(FirstTextShown != null) {
+FirstTextShown.id = "FirstText-hidden"
+show = 1
+}
+if(FirstText != null) {
+FirstText.id = "FirstText"
+show = 0
+}
+if(SecondSquareShown != null) {
+SecondSquareShown.id = "SecondSquare-hidden"
+show = 1
+}
+if(SecondSquare != null) {
+SecondSquare.id = "SecondSquare"
+show = 0
+}
+if(SecondImageShown != null) {
+SecondImageShown.id = "SecondImage-hidden"
+show = 1
+}
+if(SecondImage != null) {
+SecondImage.id = "SecondImage"
+show = 0
+}
+if(SecondTextShown != null) {
+SecondTextShown.id = "SecondText-hidden"
+show = 1
+}
+if(SecondText != null) {
+SecondText.id = "SecondText"
+show = 0
+}
+if(ThirdSquareShown != null) {
+ThirdSquareShown.id = "ThirdSquare-hidden"
+show = 1
+}
+if(ThirdSquare != null) {
+ThirdSquare.id = "ThirdSquare"
+show = 0
+}
+if(ThirdImageShown != null) {
+ThirdImageShown.id = "ThirdImage-hidden"
+show = 1
+}
+if(ThirdImage != null) {
+ThirdImage.id = "ThirdImage"
+show = 0
+}
+if(ThirdTextShown != null) {
+ThirdTextShown.id = "ThirdText-hidden"
+show = 1
+}
+if(ThirdText != null) {
+ThirdText.id = "ThirdText"
 show = 0
 }
 hideshow()
