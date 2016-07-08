@@ -1,4 +1,416 @@
 <style type="text/css">
+#FirstLeftPic {
+position: fixed;
+left: 0px;
+bottom: 23%;
+height: 8vh;
+z-index: 2;
+}
+#FirstRightPic {
+position: fixed;
+right: 0px;
+bottom: 23%;
+height: 8vh;
+z-index: 2;
+}
+#FirstLeftPic-hidden {
+position: fixed;
+bottom: 100%
+}
+#FirstRightPic-hidden {
+position: fixed;
+bottom: 100%
+}
+#SmallSquare6-hidden {
+display:block;
+position: fixed;
+top: -1000vh;
+left: 10vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 35%;
+width: 25%;
+}
+#SmallSquare6 {
+display:block;
+position: fixed;
+top: 60vh;
+left: 85vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 25%;
+width: 10%;
+}
+#SmallImage6-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 25%;
+width: 25%;
+}
+#SmallImage6 {
+display:block;
+position: fixed;
+top: 60vh;
+left: 85vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 15%;
+width: 10%;
+}
+#SmallText6-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+height: 25%;
+width: 25%;
+}
+#SmallText6 {
+display:block;
+position: fixed;
+top: 75vh;
+left: 85vw;
+z-index: 2;
+color: black;
+height: 10%;
+width: 10%;
+}
+
+#SmallSquare5-hidden {
+display:block;
+position: fixed;
+top: -1000vh;
+left: 10vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 35%;
+width: 25%;
+}
+#SmallSquare5 {
+display:block;
+position: fixed;
+top: 60vh;
+left: 69vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 25%;
+width: 10%;
+}
+#SmallImage5-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 25%;
+width: 25%;
+}
+#SmallImage5 {
+display:block;
+position: fixed;
+top: 60vh;
+left: 69vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 15%;
+width: 10%;
+}
+#SmallText5-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+height: 25%;
+width: 25%;
+}
+#SmallText5 {
+display:block;
+position: fixed;
+top: 75vh;
+left: 69vw;
+z-index: 2;
+color: black;
+height: 10%;
+width: 10%;
+}
+
+#SmallSquare4-hidden {
+display:block;
+position: fixed;
+top: -1000vh;
+left: 10vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 35%;
+width: 25%;
+}
+#SmallSquare4 {
+display:block;
+position: fixed;
+top: 60vh;
+left: 53vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 25%;
+width: 10%;
+}
+#SmallImage4-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 25%;
+width: 25%;
+}
+#SmallImage4 {
+display:block;
+position: fixed;
+top: 60vh;
+left: 53vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 15%;
+width: 10%;
+}
+#SmallText4-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+height: 25%;
+width: 25%;
+}
+#SmallText4 {
+display:block;
+position: fixed;
+top: 75vh;
+left: 53vw;
+z-index: 2;
+color: black;
+height: 10%;
+width: 10%;
+}
+
+#SmallSquare3-hidden {
+display:block;
+position: fixed;
+top: -1000vh;
+left: 10vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 35%;
+width: 25%;
+}
+#SmallSquare3 {
+display:block;
+position: fixed;
+top: 60vh;
+left: 37vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 25%;
+width: 10%;
+}
+#SmallImage3-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 25%;
+width: 25%;
+}
+#SmallImage3 {
+display:block;
+position: fixed;
+top: 60vh;
+left: 37vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 15%;
+width: 10%;
+}
+#SmallText3-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+height: 25%;
+width: 25%;
+}
+#SmallText3 {
+display:block;
+position: fixed;
+top: 75vh;
+left: 37vw;
+z-index: 2;
+color: black;
+height: 10%;
+width: 10%;
+}
+
+#SmallSquare2-hidden {
+display:block;
+position: fixed;
+top: -1000vh;
+left: 10vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 35%;
+width: 25%;
+}
+#SmallSquare2 {
+display:block;
+position: fixed;
+top: 60vh;
+left: 21vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 25%;
+width: 10%;
+}
+#SmallImage2-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 25%;
+width: 25%;
+}
+#SmallImage2 {
+display:block;
+position: fixed;
+top: 60vh;
+left: 21vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 15%;
+width: 10%;
+}
+#SmallText2-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+height: 25%;
+width: 25%;
+}
+#SmallText2 {
+display:block;
+position: fixed;
+top: 75vh;
+left: 21vw;
+z-index: 2;
+color: black;
+height: 10%;
+width: 10%;
+}
+
+#SmallSquare1-hidden {
+display:block;
+position: fixed;
+top: -1000vh;
+left: 10vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 35%;
+width: 25%;
+}
+#SmallSquare1 {
+display:block;
+position: fixed;
+top: 60vh;
+left: 5vw;
+z-index: 3;
+color: black;
+background-color: white;
+height: 25%;
+width: 10%;
+}
+#SmallImage1-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 25%;
+width: 25%;
+}
+#SmallImage1 {
+display:block;
+position: fixed;
+top: 60vh;
+left: 5vw;
+z-index: 2;
+color: black;
+background-color: white;
+height: 15%;
+width: 10%;
+}
+#SmallText1-hidden {
+display:block;
+position: fixed;
+top: 1000vh;
+left: 10vw;
+z-index: 2;
+color: black;
+height: 25%;
+width: 25%;
+}
+#SmallText1 {
+display:block;
+position: fixed;
+top: 75vh;
+left: 5vw;
+z-index: 2;
+color: black;
+height: 10%;
+width: 10%;
+}
+
 #ThirdSquare-hidden {
 display:block;
 position: fixed;
@@ -1423,7 +1835,8 @@ z-index: 1;
 <a href="javascript:FlipChannel()"><div id="Flip">Flip</div></a>
 <div id="menu"><a href="javascript:hideshow()"><img src="grid.png" id="menuicon"></a></div>
 <video src = "http://abclive.abcnews.com/i/abc_live1@136327/index_1200_av-b.m3u8" controls id="video" allowfullscreen onpause="TuneFrom()" type="application/x-mpegurl" onerror="NonHTML5(); PlayVideo(this.src); console.error('Error playing stream ' + this.src + ' with HTML5.')"></video>
-
+<a href="javascript:ShiftLeft()"><img src="Left.png" id="FirstLeftPic-hidden"></a>
+<a href="javascript:ShiftRight()"><img src="Right.png" id="FirstRightPic-hidden"></a>
 <div id="WholeGuide">
 <div id="FirstSquare-hidden">
 <img src="http://www.newscaststudio.com/wp-content/uploads/2008/12/cnn.jpg" id="FirstImage-hidden"></img>
@@ -1442,6 +1855,48 @@ Here Is Something. Else.
 <div id="ThirdSquare-hidden">
 <img src="http://www.newscaststudio.com/wp-content/uploads/2008/12/cnn.jpg" id="ThirdImage-hidden"></img>
 <div id="ThirdText-hidden">
+Here Is Something.<br />
+Here Is Something. Else.
+</div>
+</div>
+<div id="SmallSquare1-hidden">
+<img src="http://img3.wikia.nocookie.net/__cb20140910201936/logopedia/images/4/47/CNN_International_logo_2014.png" id="SmallImage1-hidden"></img>
+<div id="SmallText1-hidden">
+Here Is Something.<br />
+Here Is Something. Else.
+</div>
+</div>
+<div id="SmallSquare2-hidden">
+<img src="http://img3.wikia.nocookie.net/__cb20140910201936/logopedia/images/4/47/CNN_International_logo_2014.png" id="SmallImage2-hidden"></img>
+<div id="SmallText2-hidden">
+Here Is Something.<br />
+Here Is Something. Else.
+</div>
+</div>
+<div id="SmallSquare3-hidden">
+<img src="http://img3.wikia.nocookie.net/__cb20140910201936/logopedia/images/4/47/CNN_International_logo_2014.png" id="SmallImage3-hidden"></img>
+<div id="SmallText3-hidden">
+Here Is Something.<br />
+Here Is Something. Else.
+</div>
+</div>
+<div id="SmallSquare4-hidden">
+<img src="http://img3.wikia.nocookie.net/__cb20140910201936/logopedia/images/4/47/CNN_International_logo_2014.png" id="SmallImage4-hidden"></img>
+<div id="SmallText4-hidden">
+Here Is Something.<br />
+Here Is Something. Else.
+</div>
+</div>
+<div id="SmallSquare5-hidden">
+<img src="http://img3.wikia.nocookie.net/__cb20140910201936/logopedia/images/4/47/CNN_International_logo_2014.png" id="SmallImage5-hidden"></img>
+<div id="SmallText5-hidden">
+Here Is Something.<br />
+Here Is Something. Else.
+</div>
+</div>
+<div id="SmallSquare6-hidden">
+<img src="http://img3.wikia.nocookie.net/__cb20140910201936/logopedia/images/4/47/CNN_International_logo_2014.png" id="SmallImage6-hidden"></img>
+<div id="SmallText6-hidden">
 Here Is Something.<br />
 Here Is Something. Else.
 </div>
@@ -1878,7 +2333,6 @@ video.id = "video"
 video.webkitExitFullscreen();
 }
 function MoveLeft() {
-alert(pos)
 change = 0;
 if(pos == 20 && change == 0) {
 table.id = "table-20-19";
@@ -2126,7 +2580,7 @@ FirstImage = document.getElementById("FirstImage-hidden")
 FirstImageShown = document.getElementById("FirstImage")
 
 FirstText = document.getElementById("FirstText-hidden")
-FirstTextShown = document.getElementById("TextImage")
+FirstTextShown = document.getElementById("FirstText")
 
 SecondSquare = document.getElementById("SecondSquare-hidden")
 SecondSquareShown = document.getElementById("SecondSquare")
@@ -2145,6 +2599,66 @@ ThirdImageShown = document.getElementById("ThirdImage")
 
 ThirdText = document.getElementById("ThirdText-hidden")
 ThirdTextShown = document.getElementById("ThirdText")
+
+SmallSquare1 = document.getElementById("SmallSquare1-hidden")
+SmallSquare1Shown = document.getElementById("SmallSquare1")
+
+SmallImage1 = document.getElementById("SmallImage1-hidden")
+SmallImage1Shown = document.getElementById("SmallImage1")
+
+SmallText1 = document.getElementById("SmallText1-hidden")
+SmallText1Shown = document.getElementById("SmallText1")
+
+SmallSquare2 = document.getElementById("SmallSquare2-hidden")
+SmallSquare2Shown = document.getElementById("SmallSquare2")
+
+SmallImage2 = document.getElementById("SmallImage2-hidden")
+SmallImage2Shown = document.getElementById("SmallImage2")
+
+SmallText2 = document.getElementById("SmallText2-hidden")
+SmallText2Shown = document.getElementById("SmallText2")
+
+SmallSquare3 = document.getElementById("SmallSquare3-hidden")
+SmallSquare3Shown = document.getElementById("SmallSquare3")
+
+SmallImage3 = document.getElementById("SmallImage3-hidden")
+SmallImage3Shown = document.getElementById("SmallImage3")
+
+SmallText3 = document.getElementById("SmallText3-hidden")
+SmallText3Shown = document.getElementById("SmallText3")
+
+SmallSquare4 = document.getElementById("SmallSquare4-hidden")
+SmallSquare4Shown = document.getElementById("SmallSquare4")
+
+SmallImage4 = document.getElementById("SmallImage4-hidden")
+SmallImage4Shown = document.getElementById("SmallImage4")
+
+SmallText4 = document.getElementById("SmallText4-hidden")
+SmallText4Shown = document.getElementById("SmallText4")
+
+SmallSquare5 = document.getElementById("SmallSquare5-hidden")
+SmallSquare5Shown = document.getElementById("SmallSquare5")
+
+SmallImage5 = document.getElementById("SmallImage5-hidden")
+SmallImage5Shown = document.getElementById("SmallImage5")
+
+SmallText5 = document.getElementById("SmallText5-hidden")
+SmallText5Shown = document.getElementById("SmallText5")
+
+SmallSquare6 = document.getElementById("SmallSquare6-hidden")
+SmallSquare6Shown = document.getElementById("SmallSquare6")
+
+SmallImage6 = document.getElementById("SmallImage6-hidden")
+SmallImage6Shown = document.getElementById("SmallImage6")
+
+SmallText6 = document.getElementById("SmallText6-hidden")
+SmallText6Shown = document.getElementById("SmallText6")
+
+FirstRightPic = document.getElementById("FirstRightPic-hidden")
+FirstRightPicShown = document.getElementById("FirstRightPic")
+
+FirstLeftPic = document.getElementById("FirstLeftPic-hidden")
+FirstLeftPicShown = document.getElementById("FirstLeftPic")
 
 if(BigGuide != null) {
 BigGuide.id = "WholeGuide-show"
@@ -2226,10 +2740,183 @@ if(ThirdText != null) {
 ThirdText.id = "ThirdText"
 show = 0
 }
-hideshow()
+
+if(SmallSquare1Shown != null) {
+SmallSquare1Shown.id = "SmallSquare1-hidden"
+show = 1
+}
+if(SmallSquare1 != null) {
+SmallSquare1.id = "SmallSquare1"
+show = 0
+}
+if(SmallImage1Shown != null) {
+SmallImage1Shown.id = "SmallImage1-hidden"
+show = 1
+}
+if(SmallImage1 != null) {
+SmallImage1.id = "SmallImage1"
+show = 0
+}
+if(SmallText1Shown != null) {
+SmallText1Shown.id = "SmallText1-hidden"
+show = 1
+}
+if(SmallText1 != null) {
+SmallText1.id = "SmallText1"
+show = 0
+}
+
+if(SmallSquare2Shown != null) {
+SmallSquare2Shown.id = "SmallSquare2-hidden"
+show = 1
+}
+if(SmallSquare2 != null) {
+SmallSquare2.id = "SmallSquare2"
+show = 0
+}
+if(SmallImage2Shown != null) {
+SmallImage2Shown.id = "SmallImage2-hidden"
+show = 1
+}
+if(SmallImage2 != null) {
+SmallImage2.id = "SmallImage2"
+show = 0
+}
+if(SmallText2Shown != null) {
+SmallText2Shown.id = "SmallText2-hidden"
+show = 1
+}
+if(SmallText2 != null) {
+SmallText2.id = "SmallText2"
+show = 0
+}
+
+if(SmallSquare3Shown != null) {
+SmallSquare3Shown.id = "SmallSquare3-hidden"
+show = 1
+}
+if(SmallSquare3 != null) {
+SmallSquare3.id = "SmallSquare3"
+show = 0
+}
+if(SmallImage3Shown != null) {
+SmallImage3Shown.id = "SmallImage3-hidden"
+show = 1
+}
+if(SmallImage3 != null) {
+SmallImage3.id = "SmallImage3"
+show = 0
+}
+if(SmallText3Shown != null) {
+SmallText3Shown.id = "SmallText3-hidden"
+show = 1
+}
+if(SmallText3 != null) {
+SmallText3.id = "SmallText3"
+show = 0
+}
+
+if(SmallSquare4Shown != null) {
+SmallSquare4Shown.id = "SmallSquare4-hidden"
+show = 1
+}
+if(SmallSquare4 != null) {
+SmallSquare4.id = "SmallSquare4"
+show = 0
+}
+if(SmallImage4Shown != null) {
+SmallImage4Shown.id = "SmallImage4-hidden"
+show = 1
+}
+if(SmallImage4 != null) {
+SmallImage4.id = "SmallImage4"
+show = 0
+}
+if(SmallText4Shown != null) {
+SmallText4Shown.id = "SmallText4-hidden"
+show = 1
+}
+if(SmallText4 != null) {
+SmallText4.id = "SmallText4"
+show = 0
+}
+
+if(SmallSquare5Shown != null) {
+SmallSquare5Shown.id = "SmallSquare5-hidden"
+show = 1
+}
+if(SmallSquare5 != null) {
+SmallSquare5.id = "SmallSquare5"
+show = 0
+}
+if(SmallImage5Shown != null) {
+SmallImage5Shown.id = "SmallImage5-hidden"
+show = 1
+}
+if(SmallImage5 != null) {
+SmallImage5.id = "SmallImage5"
+show = 0
+}
+if(SmallText5Shown != null) {
+SmallText5Shown.id = "SmallText5-hidden"
+show = 1
+}
+if(SmallText5 != null) {
+SmallText5.id = "SmallText5"
+show = 0
+}
+
+if(SmallSquare6Shown != null) {
+SmallSquare6Shown.id = "SmallSquare6-hidden"
+show = 1
+}
+if(SmallSquare6 != null) {
+SmallSquare6.id = "SmallSquare6"
+show = 0
+}
+if(SmallImage6Shown != null) {
+SmallImage6Shown.id = "SmallImage6-hidden"
+show = 1
+}
+if(SmallImage6 != null) {
+SmallImage6.id = "SmallImage6"
+show = 0
+}
+if(SmallText6Shown != null) {
+SmallText6Shown.id = "SmallText6-hidden"
+show = 1
+}
+if(SmallText6 != null) {
+SmallText6.id = "SmallText6"
+show = 0
+}
+
+if(FirstRightPicShown != null) {
+FirstRightPicShown.id = "FirstRightPic-hidden"
+show = 1
+}
+if(FirstRightPic != null) {
+FirstRightPic.id = "FirstRightPic"
+show = 0
+}
+if(FirstLeftPicShown != null) {
+FirstLeftPicShown.id = "FirstLeftPic-hidden"
+show = 1
+}
+if(FirstLeftPic != null) {
+FirstLeftPic.id = "FirstLeftPic"
+show = 0
+}
+//hideshow()
 console.log(show)
 }
 function FlipChannel() {
 TuneTo(Math.floor(Math.random() * 81))
+}
+function ShiftLeft() {
+alert("I appreciate your intrigue, but this feature is so incomplete that this is all there is to it.")
+}
+function ShiftRight() {
+alert("I appreciate your intrigue, but this feature is so incomplete that this is all there is to it.")
 }
 </script>
