@@ -2116,6 +2116,7 @@ console.log(getCookie("liptvnum"))
 if(num == 1) {
 PlayVideo(ABC_News)
 CurrentChannel = "ABC_News"
+console.log(CurrentChannel)
 }
 if(num == 901) {
 PlayVideo(ABC_News_HD)
@@ -2997,6 +2998,7 @@ if(getCookie(CurrentChannel) == undefined) {
 Trackin = 1
 }
 document.cookie = CurrentChannel + "=" + Trackin
+console.log("The current channel is " + CurrentChannel)
 console.log(Trackin)
 
 
@@ -3071,203 +3073,204 @@ Cookie_Rap = getCookie("KHZTV")
 //Charts
 Cookies = [Cookie_ABC_News, Cookie_ABC_News_HD, Cookie_ABC_News_2, Cookie_ABC_News_HD_2, Cookie_ABC_News_3, Cookie_ABC_News_HD_3, Cookie_ABC_News_4, Cookie_ABC_News_HD_4, Cookie_ABC_News_5, Cookie_ABC_News_HD_5, Cookie_CBSN, Cookie_CBSNHD, Cookie_Newsmax, Cookie_Newsmax_HD, Cookie_Shift, Cookie_Shift_HD, Cookie_msnbc, Cookie_NBC_News, Cookie_NBC_News_HD, Cookie_France_24, Cookie_RT_News, Cookie_RT_News_HD, Cookie_CBN_News, Cookie_Fox_News_Talk, Cookie_FNC1, Cookie_FNC2, Cookie_FNC3, Cookie_FNC4, Cookie_FNC5, Cookie_FNC6, Cookie_CNNDebate, Cookie_TWiT, Cookie_TWiT_alt, Cookie_TWiT_HD, Cookie_TWiT_alt_HD, Cookie_AFA, Cookie_TBN, Cookie_TCT, Cookie_TCT_Family, Cookie_TCT_Kids, Cookie_NRB, Cookie_JUCE, Cookie_JUCE_RU, Cookie_CHHTV, Cookie_YesTV, Cookie_Bloomberg, Cookie_ACC, Cookie_SEC1, Cookie_SEC2, Cookie_SEC3, Cookie_CBK1, Cookie_CBK2, Cookie_TheFan1, Cookie_TheFan2, Cookie_ESPN3, Cookie_Daystar, Cookie_CBKHD, Cookie_BYUTV, Cookie_BYUTVI, Cookie_BYUTVHD, Cookie_BYUTVIHD, Cookie_VEVO, Cookie_VEVO2, Cookie_VEVO3, Cookie_RadioU, Cookie_Spirit, Cookie_Family, Cookie_Rap]
 Charts = Cookies.sort(function(a, b){return b-a});
+console.log(Charts[0] + ", " + Charts[1] + ", " + Charts[2])
 if(Cookies[0] == Charts[0]) {
 Number1 = "ABC_News"
 }
-if(Cookies[1] == Charts[0]) {
+else if(Cookies[1] == Charts[64]) {
 Number1 = "ABC_News_HD"
 }
-if(Cookies[2] == Charts[0]) {
+else if(Cookies[2] == Charts[64]) {
 Number1 = "ABC_News_2"
 }
-if(Cookies[3] == Charts[0]) {
+else if(Cookies[3] == Charts[64]) {
 Number1 = "Cookie_ABC_News_HD_2"
 }
-if(Cookies[4] == Charts[0]) {
+else if(Cookies[4] == Charts[64]) {
 Number1 = "ABC_News_3"
 }
-if(Cookies[5] == Charts[0]) {
+else if(Cookies[5] == Charts[64]) {
 Number1 = "Cookie_ABC_News_HD_3"
 }
-if(Cookies[6] == Charts[0]) {
+else if(Cookies[6] == Charts[64]) {
 Number1 = "ABC_News_4"
 }
-if(Cookies[7] == Charts[0]) {
+else if(Cookies[7] == Charts[64]) {
 Number1 = "Cookie_ABC_News_HD_4"
 }
-if(Cookies[8] == Charts[0]) {
+else if(Cookies[8] == Charts[64]) {
 Number1 = "ABC_News_5"
 }
-if(Cookies[8] == Charts[0]) {
+else if(Cookies[8] == Charts[64]) {
 Number1 = "Cookie_ABC_News_HD_5"
 }
-if(Cookies[9] == Charts[0]) {
+else if(Cookies[9] == Charts[64]) {
 Number1 = "Cookie_CBSN"
 }
-if(Cookies[10] == Charts[0]) {
+else if(Cookies[10] == Charts[64]) {
 Number1 = "Cookie_CBSNHD"
 }
-if(Cookies[11] == Charts[0]) {
+else if(Cookies[11] == Charts[64]) {
 Number1 = "Cookie_Newsmax"
 }
-if(Cookies[12] == Charts[0]) {
+else if(Cookies[12] == Charts[64]) {
 Number1 = "Cookie_Newsmax_HD"
 }
-if(Cookies[14] == Charts[0]) {
+else if(Cookies[14] == Charts[64]) {
 Number1 = "Cookie_Shift"
 }
-if(Cookies[15] == Charts[0]) {
+else if(Cookies[15] == Charts[64]) {
 Number1 = "Cookie_Shift_HD"
 }
-if(Cookies[16] == Charts[0]) {
+else if(Cookies[16] == Charts[64]) {
 Number1 = "Cookie_msnbc"
 }
-if(Cookies[17] == Charts[0]) {
+else if(Cookies[17] == Charts[64]) {
 Number1 = "Cookie_NBC_News"
 }
-if(Cookies[18] == Charts[0]) {
+else if(Cookies[18] == Charts[64]) {
 Number1 = "Cookie_NBC_News_HD"
 }
-if(Cookies[19] == Charts[0]) {
+else if(Cookies[19] == Charts[64]) {
 Number1 = "Cookie_France_24"
 }
-if(Cookies[20] == Charts[0]) {
+else if(Cookies[20] == Charts[64]) {
 Number1 = "Cookie_RT_News"
 }
-if(Cookies[21] == Charts[0]) {
+else if(Cookies[21] == Charts[64]) {
 Number1 = "Cookie_RT_News_HD"
 }
-if(Cookies[22] == Charts[0]) {
+else if(Cookies[22] == Charts[64]) {
 Number1 = "Cookie_CBN_News"
 }
-if(Cookies[23] == Charts[0]) {
+else if(Cookies[23] == Charts[64]) {
 Number1 = "Cookie_Fox_News_Talk"
 }
-if(Cookies[24] == Charts[0]) {
+else if(Cookies[24] == Charts[64]) {
 Number1 = "Cookie_FNC1"
 }
-if(Cookies[25] == Charts[0]) {
+else if(Cookies[25] == Charts[64]) {
 Number1 = "Cookie_FNC2"
 }
-if(Cookies[26] == Charts[0]) {
+else if(Cookies[26] == Charts[64]) {
 Number1 = "Cookie_FNC3"
 }
-if(Cookies[27] == Charts[0]) {
+else if(Cookies[27] == Charts[64]) {
 Number1 = "Cookie_FNC4"
 }
-if(Cookies[28] == Charts[0]) {
+else if(Cookies[28] == Charts[64]) {
 Number1 = "Cookie_FNC5"
 }
-if(Cookies[29] == Charts[0]) {
+else if(Cookies[29] == Charts[64]) {
 Number1 = "Cookie_FNC6"
 }
-if(Cookies[30] == Charts[0]) {
+else if(Cookies[30] == Charts[64]) {
 Number1 = "Cookie_CNNDebate"
 }
-if(Cookies[31] == Charts[0]) {
+else if(Cookies[31] == Charts[64]) {
 Number1 = "Cookie_TWiT"
 }
-if(Cookies[32] == Charts[0]) {
+else if(Cookies[32] == Charts[64]) {
 Number1 = "Cookie_TWiT_alt"
 }
-if(Cookies[33] == Charts[0]) {
+else if(Cookies[33] == Charts[64]) {
 Number1 = "Cookie_TWiT_HD"
 }
-if(Cookies[34] == Charts[0]) {
+else if(Cookies[34] == Charts[64]) {
 Number1 = "Cookie_TWiT_alt_HD"
 }
-if(Cookies[35] == Charts[0]) {
+else if(Cookies[35] == Charts[64]) {
 Number1 = "Cookie_AFA"
 }
-if(Cookies[36] == Charts[0]) {
+else if(Cookies[36] == Charts[64]) {
 Number1 = "Cookie_TBN"
 }
-if(Cookies[37] == Charts[0]) {
+else if(Cookies[37] == Charts[64]) {
 Number1 = "Cookie_TCT"
 }
-if(Cookies[38] == Charts[0]) {
+else if(Cookies[38] == Charts[64]) {
 Number1 = "Cookie_TCT_Kids"
 }
-if(Cookies[39] == Charts[0]) {
+else if(Cookies[39] == Charts[64]) {
 Number1 = "Cookie_NRB"
 }
-if(Cookies[40] == Charts[0]) {
+else if(Cookies[40] == Charts[64]) {
 Number1 = "Cookie_JUCE"
 }
-if(Cookies[41] == Charts[0]) {
+else if(Cookies[41] == Charts[64]) {
 Number1 = "Cookie_JUCE_RU"
 }
-if(Cookies[42] == Charts[0]) {
+else if(Cookies[42] == Charts[64]) {
 Number1 = "Cookie_CHHTV"
 }
-if(Cookies[43] == Charts[0]) {
+else if(Cookies[43] == Charts[64]) {
 Number1 = "Cookie_YesTV"
 }
-if(Cookies[44] == Charts[0]) {
+else if(Cookies[44] == Charts[64]) {
 Number1 = "Cookie_Bloomberg"
 }
-if(Cookies[45] == Charts[0]) {
+else if(Cookies[45] == Charts[64]) {
 Number1 = "Cookie_ACC"
 }
-if(Cookies[46] == Charts[0]) {
+else if(Cookies[46] == Charts[64]) {
 Number1 = "Cookie_SEC1"
 }
-if(Cookies[47] == Charts[0]) {
+else if(Cookies[47] == Charts[64]) {
 Number1 = "Cookie_SEC2"
 }
-if(Cookies[48] == Charts[0]) {
+else if(Cookies[48] == Charts[64]) {
 Number1 = "Cookie_SEC3"
 }
-if(Cookies[49] == Charts[0]) {
+else if(Cookies[49] == Charts[64]) {
 Number1 = "Cookie_CBK1"
 }
-if(Cookies[50] == Charts[0]) {
+else if(Cookies[50] == Charts[64]) {
 Number1 = "Cookie_CBK2"
 }
-if(Cookies[51] == Charts[0]) {
+else if(Cookies[51] == Charts[64]) {
 Number1 = "Cookie_TheFan1"
 }
-if(Cookies[52] == Charts[0]) {
+else if(Cookies[52] == Charts[64]) {
 Number1 = "Cookie_TheFan2"
 }
-if(Cookies[53] == Charts[0]) {
+else if(Cookies[53] == Charts[64]) {
 Number1 = "Cookie_ESPN3"
 }
-if(Cookies[54] == Charts[0]) {
+else if(Cookies[54] == Charts[64]) {
 Number1 = "Cookie_Daystar"
 }
-if(Cookies[55] == Charts[0]) {
+else if(Cookies[55] == Charts[64]) {
 Number1 = "Cookie_CBKHD"
 }
-if(Cookies[56] == Charts[0]) {
+else if(Cookies[56] == Charts[64]) {
 Number1 = "Cookie_BYUTV"
 }
-if(Cookies[57] == Charts[0]) {
+else if(Cookies[57] == Charts[64]) {
 Number1 = "Cookie_BYUTVIHD"
 }
-if(Cookies[58] == Charts[0]) {
+else if(Cookies[58] == Charts[64]) {
 Number1 = "Cookie_VEVO"
 }
-if(Cookies[59] == Charts[0]) {
+else if(Cookies[59] == Charts[64]) {
 Number1 = "Cookie_VEVO2"
 }
-if(Cookies[60] == Charts[0]) {
+else if(Cookies[60] == Charts[64]) {
 Number1 = "Cookie_VEVO3"
 }
-if(Cookies[61] == Charts[0]) {
+else if(Cookies[61] == Charts[64]) {
 Number1 = "Cookie_RadioU"
 }
-if(Cookies[62] == Charts[0]) {
+else if(Cookies[62] == Charts[64]) {
 Number1 = "Cookie_Spirit"
 }
-if(Cookies[63] == Charts[0]) {
+else if(Cookies[63] == Charts[64]) {
 Number1 = "Cookie_Family"
 }
-if(Cookies[64] == Charts[0]) {
+else if(Cookies[64] == Charts[64]) {
 Number1 = "Cookie_Rap"
 }
+document.cookie="ABC_News=0"
 console.log(Number1 + " is the number one channel with " + Charts[0] + " seconds viewed.")
-console.log(CurrentChannel)
 }
 setInterval(Track, 1000);
 </script>
