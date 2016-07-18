@@ -1928,6 +1928,7 @@ Here Is Something. Else.
 </html>
 <script src="https://raw.githubusercontent.com/notanewbie/getCookie/master/getCookie.js"></script>
 <script type="text/javascript">
+Numbar = new Array;
 var show = 1
 var table = document.getElementsByTagName("table");
 var arrows = document.getElementsByTagName("table");
@@ -3142,240 +3143,340 @@ Cookie_Rap = getCookie("KHZTV")
 //Charts
 Cookies = [Cookie_ABC_News, Cookie_ABC_News_HD, Cookie_ABC_News_2, Cookie_ABC_News_HD_2, Cookie_ABC_News_3, Cookie_ABC_News_HD_3, Cookie_ABC_News_4, Cookie_ABC_News_HD_4, Cookie_ABC_News_5, Cookie_ABC_News_HD_5, Cookie_CBSN, Cookie_CBSNHD, Cookie_Newsmax, Cookie_Newsmax_HD, Cookie_Shift, Cookie_Shift_HD, Cookie_msnbc, Cookie_NBC_News, Cookie_NBC_News_HD, Cookie_France_24, Cookie_RT_News, Cookie_RT_News_HD, Cookie_CBN_News, Cookie_Fox_News_Talk, Cookie_FNC1, Cookie_FNC2, Cookie_FNC3, Cookie_FNC4, Cookie_FNC5, Cookie_FNC6, Cookie_CNNDebate, Cookie_TWiT, Cookie_TWiT_alt, Cookie_TWiT_HD, Cookie_TWiT_alt_HD, Cookie_AFA, Cookie_TBN, Cookie_TCT, Cookie_TCT_Family, Cookie_TCT_Kids, Cookie_NRB, Cookie_JUCE, Cookie_JUCE_RU, Cookie_CHHTV, Cookie_YesTV, Cookie_Bloomberg, Cookie_ACC, Cookie_SEC1, Cookie_SEC2, Cookie_SEC3, Cookie_CBK1, Cookie_CBK2, Cookie_TheFan1, Cookie_TheFan2, Cookie_ESPN3, Cookie_Daystar, Cookie_CBKHD, Cookie_BYUTV, Cookie_BYUTVI, Cookie_BYUTVHD, Cookie_BYUTVIHD, Cookie_VEVO, Cookie_VEVO2, Cookie_VEVO3, Cookie_RadioU, Cookie_Spirit, Cookie_Family, Cookie_Rap]
 Charts = Cookies.sort(function(a, b){return b-a});
-for (var i = 0; i < 10; i++)
-{
-if(Cookie_ABC_News == Charts[i]) {
+for (var i = 0; i < 70; i++) {
+ABC_News_Chosen = 0
+ABC_News_HD_Chosen = 0
+ABC_News_2_Chosen = 0
+ABC_News_HD_2_Chosen = 0
+ABC_News_3_Chosen = 0
+ABC_News_HD_3_Chosen = 0
+ABC_News_4_Chosen = 0
+ABC_News_HD_4_Chosen = 0
+ABC_News_5_Chosen = 0
+ABC_News_HD_5_Chosen = 0
+CBSN_Chosen = 0
+CBSNHD_Chosen = 0
+Newsmax_Chosen = 0
+Newsmax_HD_Chosen = 0
+Shift_Chosen = 0
+Shift_HD_Chosen = 0
+msnbc_Chosen = 0
+NBC_News_Chosen = 0
+NBC_News_HD_Chosen = 0
+France_24_Chosen = 0
+RT_News_Chosen = 0
+RT_News_HD_Chosen = 0
+CBN_News_Chosen = 0
+Fox_News_Talk_Chosen = 0
+FNC0_Chosen = 0
+FNC1_Chosen = 0
+FNC2_Chosen = 0
+FNC3_Chosen = 0
+FNC4_Chosen = 0
+FNC5_Chosen = 0
+FNC6_Chosen = 0
+CNNDebate_Chosen = 0
+TWiT_Chosen = 0
+TWiT_alt_Chosen = 0
+TWiT_HD_Chosen = 0
+TWiT_alt_HD_Chosen = 0
+AFA_Chosen = 0
+TBN_Chosen = 0
+TCT_Chosen = 0
+TCT_Kids_Chosen = 0
+NRB_Chosen = 0
+JUCE_Chosen = 0
+JUCE_RU_Chosen = 0
+CHHTV_Chosen = 0
+YesTV_Chosen = 0
+Bloomberg_Chosen = 0
+ACC_Chosen = 0
+SEC0_Chosen = 0
+SEC1_Chosen = 0
+SEC2_Chosen = 0
+SEC3_Chosen = 0
+CBK0_Chosen = 0
+CBK1_Chosen = 0
+CBK2_Chosen = 0
+TheFan1_Chosen = 0
+TheFan2_Chosen = 0
+ESPN3_Chosen = 0
+Daystar_Chosen = 0
+CBKHD_Chosen = 0
+BYUTV_Chosen = 0
+BYUTVIHD_Chosen = 0
+VEVO_Chosen = 0
+VEVO2_Chosen = 0
+VEVO3_Chosen = 0
+RadioU_Chosen = 0
+Spirit_Chosen = 0
+Family_Chosen = 0
+Rap_Chosen = 0
+if(Cookie_ABC_News == Charts[i] && ABC_News_Chosen == 0) {
 Numba = "ABC_News"
+ABC_News_Chosen = 1
 }
-else if(Cookie_ABC_News_HD == Charts[i]) {
+else if(Cookie_ABC_News_HD == Charts[i] && ABC_News_HD_Chosen == 0) {
 Numba = "ABC_News_HD"
+ABC_News_HD_Chosen = 1
 }
-else if(Cookie_ABC_News_2 == Charts[i]) {
+else if(Cookie_ABC_News_2 == Charts[i] && ABC_News_2_Chosen == 0) {
 Numba = "ABC_News_2"
+ABC_News_2_Chosen = 1
 }
-else if(Cookie_ABC_News_HD_2 == Charts[i]) {
+else if(Cookie_ABC_News_HD_2 == Charts[i] && ABC_News_HD_2_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_2"
+ABC_News_HD_2_Chosen = 1
 }
-else if(Cookie_ABC_News_3 == Charts[i]) {
+else if(Cookie_ABC_News_3 == Charts[i] && ABC_News_3_Chosen == 0) {
 Numba = "ABC_News_3"
+ABC_News_3_Chosen = 1
 }
-else if(Cookie_ABC_News_HD_3 == Charts[i]) {
+else if(Cookie_ABC_News_HD_3 == Charts[i] && ABC_News_HD_3_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_3"
+ABC_News_HD_3_Chosen = 1
 }
-else if(Cookie_ABC_News_4 == Charts[i]) {
+else if(Cookie_ABC_News_4 == Charts[i] && ABC_News_4_Chosen == 0) {
 Numba = "ABC_News_4"
+ABC_News_4_Chosen = 1
 }
-else if(Cookie_ABC_News_HD_4 == Charts[i]) {
+else if(Cookie_ABC_News_HD_4 == Charts[i] && ABC_News_HD_4_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_4"
+ABC_News_HD_4_Chosen = 1
 }
-else if(Cookie_ABC_News_5 == Charts[i]) {
+else if(Cookie_ABC_News_5 == Charts[i] && ABC_News_5_Chosen == 0) {
 Numba = "ABC_News_5"
+ABC_News_5_Chosen = 1
 }
-else if(Cookie_ABC_News_HD_5 == Charts[i]) {
+else if(Cookie_ABC_News_HD_5 == Charts[i] && ABC_News_HD_5_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_5"
+ABC_News_HD_5_Chosen = 1
 }
-else if(Cookie_CBSN == Charts[i]) {
+else if(Cookie_CBSN == Charts[i] && CBSN_Chosen == 0) {
 Numba = "Cookie_CBSN"
+CBSN_Chosen = 1
 }
-else if(Cookie_CBSNHD == Charts[i]) {
+else if(Cookie_CBSNHD == Charts[i] && CBSNHD_Chosen == 0) {
 Numba = "Cookie_CBSNHD"
+CBSNHD_Chosen = 1
 }
-else if(Cookie_Newsmax == Charts[i]) {
+else if(Cookie_Newsmax == Charts[i] && Newsmax_Chosen == 0) {
 Numba = "Cookie_Newsmax"
+Newsmax_Chosen = 1
 }
-else if(Cookie_Newsmax_HD == Charts[i]) {
+else if(Cookie_Newsmax_HD == Charts[i] && Newsmax_HD_Chosen == 0) {
 Numba = "Cookie_Newsmax_HD"
+Newsmax_HD_Chosen = 1
 }
-else if(Cookie_Shift == Charts[i]) {
+else if(Cookie_Shift == Charts[i] && Shift_Chosen == 0) {
 Numba = "Cookie_Shift"
+Shift_Chosen = 1
 }
-else if(Cookie_Shift_HD == Charts[i]) {
+else if(Cookie_Shift_HD == Charts[i] && Shift_HD_Chosen == 0) {
 Numba = "Cookie_Shift_HD"
+Shift_HD_Chosen = 1
 }
-else if(Cookie_msnbc == Charts[i]) {
+else if(Cookie_msnbc == Charts[i] && msnbc_Chosen == 0) {
 Numba = "Cookie_msnbc"
+msnbc_Chosen = 1
 }
-else if(Cookie_NBC_News == Charts[i]) {
+else if(Cookie_NBC_News == Charts[i] && NBC_News_Chosen == 0) {
 Numba = "Cookie_NBC_News"
+NBC_News_Chosen = 1
 }
-else if(Cookie_NBC_News_HD == Charts[i]) {
+else if(Cookie_NBC_News_HD == Charts[i] && NBC_News_HD_Chosen == 0) {
 Numba = "Cookie_NBC_News_HD"
+NBC_News_HD_Chosen = 1
 }
-else if(Cookie_France_24 == Charts[i]) {
+else if(Cookie_France_24 == Charts[i] && France_24_Chosen == 0) {
 Numba = "Cookie_France_24"
+France_24_Chosen = 1
 }
-else if(Cookie_RT_News == Charts[i]) {
+else if(Cookie_RT_News == Charts[i] && RT_News_Chosen == 0) {
 Numba = "Cookie_RT_News"
+RT_News_Chosen = 1
 }
-else if(Cookie_RT_News_HD == Charts[i]) {
+else if(Cookie_RT_News_HD == Charts[i] && RT_News_HD_Chosen == 0) {
 Numba = "Cookie_RT_News_HD"
+RT_News_HD_Chosen = 1
 }
-else if(Cookie_CBN_News == Charts[i]) {
+else if(Cookie_CBN_News == Charts[i] && CBN_News_Chosen == 0) {
 Numba = "Cookie_CBN_News"
+CBN_News_Chosen = 1
 }
-else if(Cookie_Fox_News_Talk == Charts[i]) {
+else if(Cookie_Fox_News_Talk == Charts[i] && Fox_News_Talk_Chosen == 0) {
 Numba = "Cookie_Fox_News_Talk"
+Fox_News_Talk_Chosen = 1
 }
-else if(Cookie_FNC1 == Charts[i]) {
+else if(Cookie_FNC1 == Charts[i] && FNC1_Chosen == 0) {
 Numba = "Cookie_FNC1"
+FNC1_Chosen = 1
 }
-else if(Cookie_FNC2 == Charts[i]) {
+else if(Cookie_FNC2 == Charts[i] && FNC2_Chosen == 0) {
 Numba = "Cookie_FNC2"
+FNC2_Chosen = 1
 }
-else if(Cookie_FNC3 == Charts[i]) {
+else if(Cookie_FNC3 == Charts[i] && FNC3_Chosen == 0) {
 Numba = "Cookie_FNC3"
+FNC3_Chosen = 1
 }
-else if(Cookie_FNC4 == Charts[i]) {
+else if(Cookie_FNC4 == Charts[i] && FNC4_Chosen == 0) {
 Numba = "Cookie_FNC4"
+FNC4_Chosen = 1
 }
-else if(Cookie_FNC5 == Charts[i]) {
+else if(Cookie_FNC5 == Charts[i] && FNC5_Chosen == 0) {
 Numba = "Cookie_FNC5"
+FNC5_Chosen = 1
 }
-else if(Cookie_FNC6 == Charts[i]) {
+else if(Cookie_FNC6 == Charts[i] && FNC6_Chosen == 0) {
 Numba = "Cookie_FNC6"
+FNC6_Chosen = 1
 }
-else if(Cookie_CNNDebate == Charts[i]) {
+else if(Cookie_CNNDebate == Charts[i] && CNNDebate_Chosen == 0) {
 Numba = "Cookie_CNNDebate"
+CNNDebate_Chosen = 1
 }
-else if(Cookie_TWiT == Charts[i]) {
+else if(Cookie_TWiT == Charts[i] && TWiT_Chosen == 0) {
 Numba = "Cookie_TWiT"
+TWiT_Chosen = 1
 }
-else if(Cookie_TWiT_alt == Charts[i]) {
+else if(Cookie_TWiT_alt == Charts[i] && TWiT_alt_Chosen == 0) {
 Numba = "Cookie_TWiT_alt"
+TWiT_alt_Chosen = 1
 }
-else if(Cookie_TWiT_HD == Charts[i]) {
+else if(Cookie_TWiT_HD == Charts[i] && TWiT_HD_Chosen == 0) {
 Numba = "Cookie_TWiT_HD"
+TWiT_HD_Chosen = 1
 }
-else if(Cookie_TWiT_alt_HD == Charts[i]) {
+else if(Cookie_TWiT_alt_HD == Charts[i] && TWiT_alt_HD_Chosen == 0) {
 Numba = "Cookie_TWiT_alt_HD"
+TWiT_alt_HD_Chosen = 1
 }
-else if(Cookie_AFA == Charts[i]) {
+else if(Cookie_AFA == Charts[i] && AFA_Chosen == 0) {
 Numba = "Cookie_AFA"
+AFA_Chosen = 1
 }
-else if(Cookie_TBN == Charts[i]) {
+else if(Cookie_TBN == Charts[i] && TBN_Chosen == 0) {
 Numba = "Cookie_TBN"
+TBN_Chosen = 1
 }
-else if(Cookie_TCT == Charts[i]) {
+else if(Cookie_TCT == Charts[i] && TCT_Chosen == 0) {
 Numba = "Cookie_TCT"
+TCT_Chosen = 1
 }
-else if(Cookie_TCT_Kids == Charts[i]) {
+else if(Cookie_TCT_Kids == Charts[i] && TCT_Kids_Chosen == 0) {
 Numba = "Cookie_TCT_Kids"
+TCT_Kids_Chosen = 1
 }
-else if(Cookie_NRB == Charts[i]) {
+else if(Cookie_NRB == Charts[i] && NRB_Chosen == 0) {
 Numba = "Cookie_NRB"
+NRB_Chosen = 1
 }
-else if(Cookie_JUCE == Charts[i]) {
+else if(Cookie_JUCE == Charts[i] && NRB_Chosen == 0) {
 Numba = "Cookie_JUCE"
+JUCE_Chosen = 1
 }
-else if(Cookie_JUCE_RU == Charts[i]) {
+else if(Cookie_JUCE_RU == Charts[i] && JUCE_RU_Chosen == 0) {
 Numba = "Cookie_JUCE_RU"
+JUCE_RU_Chosen = 1
 }
-else if(Cookie_CHHTV == Charts[i]) {
+else if(Cookie_CHHTV == Charts[i] && CHHTV_Chosen == 0) {
 Numba = "Cookie_CHHTV"
+CHHTV_Chosen = 1
 }
-else if(Cookie_YesTV == Charts[i]) {
+else if(Cookie_YesTV == Charts[i] && YesTV_Chosen == 0) {
 Numba = "Cookie_YesTV"
+YesTV_Chosen = 1
 }
-else if(Cookie_Bloomberg == Charts[i]) {
+else if(Cookie_Bloomberg == Charts[i] && Bloomberg_Chosen == 0) {
 Numba = "Cookie_Bloomberg"
+Bloomberg_Chosen = 1
 }
-else if(Cookie_ACC == Charts[i]) {
+else if(Cookie_ACC == Charts[i] && ACC_Chosen == 0) {
 Numba = "Cookie_ACC"
+ACC_Chosen = 1
 }
-else if(Cookie_SEC1 == Charts[i]) {
+else if(Cookie_SEC1 == Charts[i] && SEC1_Chosen == 0) {
 Numba = "Cookie_SEC1"
+SEC1_Chosen = 1
 }
-else if(Cookie_SEC2 == Charts[i]) {
+else if(Cookie_SEC2 == Charts[i] && SEC2_Chosen == 0) {
 Numba = "Cookie_SEC2"
+SEC2_Chosen = 1
 }
-else if(Cookie_SEC3 == Charts[i]) {
+else if(Cookie_SEC3 == Charts[i] && SEC3_Chosen == 0) {
 Numba = "Cookie_SEC3"
+SEC3_Chosen = 1
 }
-else if(Cookie_CBK1 == Charts[i]) {
+else if(Cookie_CBK1 == Charts[i] && CBK1_Chosen == 0) {
 Numba = "Cookie_CBK1"
+CBK1_Chosen = 1
 }
-else if(Cookie_CBK2 == Charts[i]) {
+else if(Cookie_CBK2 == Charts[i] && CBK2_Chosen == 0) {
 Numba = "Cookie_CBK2"
+CBK2_Chosen = 1
 }
-else if(Cookie_TheFan1 == Charts[i]) {
+else if(Cookie_TheFan1 == Charts[i] && TheFan1_Chosen == 0) {
 Numba = "Cookie_TheFan1"
+TheFan1_Chosen = 1
 }
-else if(Cookie_TheFan2 == Charts[i]) {
+else if(Cookie_TheFan2 == Charts[i] && TheFan2_Chosen == 0) {
 Numba = "Cookie_TheFan2"
+TheFan2_Chosen = 1
 }
-else if(Cookie_ESPN3 == Charts[i]) {
+else if(Cookie_ESPN3 == Charts[i] && ESPN3_Chosen == 0) {
 Numba = "Cookie_ESPN3"
+ESPN3_Chosen = 1
 }
-else if(Cookie_Daystar == Charts[i]) {
+else if(Cookie_Daystar == Charts[i] && Daystar_Chosen == 0) {
 Numba = "Cookie_Daystar"
+Daystar_Chosen = 1
 }
-else if(Cookie_CBKHD == Charts[i]) {
+else if(Cookie_CBKHD == Charts[i] && CBKHD_Chosen == 0) {
 Numba = "Cookie_CBKHD"
+CBKHD_Chosen = 1
 }
-else if(Cookie_BYUTV == Charts[i]) {
+else if(Cookie_BYUTV == Charts[i] && BYUTV_Chosen == 0) {
 Numba = "Cookie_BYUTV"
+BYUTV_Chosen = 1
 }
-else if(Cookie_BYUTVIHD == Charts[i]) {
+else if(Cookie_BYUTVIHD == Charts[i] && BYUTVIHD_Chosen == 0) {
 Numba = "Cookie_BYUTVIHD"
+BYUTVIHD_Chosen = 1
 }
-else if(Cookie_VEVO == Charts[i]) {
+else if(Cookie_VEVO == Charts[i] && VEVO_Chosen == 0) {
 Numba = "Cookie_VEVO"
+VEVO_Chosen = 1
 }
-else if(Cookie_VEVO2 == Charts[i]) {
+else if(Cookie_VEVO2 == Charts[i] && VEVO2_Chosen == 0) {
 Numba = "Cookie_VEVO2"
+VEVO2_Chosen = 1
 }
-else if(Cookie_VEVO3 == Charts[i]) {
+else if(Cookie_VEVO3 == Charts[i] && VEVO3_Chosen == 0) {
 Numba = "Cookie_VEVO3"
+VEVO3_Chosen = 1
 }
-else if(Cookie_RadioU == Charts[i]) {
+else if(Cookie_RadioU == Charts[i] && RadioU_Chosen == 0) {
 Numba = "Cookie_RadioU"
+RadioU_Chosen = 1
 }
-else if(Cookie_Spirit == Charts[i]) {
+else if(Cookie_Spirit == Charts[i] && Spirit_Chosen == 0) {
 Numba = "Cookie_Spirit"
+Spirit_Chosen = 1
 }
-else if(Cookie_Family == Charts[i]) {
+else if(Cookie_Family == Charts[i] && Family_Chosen == 0) {
 Numba = "Cookie_Family"
+Family_Chosen = 1
 }
-else if(Cookie_Rap == Charts[i]) {
+else if(Cookie_Rap == Charts[i] && Rap_Chosen == 0) {
 Numba = "Cookie_Rap"
+Rap_Chosen = 1
 }
-if(i == 0) {
-Number1 = Numba
-console.log(Number1 + " is the number one channel with " + Charts[i] + " seconds viewed.")
-}
-if(i == 1) {
-Number2 = Numba
-console.log(Number2 + " is the number two channel with " + Charts[i] + " seconds viewed.")
-}
-if(i == 2) {
-Number3 = Numba
-console.log(Number3 + " is the number three channel with " + Charts[i] + " seconds viewed.")
-}
-if(i == 3) {
-Number4 = Numba
-console.log(Number4 + " is the number four channel with " + Charts[i] + " seconds viewed.")
-}
-if(i == 4) {
-Number5 = Numba
-console.log(Number5 + " is the number five channel with " + Charts[i] + " seconds viewed.")
-}
-if(i == 5) {
-Number6 = Numba
-console.log(Number6 + " is the number six channel with " + Charts[i] + " seconds viewed.")
-}
-if(i == 6) {
-Number7 = Numba
-console.log(Number7 + " is the number seven channel with " + Charts[i] + " seconds viewed.")
-}
-if(i == 7) {
-Number8 = Numba
-console.log(Number8 + " is the number eight channel with " + Charts[i] + " seconds viewed.")
-}
-if(i == 8) {
-Number9 = Numba
-console.log(Number9 + " is the number nine channel with " + Charts[i] + " seconds viewed.")
-}
-
+Numbar[i] = Numba
+CurrentNumber = i + 1
+//console.log(i)
+//console.log(Numbar[i])
+console.log(Numbar[i] + " is channel number " + CurrentNumber + " with " + Charts[i] + " seconds watched.")
 }
 }
 setInterval(Track, 1000);
