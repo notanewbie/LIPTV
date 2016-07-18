@@ -2095,6 +2095,94 @@ Rap = "http://edge2.tikilive.com:1935/unrestricted_tikilive/36008/amlst:amKEQ2Y2
 RapPreview = "Rap_Preview.jpg"
 KHZTV = "http://rbc.streamguys.com/khztv/khztv/playlist.m3u8"
 KHZTVPreview = "KHZTV_Preview.png"
+BigGuide = document.getElementById("WholeGuide")
+BigGuideShown = document.getElementById("WholeGuide-show")
+FirstSquare = document.getElementById("FirstSquare-hidden")
+FirstSquareShown = document.getElementById("FirstSquare")
+
+FirstImage = document.getElementById("FirstImage-hidden")
+FirstImageShown = document.getElementById("FirstImage")
+
+FirstText = document.getElementById("FirstText-hidden")
+FirstTextShown = document.getElementById("FirstText")
+
+SecondSquare = document.getElementById("SecondSquare-hidden")
+SecondSquareShown = document.getElementById("SecondSquare")
+
+SecondImage = document.getElementById("SecondImage-hidden")
+SecondImageShown = document.getElementById("SecondImage")
+
+SecondText = document.getElementById("SecondText-hidden")
+SecondTextShown = document.getElementById("SecondText")
+
+ThirdSquare = document.getElementById("ThirdSquare-hidden")
+ThirdSquareShown = document.getElementById("ThirdSquare")
+
+ThirdImage = document.getElementById("ThirdImage-hidden")
+ThirdImageShown = document.getElementById("ThirdImage")
+
+ThirdText = document.getElementById("ThirdText-hidden")
+ThirdTextShown = document.getElementById("ThirdText")
+
+SmallSquare1 = document.getElementById("SmallSquare1-hidden")
+SmallSquare1Shown = document.getElementById("SmallSquare1")
+
+SmallImage1 = document.getElementById("SmallImage1-hidden")
+SmallImage1Shown = document.getElementById("SmallImage1")
+
+SmallText1 = document.getElementById("SmallText1-hidden")
+SmallText1Shown = document.getElementById("SmallText1")
+
+SmallSquare2 = document.getElementById("SmallSquare2-hidden")
+SmallSquare2Shown = document.getElementById("SmallSquare2")
+
+SmallImage2 = document.getElementById("SmallImage2-hidden")
+SmallImage2Shown = document.getElementById("SmallImage2")
+
+SmallText2 = document.getElementById("SmallText2-hidden")
+SmallText2Shown = document.getElementById("SmallText2")
+
+SmallSquare3 = document.getElementById("SmallSquare3-hidden")
+SmallSquare3Shown = document.getElementById("SmallSquare3")
+
+SmallImage3 = document.getElementById("SmallImage3-hidden")
+SmallImage3Shown = document.getElementById("SmallImage3")
+
+SmallText3 = document.getElementById("SmallText3-hidden")
+SmallText3Shown = document.getElementById("SmallText3")
+
+SmallSquare4 = document.getElementById("SmallSquare4-hidden")
+SmallSquare4Shown = document.getElementById("SmallSquare4")
+
+SmallImage4 = document.getElementById("SmallImage4-hidden")
+SmallImage4Shown = document.getElementById("SmallImage4")
+
+SmallText4 = document.getElementById("SmallText4-hidden")
+SmallText4Shown = document.getElementById("SmallText4")
+
+SmallSquare5 = document.getElementById("SmallSquare5-hidden")
+SmallSquare5Shown = document.getElementById("SmallSquare5")
+
+SmallImage5 = document.getElementById("SmallImage5-hidden")
+SmallImage5Shown = document.getElementById("SmallImage5")
+
+SmallText5 = document.getElementById("SmallText5-hidden")
+SmallText5Shown = document.getElementById("SmallText5")
+
+SmallSquare6 = document.getElementById("SmallSquare6-hidden")
+SmallSquare6Shown = document.getElementById("SmallSquare6")
+
+SmallImage6 = document.getElementById("SmallImage6-hidden")
+SmallImage6Shown = document.getElementById("SmallImage6")
+
+SmallText6 = document.getElementById("SmallText6-hidden")
+SmallText6Shown = document.getElementById("SmallText6")
+
+FirstRightPic = document.getElementById("FirstRightPic-hidden")
+FirstRightPicShown = document.getElementById("FirstRightPic")
+
+FirstLeftPic = document.getElementById("FirstLeftPic-hidden")
+FirstLeftPicShown = document.getElementById("FirstLeftPic")
 var video = document.getElementsByTagName("video");
 var Div = document.getElementsByTagName("div");
 Div = Div[0]
@@ -3212,9 +3300,38 @@ RadioU_Chosen = 0
 Spirit_Chosen = 0
 Family_Chosen = 0
 Rap_Chosen = 0
+if(FirstImage) {
+TheFirstImage = FirstImage
+}
+else {
+TheFirstImage = FirstImageShown
+}
+
+if(SecondImage) {
+TheSecondImage = SecondImage
+}
+else {
+TheSecondImage = SecondImageShown
+}
+
+if(ThirdImage) {
+TheThirdImage = ThirdImage
+}
+else {
+TheThirdImage = ThirdImageShown
+}
 if(Cookie_ABC_News == Charts[i] && ABC_News_Chosen == 0) {
 Numba = "ABC_News"
 ABC_News_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = ABC_NewsPreview
+}
+if(i == 1) {
+TheSecondImage.src = ABC_NewsPreview
+}
+if(i == 2) {
+TheThirdImage.src = ABC_NewsPreview
+}
 }
 else if(Cookie_ABC_News_HD == Charts[i] && ABC_News_HD_Chosen == 0) {
 Numba = "ABC_News_HD"
@@ -3255,6 +3372,15 @@ ABC_News_HD_5_Chosen = 1
 else if(Cookie_CBSN == Charts[i] && CBSN_Chosen == 0) {
 Numba = "Cookie_CBSN"
 CBSN_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = CBSNPreview
+}
+if(i == 1) {
+TheSecondImage.src = CBSNPreview
+}
+if(i == 2) {
+TheThirdImage.src = CBSNPreview
+}
 }
 else if(Cookie_CBSNHD == Charts[i] && CBSNHD_Chosen == 0) {
 Numba = "Cookie_CBSNHD"
@@ -3391,6 +3517,15 @@ YesTV_Chosen = 1
 else if(Cookie_Bloomberg == Charts[i] && Bloomberg_Chosen == 0) {
 Numba = "Cookie_Bloomberg"
 Bloomberg_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = BloombergPreview
+}
+if(i == 1) {
+TheSecondImage.src = BloombergPreview
+}
+if(i == 2) {
+TheThirdImage.src = BloombergPreview
+}
 }
 else if(Cookie_ACC == Charts[i] && ACC_Chosen == 0) {
 Numba = "Cookie_ACC"
