@@ -2028,7 +2028,7 @@ JUCEPreview = "JUCE_Preview.jpg"
 JUCE_RU = "http://acaooyalahd2-lh.akamaihd.net/i/TBN11_delivery@186249/master.m3u8"
 JUCE_RUPreview = "Unavailable.jpeg"
 CHHTV = "http://telvuehls_t01997-i.akamaihd.net/hls/live/218552/T01997-2/playlist.m3u8"
-CHHTV = "CHHTV_Preview.jpg"
+CHHTVPreview = "CHHTV_Preview.jpg"
 YesTV = "http://stream-live-edge-a01.crossroadscloud.com:8081/yestv-ont-multibit/yestv-ont-multibit/playlist.m3u8"
 YesTVPreview = "Yes TV_Preview.png"
 Bloomberg = "http://btv-i.akamaihd.net/hls/live/202760/btvusa_ios/P1/master.m3u8"
@@ -2054,7 +2054,7 @@ ESPN3Preview = "Unavailable.jpeg"
 Daystar = "http://brightcove03-f.akamaihd.net/daystar_HD_720@112478"
 DaystarPreview = "Daystar_Preview.jpg"
 CBKHD = "http://cbssports-origin.mdialog.com/cbssports/live/4fdd561d-ff33-4558-9cba-f53b9aa95d65/ssb/200603-b_cbklive1_cbklive1-3000-1.m3u8"
-CBKHD = "CBK_Preview.jpg"
+CBKHDPreview = "CBK_Preview.jpg"
 BYUTV = "http://byuhd2-lh.akamaihd.net/i/byutvhd2_live@103136/master.m3u8"
 BYUTVPreview = "BYUTV_Preview.jpeg"
 BYUTVI = "http://byuhd2-lh.akamaihd.net/i/byutvintspanhd2_live@103133/master.m3u8"
@@ -3336,38 +3336,119 @@ TheThirdImage.src = ABC_NewsPreview
 else if(Cookie_ABC_News_HD == Charts[i] && ABC_News_HD_Chosen == 0) {
 Numba = "ABC_News_HD"
 ABC_News_HD_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = ABC_NewsPreview
+}
+if(i == 1) {
+TheSecondImage.src = ABC_NewsPreview
+}
+if(i == 2) {
+TheThirdImage.src = ABC_NewsPreview
+}
 }
 else if(Cookie_ABC_News_2 == Charts[i] && ABC_News_2_Chosen == 0) {
 Numba = "ABC_News_2"
 ABC_News_2_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = ABC_NewsPreview
+}
+if(i == 1) {
+TheSecondImage.src = ABC_NewsPreview
+}
+if(i == 2) {
+TheThirdImage.src = ABC_NewsPreview
+}
 }
 else if(Cookie_ABC_News_HD_2 == Charts[i] && ABC_News_HD_2_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_2"
 ABC_News_HD_2_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = ABC_NewsPreview
+}
+if(i == 1) {
+TheSecondImage.src = ABC_NewsPreview
+}
+if(i == 2) {
+TheThirdImage.src = ABC_NewsPreview
+}
 }
 else if(Cookie_ABC_News_3 == Charts[i] && ABC_News_3_Chosen == 0) {
 Numba = "ABC_News_3"
 ABC_News_3_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = ABC_NewsPreview
+}
+if(i == 1) {
+TheSecondImage.src = ABC_NewsPreview
+}
+if(i == 2) {
+TheThirdImage.src = ABC_NewsPreview
+}
 }
 else if(Cookie_ABC_News_HD_3 == Charts[i] && ABC_News_HD_3_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_3"
 ABC_News_HD_3_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = ABC_NewsPreview
+}
+if(i == 1) {
+TheSecondImage.src = ABC_NewsPreview
+}
+if(i == 2) {
+TheThirdImage.src = ABC_NewsPreview
+}
 }
 else if(Cookie_ABC_News_4 == Charts[i] && ABC_News_4_Chosen == 0) {
 Numba = "ABC_News_4"
 ABC_News_4_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = ABC_NewsPreview
+}
+if(i == 1) {
+TheSecondImage.src = ABC_NewsPreview
+}
+if(i == 2) {
+TheThirdImage.src = ABC_NewsPreview
+}
 }
 else if(Cookie_ABC_News_HD_4 == Charts[i] && ABC_News_HD_4_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_4"
 ABC_News_HD_4_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = ABC_NewsPreview
+}
+if(i == 1) {
+TheSecondImage.src = ABC_NewsPreview
+}
+if(i == 2) {
+TheThirdImage.src = ABC_NewsPreview
+}
 }
 else if(Cookie_ABC_News_5 == Charts[i] && ABC_News_5_Chosen == 0) {
 Numba = "ABC_News_5"
 ABC_News_5_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = ABC_NewsPreview
+}
+if(i == 1) {
+TheSecondImage.src = ABC_NewsPreview
+}
+if(i == 2) {
+TheThirdImage.src = ABC_NewsPreview
+}
 }
 else if(Cookie_ABC_News_HD_5 == Charts[i] && ABC_News_HD_5_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_5"
 ABC_News_HD_5_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = ABC_NewsPreview
+}
+if(i == 1) {
+TheSecondImage.src = ABC_NewsPreview
+}
+if(i == 2) {
+TheThirdImage.src = ABC_NewsPreview
+}
 }
 else if(Cookie_CBSN == Charts[i] && CBSN_Chosen == 0) {
 Numba = "Cookie_CBSN"
@@ -3385,134 +3466,431 @@ TheThirdImage.src = CBSNPreview
 else if(Cookie_CBSNHD == Charts[i] && CBSNHD_Chosen == 0) {
 Numba = "Cookie_CBSNHD"
 CBSNHD_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = CBSNPreview
+}
+if(i == 1) {
+TheSecondImage.src = CBSNPreview
+}
+if(i == 2) {
+TheThirdImage.src = CBSNPreview
+}
 }
 else if(Cookie_Newsmax == Charts[i] && Newsmax_Chosen == 0) {
 Numba = "Cookie_Newsmax"
 Newsmax_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = Newsmax_TVPreview
+}
+if(i == 1) {
+TheSecondImage.src = Newsmax_TVPreview
+}
+if(i == 2) {
+TheThirdImage.src = Newsmax_TVPreview
+}
 }
 else if(Cookie_Newsmax_HD == Charts[i] && Newsmax_HD_Chosen == 0) {
 Numba = "Cookie_Newsmax_HD"
 Newsmax_HD_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = Newsmax_TVPreview
+}
+if(i == 1) {
+TheSecondImage.src = Newsmax_TVPreview
+}
+if(i == 2) {
+TheThirdImage.src = Newsmax_TVPreview
+}
 }
 else if(Cookie_Shift == Charts[i] && Shift_Chosen == 0) {
 Numba = "Cookie_Shift"
 Shift_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = Shift_by_msnbcPreview
+}
+if(i == 1) {
+TheSecondImage.src = Shift_by_msnbcPreview
+}
+if(i == 2) {
+TheThirdImage.src = Shift_by_msnbcPreview
+}
 }
 else if(Cookie_Shift_HD == Charts[i] && Shift_HD_Chosen == 0) {
 Numba = "Cookie_Shift_HD"
 Shift_HD_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = Shift_by_msnbcPreview
+}
+if(i == 1) {
+TheSecondImage.src = Shift_by_msnbcPreview
+}
+if(i == 2) {
+TheThirdImage.src = Shift_by_msnbcPreview
+}
 }
 else if(Cookie_msnbc == Charts[i] && msnbc_Chosen == 0) {
 Numba = "Cookie_msnbc"
 msnbc_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = msnbcPreview
+}
+if(i == 1) {
+TheSecondImage.src = msnbcPreview
+}
+if(i == 2) {
+TheThirdImage.src = msnbcPreview
+}
 }
 else if(Cookie_NBC_News == Charts[i] && NBC_News_Chosen == 0) {
 Numba = "Cookie_NBC_News"
 NBC_News_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = NBC_NewsPreview
+}
+if(i == 1) {
+TheSecondImage.src = NBC_NewsPreview
+}
+if(i == 2) {
+TheThirdImage.src = NBC_NewsPreview
+}
 }
 else if(Cookie_NBC_News_HD == Charts[i] && NBC_News_HD_Chosen == 0) {
 Numba = "Cookie_NBC_News_HD"
 NBC_News_HD_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = NBC_NewsPreview
+}
+if(i == 1) {
+TheSecondImage.src = NBC_NewsPreview
+}
+if(i == 2) {
+TheThirdImage.src = NBC_NewsPreview
+}
 }
 else if(Cookie_France_24 == Charts[i] && France_24_Chosen == 0) {
 Numba = "Cookie_France_24"
 France_24_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = France_24Preview
+}
+if(i == 1) {
+TheSecondImage.src = France_24Preview
+}
+if(i == 2) {
+TheThirdImage.src = France_24Preview
+}
 }
 else if(Cookie_RT_News == Charts[i] && RT_News_Chosen == 0) {
 Numba = "Cookie_RT_News"
 RT_News_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = RT_NewsPreview
+}
+if(i == 1) {
+TheSecondImage.src = RT_NewsPreview
+}
+if(i == 2) {
+TheThirdImage.src = RT_NewsPreview
+}
 }
 else if(Cookie_RT_News_HD == Charts[i] && RT_News_HD_Chosen == 0) {
 Numba = "Cookie_RT_News_HD"
 RT_News_HD_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = RT_NewsPreview
+}
+if(i == 1) {
+TheSecondImage.src = RT_NewsPreview
+}
+if(i == 2) {
+TheThirdImage.src = RT_NewsPreview
+}
 }
 else if(Cookie_CBN_News == Charts[i] && CBN_News_Chosen == 0) {
 Numba = "Cookie_CBN_News"
 CBN_News_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = CBN_NewsPreview
+}
+if(i == 1) {
+TheSecondImage.src = CBN_NewsPreview
+}
+if(i == 2) {
+TheThirdImage.src = CBN_NewsPreview
+}
 }
 else if(Cookie_Fox_News_Talk == Charts[i] && Fox_News_Talk_Chosen == 0) {
 Numba = "Cookie_Fox_News_Talk"
 Fox_News_Talk_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = Fox_News_TalkPreview
+}
+if(i == 1) {
+TheSecondImage.src = Fox_News_TalkPreview
+}
+if(i == 2) {
+TheThirdImage.src = Fox_News_TalkPreview
+}
 }
 else if(Cookie_FNC1 == Charts[i] && FNC1_Chosen == 0) {
 Numba = "Cookie_FNC1"
 FNC1_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = FNC1Preview
+}
+if(i == 1) {
+TheSecondImage.src = FNC1Preview
+}
+if(i == 2) {
+TheThirdImage.src = FNC1Preview
+}
 }
 else if(Cookie_FNC2 == Charts[i] && FNC2_Chosen == 0) {
 Numba = "Cookie_FNC2"
 FNC2_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = FNC1Preview
+}
+if(i == 1) {
+TheSecondImage.src = FNC1Preview
+}
+if(i == 2) {
+TheThirdImage.src = FNC1Preview
+}
 }
 else if(Cookie_FNC3 == Charts[i] && FNC3_Chosen == 0) {
 Numba = "Cookie_FNC3"
 FNC3_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = FNC1Preview
+}
+if(i == 1) {
+TheSecondImage.src = FNC1Preview
+}
+if(i == 2) {
+TheThirdImage.src = FNC1Preview
+}
 }
 else if(Cookie_FNC4 == Charts[i] && FNC4_Chosen == 0) {
 Numba = "Cookie_FNC4"
 FNC4_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = FNC1Preview
+}
+if(i == 1) {
+TheSecondImage.src = FNC1Preview
+}
+if(i == 2) {
+TheThirdImage.src = FNC1Preview
+}
 }
 else if(Cookie_FNC5 == Charts[i] && FNC5_Chosen == 0) {
 Numba = "Cookie_FNC5"
 FNC5_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = FNC1Preview
+}
+if(i == 1) {
+TheSecondImage.src = FNC1Preview
+}
+if(i == 2) {
+TheThirdImage.src = FNC1Preview
+}
 }
 else if(Cookie_FNC6 == Charts[i] && FNC6_Chosen == 0) {
 Numba = "Cookie_FNC6"
 FNC6_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = FNC1Preview
+}
+if(i == 1) {
+TheSecondImage.src = FNC1Preview
+}
+if(i == 2) {
+TheThirdImage.src = FNC1Preview
+}
 }
 else if(Cookie_CNNDebate == Charts[i] && CNNDebate_Chosen == 0) {
 Numba = "Cookie_CNNDebate"
 CNNDebate_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = CNNDebatePreview
+}
+if(i == 1) {
+TheSecondImage.src = CNNDebatePreview
+}
+if(i == 2) {
+TheThirdImage.src = CNNDebatePreview
+}
 }
 else if(Cookie_TWiT == Charts[i] && TWiT_Chosen == 0) {
 Numba = "Cookie_TWiT"
 TWiT_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = TWiTPreview
+}
+if(i == 1) {
+TheSecondImage.src = TWiTPreview
+}
+if(i == 2) {
+TheThirdImage.src = TWiTPreview
+}
 }
 else if(Cookie_TWiT_alt == Charts[i] && TWiT_alt_Chosen == 0) {
 Numba = "Cookie_TWiT_alt"
 TWiT_alt_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = TWiTPreview
+}
+if(i == 1) {
+TheSecondImage.src = TWiTPreview
+}
+if(i == 2) {
+TheThirdImage.src = TWiTPreview
+}
 }
 else if(Cookie_TWiT_HD == Charts[i] && TWiT_HD_Chosen == 0) {
 Numba = "Cookie_TWiT_HD"
 TWiT_HD_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = TWiTPreview
+}
+if(i == 1) {
+TheSecondImage.src = TWiTPreview
+}
+if(i == 2) {
+TheThirdImage.src = TWiTPreview
+}
 }
 else if(Cookie_TWiT_alt_HD == Charts[i] && TWiT_alt_HD_Chosen == 0) {
 Numba = "Cookie_TWiT_alt_HD"
 TWiT_alt_HD_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = TWiTPreview
+}
+if(i == 1) {
+TheSecondImage.src = TWiTPreview
+}
+if(i == 2) {
+TheThirdImage.src = TWiTPreview
+}
 }
 else if(Cookie_AFA == Charts[i] && AFA_Chosen == 0) {
 Numba = "Cookie_AFA"
 AFA_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = AFAPreview
+}
+if(i == 1) {
+TheSecondImage.src = AFAPreview
+}
+if(i == 2) {
+TheThirdImage.src = AFAPreview
+}
 }
 else if(Cookie_TBN == Charts[i] && TBN_Chosen == 0) {
 Numba = "Cookie_TBN"
 TBN_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = TBNPreview
+}
+if(i == 1) {
+TheSecondImage.src = TBNPreview
+}
+if(i == 2) {
+TheThirdImage.src = TBNPreview
+}
 }
 else if(Cookie_TCT == Charts[i] && TCT_Chosen == 0) {
 Numba = "Cookie_TCT"
 TCT_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = TCTPreview
+}
+if(i == 1) {
+TheSecondImage.src = TCTPreview
+}
+if(i == 2) {
+TheThirdImage.src = TCTPreview
+}
 }
 else if(Cookie_TCT_Kids == Charts[i] && TCT_Kids_Chosen == 0) {
 Numba = "Cookie_TCT_Kids"
 TCT_Kids_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = TCT_KidsPreview
+}
+if(i == 1) {
+TheSecondImage.src = TCT_KidsPreview
+}
+if(i == 2) {
+TheThirdImage.src = TCT_KidsPreview
+}
 }
 else if(Cookie_NRB == Charts[i] && NRB_Chosen == 0) {
 Numba = "Cookie_NRB"
 NRB_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = NRBPreview
+}
+if(i == 1) {
+TheSecondImage.src = NRBPreview
+}
+if(i == 2) {
+TheThirdImage.src = NRBPreview
+}
 }
 else if(Cookie_JUCE == Charts[i] && NRB_Chosen == 0) {
 Numba = "Cookie_JUCE"
 JUCE_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = JUCEPreview
+}
+if(i == 1) {
+TheSecondImage.src = JUCEPreview
+}
+if(i == 2) {
+TheThirdImage.src = JUCEPreview
+}
 }
 else if(Cookie_JUCE_RU == Charts[i] && JUCE_RU_Chosen == 0) {
 Numba = "Cookie_JUCE_RU"
 JUCE_RU_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = JUCE_RUPreview
+}
+if(i == 1) {
+TheSecondImage.src = JUCE_RUPreview
+}
+if(i == 2) {
+TheThirdImage.src = JUCE_RUPreview
+}
 }
 else if(Cookie_CHHTV == Charts[i] && CHHTV_Chosen == 0) {
 Numba = "Cookie_CHHTV"
 CHHTV_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = CHHTVPreview
+}
+if(i == 1) {
+TheSecondImage.src = CHHTVPreview
+}
+if(i == 2) {
+TheThirdImage.src = CHHTVPreview
+}
 }
 else if(Cookie_YesTV == Charts[i] && YesTV_Chosen == 0) {
 Numba = "Cookie_YesTV"
 YesTV_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = YesTVPreview
+}
+if(i == 1) {
+TheSecondImage.src = YesTVPreview
+}
+if(i == 2) {
+TheThirdImage.src = YesTVPreview
+}
 }
 else if(Cookie_Bloomberg == Charts[i] && Bloomberg_Chosen == 0) {
 Numba = "Cookie_Bloomberg"
@@ -3530,82 +3908,262 @@ TheThirdImage.src = BloombergPreview
 else if(Cookie_ACC == Charts[i] && ACC_Chosen == 0) {
 Numba = "Cookie_ACC"
 ACC_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = ACCPreview
+}
+if(i == 1) {
+TheSecondImage.src = ACCPreview
+}
+if(i == 2) {
+TheThirdImage.src = ACCPreview
+}
 }
 else if(Cookie_SEC1 == Charts[i] && SEC1_Chosen == 0) {
 Numba = "Cookie_SEC1"
 SEC1_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = SEC1Preview
+}
+if(i == 1) {
+TheSecondImage.src = SEC1Preview
+}
+if(i == 2) {
+TheThirdImage.src = SEC1Preview
+}
 }
 else if(Cookie_SEC2 == Charts[i] && SEC2_Chosen == 0) {
 Numba = "Cookie_SEC2"
 SEC2_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = SEC1Preview
+}
+if(i == 1) {
+TheSecondImage.src = SEC1Preview
+}
+if(i == 2) {
+TheThirdImage.src = SEC1Preview
+}
 }
 else if(Cookie_SEC3 == Charts[i] && SEC3_Chosen == 0) {
 Numba = "Cookie_SEC3"
 SEC3_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = SEC1Preview
+}
+if(i == 1) {
+TheSecondImage.src = SEC1Preview
+}
+if(i == 2) {
+TheThirdImage.src = SEC1Preview
+}
 }
 else if(Cookie_CBK1 == Charts[i] && CBK1_Chosen == 0) {
 Numba = "Cookie_CBK1"
 CBK1_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = CBK1Preview
+}
+if(i == 1) {
+TheSecondImage.src = CBK1Preview
+}
+if(i == 2) {
+TheThirdImage.src = CBK1Preview
+}
 }
 else if(Cookie_CBK2 == Charts[i] && CBK2_Chosen == 0) {
 Numba = "Cookie_CBK2"
 CBK2_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = CBK1Preview
+}
+if(i == 1) {
+TheSecondImage.src = CBK1Preview
+}
+if(i == 2) {
+TheThirdImage.src = CBK1Preview
+}
 }
 else if(Cookie_TheFan1 == Charts[i] && TheFan1_Chosen == 0) {
 Numba = "Cookie_TheFan1"
 TheFan1_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = TheFan1Preview
+}
+if(i == 1) {
+TheSecondImage.src = TheFan1Preview
+}
+if(i == 2) {
+TheThirdImage.src = TheFan1Preview
+}
 }
 else if(Cookie_TheFan2 == Charts[i] && TheFan2_Chosen == 0) {
 Numba = "Cookie_TheFan2"
 TheFan2_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = TheFan2Preview
+}
+if(i == 1) {
+TheSecondImage.src = TheFan2Preview
+}
+if(i == 2) {
+TheThirdImage.src = TheFan2Preview
+}
 }
 else if(Cookie_ESPN3 == Charts[i] && ESPN3_Chosen == 0) {
 Numba = "Cookie_ESPN3"
 ESPN3_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = ESPN3Preview
+}
+if(i == 1) {
+TheSecondImage.src = ESPN3Preview
+}
+if(i == 2) {
+TheThirdImage.src = ESPN3Preview
+}
 }
 else if(Cookie_Daystar == Charts[i] && Daystar_Chosen == 0) {
 Numba = "Cookie_Daystar"
 Daystar_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = DaystarPreview
+}
+if(i == 1) {
+TheSecondImage.src = DaystarPreview
+}
+if(i == 2) {
+TheThirdImage.src = DaystarPreview
+}
 }
 else if(Cookie_CBKHD == Charts[i] && CBKHD_Chosen == 0) {
 Numba = "Cookie_CBKHD"
 CBKHD_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = CBK1Preview
+}
+if(i == 1) {
+TheSecondImage.src = CBK1Preview
+}
+if(i == 2) {
+TheThirdImage.src = CBK1Preview
+}
 }
 else if(Cookie_BYUTV == Charts[i] && BYUTV_Chosen == 0) {
 Numba = "Cookie_BYUTV"
 BYUTV_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = BYUTVPreview
+}
+if(i == 1) {
+TheSecondImage.src = BYUTVPreview
+}
+if(i == 2) {
+TheThirdImage.src = BYUTVPreview
+}
 }
 else if(Cookie_BYUTVIHD == Charts[i] && BYUTVIHD_Chosen == 0) {
 Numba = "Cookie_BYUTVIHD"
 BYUTVIHD_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = BYUTVPreview
+}
+if(i == 1) {
+TheSecondImage.src = BYUTVPreview
+}
+if(i == 2) {
+TheThirdImage.src = BYUTVPreview
+}
 }
 else if(Cookie_VEVO == Charts[i] && VEVO_Chosen == 0) {
 Numba = "Cookie_VEVO"
 VEVO_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = VEVOPreview
+}
+if(i == 1) {
+TheSecondImage.src = VEVOPreview
+}
+if(i == 2) {
+TheThirdImage.src = VEVOPreview
+}
 }
 else if(Cookie_VEVO2 == Charts[i] && VEVO2_Chosen == 0) {
 Numba = "Cookie_VEVO2"
 VEVO2_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = VEVO2Preview
+}
+if(i == 1) {
+TheSecondImage.src = VEVO2Preview
+}
+if(i == 2) {
+TheThirdImage.src = VEVO2Preview
+}
 }
 else if(Cookie_VEVO3 == Charts[i] && VEVO3_Chosen == 0) {
 Numba = "Cookie_VEVO3"
 VEVO3_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = VEVO3Preview
+}
+if(i == 1) {
+TheSecondImage.src = VEVO3Preview
+}
+if(i == 2) {
+TheThirdImage.src = VEVO3Preview
+}
 }
 else if(Cookie_RadioU == Charts[i] && RadioU_Chosen == 0) {
 Numba = "Cookie_RadioU"
 RadioU_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = RadioUPreview
+}
+if(i == 1) {
+TheSecondImage.src = RadioUPreview
+}
+if(i == 2) {
+TheThirdImage.src = RadioUPreview
+}
 }
 else if(Cookie_Spirit == Charts[i] && Spirit_Chosen == 0) {
 Numba = "Cookie_Spirit"
 Spirit_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = SpiritPreview
+}
+if(i == 1) {
+TheSecondImage.src = SpiritPreview
+}
+if(i == 2) {
+TheThirdImage.src = SpiritPreview
+}
 }
 else if(Cookie_Family == Charts[i] && Family_Chosen == 0) {
 Numba = "Cookie_Family"
 Family_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = FamilyPreview
+}
+if(i == 1) {
+TheSecondImage.src = FamilyPreview
+}
+if(i == 2) {
+TheThirdImage.src = FamilyPreview
+}
 }
 else if(Cookie_Rap == Charts[i] && Rap_Chosen == 0) {
 Numba = "Cookie_Rap"
 Rap_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = RapPreview
+}
+if(i == 1) {
+TheSecondImage.src = RapPreview
+}
+if(i == 2) {
+TheThirdImage.src = RapPreview
+}
 }
 Numbar[i] = Numba
 CurrentNumber = i + 1
