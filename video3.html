@@ -3155,6 +3155,177 @@ Trackin = parseInt(getCookie(CurrentChannel)) + 1
 if(getCookie(CurrentChannel) == undefined) {
 Trackin = 1
 }
+function SetImage(Obj, space) {
+console.error(Numbar)
+BigGuide = document.getElementById("WholeGuide")
+BigGuideShown = document.getElementById("WholeGuide-show")
+FirstSquare = document.getElementById("FirstSquare-hidden")
+FirstSquareShown = document.getElementById("FirstSquare")
+
+FirstImage = document.getElementById("FirstImage-hidden")
+FirstImageShown = document.getElementById("FirstImage")
+
+FirstText = document.getElementById("FirstText-hidden")
+FirstTextShown = document.getElementById("FirstText")
+
+SecondSquare = document.getElementById("SecondSquare-hidden")
+SecondSquareShown = document.getElementById("SecondSquare")
+
+SecondImage = document.getElementById("SecondImage-hidden")
+SecondImageShown = document.getElementById("SecondImage")
+
+SecondText = document.getElementById("SecondText-hidden")
+SecondTextShown = document.getElementById("SecondText")
+
+ThirdSquare = document.getElementById("ThirdSquare-hidden")
+ThirdSquareShown = document.getElementById("ThirdSquare")
+
+ThirdImage = document.getElementById("ThirdImage-hidden")
+ThirdImageShown = document.getElementById("ThirdImage")
+
+ThirdText = document.getElementById("ThirdText-hidden")
+ThirdTextShown = document.getElementById("ThirdText")
+
+SmallSquare1 = document.getElementById("SmallSquare1-hidden")
+SmallSquare1Shown = document.getElementById("SmallSquare1")
+
+SmallImage1 = document.getElementById("SmallImage1-hidden")
+SmallImage1Shown = document.getElementById("SmallImage1")
+if(SmallImage1) {
+TheSmallImage1 = SmallImage1
+}
+else {
+TheSmallImage1 = SmallImage1Shown
+}
+SmallText1 = document.getElementById("SmallText1-hidden")
+SmallText1Shown = document.getElementById("SmallText1")
+
+SmallSquare2 = document.getElementById("SmallSquare2-hidden")
+SmallSquare2Shown = document.getElementById("SmallSquare2")
+
+SmallImage2 = document.getElementById("SmallImage2-hidden")
+SmallImage2Shown = document.getElementById("SmallImage2")
+if(SmallImage2) {
+TheSmallImage2 = SmallImage2
+}
+else {
+TheSmallImage2 = SmallImage2Shown
+}
+SmallText2 = document.getElementById("SmallText2-hidden")
+SmallText2Shown = document.getElementById("SmallText2")
+
+SmallSquare3 = document.getElementById("SmallSquare3-hidden")
+SmallSquare3Shown = document.getElementById("SmallSquare3")
+
+SmallImage3 = document.getElementById("SmallImage3-hidden")
+SmallImage3Shown = document.getElementById("SmallImage3")
+if(SmallImage3) {
+TheSmallImage3 = SmallImage3
+}
+else {
+TheSmallImage3 = SmallImage3Shown
+}
+SmallText3 = document.getElementById("SmallText3-hidden")
+SmallText3Shown = document.getElementById("SmallText3")
+
+SmallSquare4 = document.getElementById("SmallSquare4-hidden")
+SmallSquare4Shown = document.getElementById("SmallSquare4")
+
+SmallImage4 = document.getElementById("SmallImage4-hidden")
+SmallImage4Shown = document.getElementById("SmallImage4")
+if(SmallImage4) {
+TheSmallImage4 = SmallImage4
+}
+else {
+TheSmallImage4 = SmallImage4Shown
+}
+SmallText4 = document.getElementById("SmallText4-hidden")
+SmallText4Shown = document.getElementById("SmallText4")
+
+SmallSquare5 = document.getElementById("SmallSquare5-hidden")
+SmallSquare5Shown = document.getElementById("SmallSquare5")
+
+SmallImage5 = document.getElementById("SmallImage5-hidden")
+SmallImage5Shown = document.getElementById("SmallImage5")
+if(SmallImage5) {
+TheSmallImage5 = SmallImage5
+}
+else {
+TheSmallImage5 = SmallImage5Shown
+}
+SmallText5 = document.getElementById("SmallText5-hidden")
+SmallText5Shown = document.getElementById("SmallText5")
+
+SmallSquare6 = document.getElementById("SmallSquare6-hidden")
+SmallSquare6Shown = document.getElementById("SmallSquare6")
+
+SmallImage6 = document.getElementById("SmallImage6-hidden")
+SmallImage6Shown = document.getElementById("SmallImage6")
+if(SmallImage6) {
+TheSmallImage6 = SmallImage6
+}
+else {
+TheSmallImage6 = SmallImage6Shown
+}
+SmallText6 = document.getElementById("SmallText6-hidden")
+SmallText6Shown = document.getElementById("SmallText6")
+
+FirstRightPic = document.getElementById("FirstRightPic-hidden")
+FirstRightPicShown = document.getElementById("FirstRightPic")
+
+FirstLeftPic = document.getElementById("FirstLeftPic-hidden")
+FirstLeftPicShown = document.getElementById("FirstLeftPic")
+
+if(FirstImage) {
+TheFirstImage = FirstImage
+}
+else {
+TheFirstImage = FirstImageShown
+}
+
+if(SecondImage) {
+TheSecondImage = SecondImage
+}
+else {
+TheSecondImage = SecondImageShown
+}
+
+if(ThirdImage) {
+TheThirdImage = ThirdImage
+}
+else {
+TheThirdImage = ThirdImageShown
+}
+if(space == "1st") {
+TheFirstImage.src = Obj;
+}
+if(space == "2nd") {
+TheSecondImage.src = Obj;
+}
+if(space == "3rd") {
+TheThirdImage.src = Obj;
+}
+if(space == "4th") {
+SmallImage1.src = Obj;
+}
+if(space == "5th") {
+SmallImage2.src = Obj;
+}
+if(space == "6th") {
+SmallImage3.src = Obj;
+}
+if(space == "7th") {
+SmallImage4.src = Obj;
+}
+if(space == "8th") {
+SmallImage5.src = Obj;
+}
+if(space == "9th") {
+SmallImage6.src = Obj;
+}
+//console.error("SetImage ran successfully")
+console.error("Setting " + Obj + " as " + space)
+}
 document.cookie = CurrentChannel + "=" + Trackin
 //console.log("The current channel is " + CurrentChannel)
 //console.log(Trackin)
@@ -3230,8 +3401,11 @@ Cookie_Family = getCookie("Family")
 Cookie_Rap = getCookie("KHZTV")
 //Charts
 Cookies = [Cookie_ABC_News, Cookie_ABC_News_HD, Cookie_ABC_News_2, Cookie_ABC_News_HD_2, Cookie_ABC_News_3, Cookie_ABC_News_HD_3, Cookie_ABC_News_4, Cookie_ABC_News_HD_4, Cookie_ABC_News_5, Cookie_ABC_News_HD_5, Cookie_CBSN, Cookie_CBSNHD, Cookie_Newsmax, Cookie_Newsmax_HD, Cookie_Shift, Cookie_Shift_HD, Cookie_msnbc, Cookie_NBC_News, Cookie_NBC_News_HD, Cookie_France_24, Cookie_RT_News, Cookie_RT_News_HD, Cookie_CBN_News, Cookie_Fox_News_Talk, Cookie_FNC1, Cookie_FNC2, Cookie_FNC3, Cookie_FNC4, Cookie_FNC5, Cookie_FNC6, Cookie_CNNDebate, Cookie_TWiT, Cookie_TWiT_alt, Cookie_TWiT_HD, Cookie_TWiT_alt_HD, Cookie_AFA, Cookie_TBN, Cookie_TCT, Cookie_TCT_Family, Cookie_TCT_Kids, Cookie_NRB, Cookie_JUCE, Cookie_JUCE_RU, Cookie_CHHTV, Cookie_YesTV, Cookie_Bloomberg, Cookie_ACC, Cookie_SEC1, Cookie_SEC2, Cookie_SEC3, Cookie_CBK1, Cookie_CBK2, Cookie_TheFan1, Cookie_TheFan2, Cookie_ESPN3, Cookie_Daystar, Cookie_CBKHD, Cookie_BYUTV, Cookie_BYUTVI, Cookie_BYUTVHD, Cookie_BYUTVIHD, Cookie_VEVO, Cookie_VEVO2, Cookie_VEVO3, Cookie_RadioU, Cookie_Spirit, Cookie_Family, Cookie_Rap]
+console.error("Cookies: " + Cookies)
 Charts = Cookies.sort(function(a, b){return b-a});
+console.error("Charts: " + Charts)
 for (var i = 0; i < 70; i++) {
+if(i == 0) {
 ABC_News_Chosen = 0
 ABC_News_HD_Chosen = 0
 ABC_News_2_Chosen = 0
@@ -3300,6 +3474,7 @@ RadioU_Chosen = 0
 Spirit_Chosen = 0
 Family_Chosen = 0
 Rap_Chosen = 0
+}
 if(FirstImage) {
 TheFirstImage = FirstImage
 }
@@ -3324,208 +3499,461 @@ if(Cookie_ABC_News == Charts[i] && ABC_News_Chosen == 0) {
 Numba = "ABC_News"
 ABC_News_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "3rd")
+}
+if(i == 3) {
+SetImage(ABC_NewsPreview, "4th")
+}
+if(i == 4) {
+SetImage(ABC_NewsPreview, "5th")
+}
+if(i == 5) {
+SetImage(ABC_NewsPreview, "6th")
+}
+if(i == 6) {
+SetImage(ABC_NewsPreview, "7th")
+}
+if(i == 7) {
+SetImage(ABC_NewsPreview, "8th")
+}
+if(i == 8) {
+SetImage(ABC_NewsPreview, "9th")
 }
 }
 else if(Cookie_ABC_News_HD == Charts[i] && ABC_News_HD_Chosen == 0) {
 Numba = "ABC_News_HD"
 ABC_News_HD_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "3rd")
+}
+if(i == 3) {
+SetImage(ABC_NewsPreview, "4th")
+}
+if(i == 4) {
+SetImage(ABC_NewsPreview, "5th")
+}
+if(i == 5) {
+SetImage(ABC_NewsPreview, "6th")
+}
+if(i == 6) {
+SetImage(ABC_NewsPreview, "7th")
+}
+if(i == 7) {
+SetImage(ABC_NewsPreview, "8th")
+}
+if(i == 8) {
+SetImage(ABC_NewsPreview, "9th")
 }
 }
 else if(Cookie_ABC_News_2 == Charts[i] && ABC_News_2_Chosen == 0) {
 Numba = "ABC_News_2"
 ABC_News_2_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = ABC_NewsPreview
+console.error(i)
+SetImage(ABC_NewsPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "3rd")
+}
+if(i == 3) {
+SetImage(ABC_NewsPreview, "4th")
+}
+if(i == 4) {
+SetImage(ABC_NewsPreview, "5th")
+}
+if(i == 5) {
+SetImage(ABC_NewsPreview, "6th")
+}
+if(i == 6) {
+SetImage(ABC_NewsPreview, "7th")
+}
+if(i == 7) {
+SetImage(ABC_NewsPreview, "8th")
+}
+if(i == 8) {
+SetImage(ABC_NewsPreview, "9th")
 }
 }
 else if(Cookie_ABC_News_HD_2 == Charts[i] && ABC_News_HD_2_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_2"
 ABC_News_HD_2_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "3rd")
+}
+if(i == 3) {
+SetImage(ABC_NewsPreview, "4th")
+}
+if(i == 4) {
+SetImage(ABC_NewsPreview, "5th")
+}
+if(i == 5) {
+SetImage(ABC_NewsPreview, "6th")
+}
+if(i == 6) {
+SetImage(ABC_NewsPreview, "7th")
+}
+if(i == 7) {
+SetImage(ABC_NewsPreview, "8th")
+}
+if(i == 8) {
+SetImage(ABC_NewsPreview, "9th")
 }
 }
 else if(Cookie_ABC_News_3 == Charts[i] && ABC_News_3_Chosen == 0) {
 Numba = "ABC_News_3"
 ABC_News_3_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "3rd")
+}
+if(i == 3) {
+SetImage(ABC_NewsPreview, "4th")
+}
+if(i == 4) {
+SetImage(ABC_NewsPreview, "5th")
+}
+if(i == 5) {
+SetImage(ABC_NewsPreview, "6th")
+}
+if(i == 6) {
+SetImage(ABC_NewsPreview, "7th")
+}
+if(i == 7) {
+SetImage(ABC_NewsPreview, "8th")
+}
+if(i == 8) {
+SetImage(ABC_NewsPreview, "9th")
 }
 }
 else if(Cookie_ABC_News_HD_3 == Charts[i] && ABC_News_HD_3_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_3"
 ABC_News_HD_3_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "3rd")
+}
+if(i == 3) {
+SetImage(ABC_NewsPreview, "4th")
+}
+if(i == 4) {
+SetImage(ABC_NewsPreview, "5th")
+}
+if(i == 5) {
+SetImage(ABC_NewsPreview, "6th")
+}
+if(i == 6) {
+SetImage(ABC_NewsPreview, "7th")
+}
+if(i == 7) {
+SetImage(ABC_NewsPreview, "8th")
+}
+if(i == 8) {
+SetImage(ABC_NewsPreview, "9th")
 }
 }
 else if(Cookie_ABC_News_4 == Charts[i] && ABC_News_4_Chosen == 0) {
 Numba = "ABC_News_4"
 ABC_News_4_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "3rd")
+}
+if(i == 3) {
+SetImage(ABC_NewsPreview, "4th")
+}
+if(i == 4) {
+SetImage(ABC_NewsPreview, "5th")
+}
+if(i == 5) {
+SetImage(ABC_NewsPreview, "6th")
+}
+if(i == 6) {
+SetImage(ABC_NewsPreview, "7th")
+}
+if(i == 7) {
+SetImage(ABC_NewsPreview, "8th")
+}
+if(i == 8) {
+SetImage(ABC_NewsPreview, "9th")
 }
 }
 else if(Cookie_ABC_News_HD_4 == Charts[i] && ABC_News_HD_4_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_4"
 ABC_News_HD_4_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "3rd")
+}
+if(i == 3) {
+SetImage(ABC_NewsPreview, "4th")
+}
+if(i == 4) {
+SetImage(ABC_NewsPreview, "5th")
+}
+if(i == 5) {
+SetImage(ABC_NewsPreview, "6th")
+}
+if(i == 6) {
+SetImage(ABC_NewsPreview, "7th")
+}
+if(i == 7) {
+SetImage(ABC_NewsPreview, "8th")
+}
+if(i == 8) {
+SetImage(ABC_NewsPreview, "9th")
 }
 }
 else if(Cookie_ABC_News_5 == Charts[i] && ABC_News_5_Chosen == 0) {
 Numba = "ABC_News_5"
 ABC_News_5_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "3rd")
+}
+if(i == 3) {
+SetImage(ABC_NewsPreview, "4th")
+}
+if(i == 4) {
+SetImage(ABC_NewsPreview, "5th")
+}
+if(i == 5) {
+SetImage(ABC_NewsPreview, "6th")
+}
+if(i == 6) {
+SetImage(ABC_NewsPreview, "7th")
+}
+if(i == 7) {
+SetImage(ABC_NewsPreview, "8th")
+}
+if(i == 8) {
+SetImage(ABC_NewsPreview, "9th")
 }
 }
 else if(Cookie_ABC_News_HD_5 == Charts[i] && ABC_News_HD_5_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_5"
 ABC_News_HD_5_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = ABC_NewsPreview
+SetImage(ABC_NewsPreview, "3rd")
+}
+if(i == 3) {
+SetImage(ABC_NewsPreview, "4th")
+}
+if(i == 4) {
+SetImage(ABC_NewsPreview, "5th")
+}
+if(i == 5) {
+SetImage(ABC_NewsPreview, "6th")
+}
+if(i == 6) {
+SetImage(ABC_NewsPreview, "7th")
+}
+if(i == 7) {
+SetImage(ABC_NewsPreview, "8th")
+}
+if(i == 8) {
+SetImage(ABC_NewsPreview, "9th")
 }
 }
 else if(Cookie_CBSN == Charts[i] && CBSN_Chosen == 0) {
 Numba = "Cookie_CBSN"
 CBSN_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = CBSNPreview
+SetImage(CBSNPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = CBSNPreview
+SetImage(CBSNPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = CBSNPreview
+SetImage(CBSNPreview, "3rd")
 }
 }
 else if(Cookie_CBSNHD == Charts[i] && CBSNHD_Chosen == 0) {
 Numba = "Cookie_CBSNHD"
 CBSNHD_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = CBSNPreview
+SetImage(CBSNPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = CBSNPreview
+SetImage(CBSNPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = CBSNPreview
+SetImage(CBSNPreview, "3rd")
+}
+if(i == 3) {
+SetImage(CBSNPreview, "4th")
+}
+if(i == 4) {
+SetImage(CBSNPreview, "5th")
+}
+if(i == 5) {
+SetImage(CBSNPreview, "6th")
+}
+if(i == 6) {
+SetImage(CBSNPreview, "7th")
+}
+if(i == 7) {
+SetImage(CBSNPreview, "8th")
+}
+if(i == 8) {
+SetImage(CBSNPreview, "9th")
 }
 }
 else if(Cookie_Newsmax == Charts[i] && Newsmax_Chosen == 0) {
 Numba = "Cookie_Newsmax"
 Newsmax_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = Newsmax_TVPreview
+SetImage(Newsmax_TVPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = Newsmax_TVPreview
+SetImage(Newsmax_TVPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = Newsmax_TVPreview
+SetImage(Newsmax_TVPreview, "3rd")
+}
+if(i == 3) {
+SetImage(Newsmax_TVPreview, "4th")
+}
+if(i == 4) {
+SetImage(Newsmax_TVPreview, "5th")
+}
+if(i == 5) {
+SetImage(Newsmax_TVPreview, "6th")
+}
+if(i == 6) {
+SetImage(Newsmax_TVPreview, "7th")
+}
+if(i == 7) {
+SetImage(Newsmax_TVPreview, "8th")
+}
+if(i == 8) {
+SetImage(Newsmax_TVPreview, "9th")
 }
 }
 else if(Cookie_Newsmax_HD == Charts[i] && Newsmax_HD_Chosen == 0) {
 Numba = "Cookie_Newsmax_HD"
 Newsmax_HD_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = Newsmax_TVPreview
+SetImage(Newsmax_TVPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = Newsmax_TVPreview
+SetImage(Newsmax_TVPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = Newsmax_TVPreview
+SetImage(Newsmax_TVPreview, "3rd")
+}
+if(i == 3) {
+SetImage(Newsmax_TVPreview, "4th")
+}
+if(i == 4) {
+SetImage(Newsmax_TVPreview, "5th")
+}
+if(i == 5) {
+SetImage(Newsmax_TVPreview, "6th")
+}
+if(i == 6) {
+SetImage(Newsmax_TVPreview, "7th")
+}
+if(i == 7) {
+SetImage(Newsmax_TVPreview, "8th")
+}
+if(i == 8) {
+SetImage(Newsmax_TVPreview, "9th")
 }
 }
 else if(Cookie_Shift == Charts[i] && Shift_Chosen == 0) {
 Numba = "Cookie_Shift"
 Shift_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = Shift_by_msnbcPreview
+SetImage(Shift_by_msnbcPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = Shift_by_msnbcPreview
+SetImage(Shift_by_msnbcPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = Shift_by_msnbcPreview
+SetImage(Shift_by_msnbcPreview, "3rd")
+}
+if(i == 3) {
+SetImage(Shift_by_msnbcPreview, "4th")
+}
+if(i == 4) {
+SetImage(Shift_by_msnbcPreview, "5th")
+}
+if(i == 5) {
+SetImage(Shift_by_msnbcPreview, "6th")
+}
+if(i == 6) {
+SetImage(Shift_by_msnbcPreview, "7th")
+}
+if(i == 7) {
+SetImage(Shift_by_msnbcPreview, "8th")
+}
+if(i == 8) {
+SetImage(Shift_by_msnbcPreview, "9th")
 }
 }
 else if(Cookie_Shift_HD == Charts[i] && Shift_HD_Chosen == 0) {
 Numba = "Cookie_Shift_HD"
 Shift_HD_Chosen = 1
 if(i == 0) {
-TheFirstImage.src = Shift_by_msnbcPreview
+SetImage(Shift_by_msnbcPreview, "1st")
 }
 if(i == 1) {
-TheSecondImage.src = Shift_by_msnbcPreview
+SetImage(Shift_by_msnbcPreview, "2nd")
 }
 if(i == 2) {
-TheThirdImage.src = Shift_by_msnbcPreview
+SetImage(Shift_by_msnbcPreview, "3rd")
 }
 }
 else if(Cookie_msnbc == Charts[i] && msnbc_Chosen == 0) {
@@ -3540,6 +3968,24 @@ TheSecondImage.src = msnbcPreview
 if(i == 2) {
 TheThirdImage.src = msnbcPreview
 }
+if(i == 3) {
+SetImage(msnbcPreview, "4th")
+}
+if(i == 4) {
+SetImage(msnbcPreview, "5th")
+}
+if(i == 5) {
+SetImage(msnbcPreview, "6th")
+}
+if(i == 6) {
+SetImage(msnbcPreview, "7th")
+}
+if(i == 7) {
+SetImage(msnbcPreview, "8th")
+}
+if(i == 8) {
+SetImage(msnbcPreview, "9th")
+}
 }
 else if(Cookie_NBC_News == Charts[i] && NBC_News_Chosen == 0) {
 Numba = "Cookie_NBC_News"
@@ -3552,6 +3998,24 @@ TheSecondImage.src = NBC_NewsPreview
 }
 if(i == 2) {
 TheThirdImage.src = NBC_NewsPreview
+}
+if(i == 3) {
+SetImage(NBC_NewsPreview, "4th")
+}
+if(i == 4) {
+SetImage(NBC_NewsPreview, "5th")
+}
+if(i == 5) {
+SetImage(NBC_NewsPreview, "6th")
+}
+if(i == 6) {
+SetImage(NBC_NewsPreview, "7th")
+}
+if(i == 7) {
+SetImage(NBC_NewsPreview, "8th")
+}
+if(i == 8) {
+SetImage(NBC_NewsPreview, "9th")
 }
 }
 else if(Cookie_NBC_News_HD == Charts[i] && NBC_News_HD_Chosen == 0) {
@@ -3566,6 +4030,24 @@ TheSecondImage.src = NBC_NewsPreview
 if(i == 2) {
 TheThirdImage.src = NBC_NewsPreview
 }
+if(i == 3) {
+SetImage(NBC_NewsPreview, "4th")
+}
+if(i == 4) {
+SetImage(NBC_NewsPreview, "5th")
+}
+if(i == 5) {
+SetImage(NBC_NewsPreview, "6th")
+}
+if(i == 6) {
+SetImage(NBC_NewsPreview, "7th")
+}
+if(i == 7) {
+SetImage(NBC_NewsPreview, "8th")
+}
+if(i == 8) {
+SetImage(NBC_NewsPreview, "9th")
+}
 }
 else if(Cookie_France_24 == Charts[i] && France_24_Chosen == 0) {
 Numba = "Cookie_France_24"
@@ -3578,6 +4060,24 @@ TheSecondImage.src = France_24Preview
 }
 if(i == 2) {
 TheThirdImage.src = France_24Preview
+}
+if(i == 3) {
+SetImage(France_24Preview, "4th")
+}
+if(i == 4) {
+SetImage(France_24Preview, "5th")
+}
+if(i == 5) {
+SetImage(France_24Preview, "6th")
+}
+if(i == 6) {
+SetImage(France_24Preview, "7th")
+}
+if(i == 7) {
+SetImage(France_24Preview, "8th")
+}
+if(i == 8) {
+SetImage(France_24Preview, "9th")
 }
 }
 else if(Cookie_RT_News == Charts[i] && RT_News_Chosen == 0) {
@@ -3592,6 +4092,24 @@ TheSecondImage.src = RT_NewsPreview
 if(i == 2) {
 TheThirdImage.src = RT_NewsPreview
 }
+if(i == 3) {
+SetImage(RT_NewsPreview, "4th")
+}
+if(i == 4) {
+SetImage(RT_NewsPreview, "5th")
+}
+if(i == 5) {
+SetImage(RT_NewsPreview, "6th")
+}
+if(i == 6) {
+SetImage(RT_NewsPreview, "7th")
+}
+if(i == 7) {
+SetImage(RT_NewsPreview, "8th")
+}
+if(i == 8) {
+SetImage(RT_NewsPreview, "9th")
+}
 }
 else if(Cookie_RT_News_HD == Charts[i] && RT_News_HD_Chosen == 0) {
 Numba = "Cookie_RT_News_HD"
@@ -3604,6 +4122,24 @@ TheSecondImage.src = RT_NewsPreview
 }
 if(i == 2) {
 TheThirdImage.src = RT_NewsPreview
+}
+if(i == 3) {
+SetImage(RT_NewsPreview, "4th")
+}
+if(i == 4) {
+SetImage(RT_NewsPreview, "5th")
+}
+if(i == 5) {
+SetImage(RT_NewsPreview, "6th")
+}
+if(i == 6) {
+SetImage(RT_NewsPreview, "7th")
+}
+if(i == 7) {
+SetImage(RT_NewsPreview, "8th")
+}
+if(i == 8) {
+SetImage(RT_NewsPreview, "9th")
 }
 }
 else if(Cookie_CBN_News == Charts[i] && CBN_News_Chosen == 0) {
@@ -3618,6 +4154,24 @@ TheSecondImage.src = CBN_NewsPreview
 if(i == 2) {
 TheThirdImage.src = CBN_NewsPreview
 }
+if(i == 3) {
+SetImage(CBN_NewsPreview, "4th")
+}
+if(i == 4) {
+SetImage(CBN_NewsPreview, "5th")
+}
+if(i == 5) {
+SetImage(CBN_NewsPreview, "6th")
+}
+if(i == 6) {
+SetImage(CBN_NewsPreview, "7th")
+}
+if(i == 7) {
+SetImage(CBN_NewsPreview, "8th")
+}
+if(i == 8) {
+SetImage(CBN_NewsPreview, "9th")
+}
 }
 else if(Cookie_Fox_News_Talk == Charts[i] && Fox_News_Talk_Chosen == 0) {
 Numba = "Cookie_Fox_News_Talk"
@@ -3630,6 +4184,24 @@ TheSecondImage.src = Fox_News_TalkPreview
 }
 if(i == 2) {
 TheThirdImage.src = Fox_News_TalkPreview
+}
+if(i == 3) {
+SetImage(Fox_News_TalkPreview, "4th")
+}
+if(i == 4) {
+SetImage(Fox_News_TalkPreview, "5th")
+}
+if(i == 5) {
+SetImage(Fox_News_TalkPreview, "6th")
+}
+if(i == 6) {
+SetImage(Fox_News_TalkPreview, "7th")
+}
+if(i == 7) {
+SetImage(Fox_News_TalkPreview, "8th")
+}
+if(i == 8) {
+SetImage(Fox_News_TalkPreview, "9th")
 }
 }
 else if(Cookie_FNC1 == Charts[i] && FNC1_Chosen == 0) {
@@ -3644,6 +4216,24 @@ TheSecondImage.src = FNC1Preview
 if(i == 2) {
 TheThirdImage.src = FNC1Preview
 }
+if(i == 3) {
+SetImage(Fox_News_TalkPreview, "4th")
+}
+if(i == 4) {
+SetImage(Fox_News_TalkPreview, "5th")
+}
+if(i == 5) {
+SetImage(Fox_News_TalkPreview, "6th")
+}
+if(i == 6) {
+SetImage(Fox_News_TalkPreview, "7th")
+}
+if(i == 7) {
+SetImage(Fox_News_TalkPreview, "8th")
+}
+if(i == 8) {
+SetImage(Fox_News_TalkPreview, "9th")
+}
 }
 else if(Cookie_FNC2 == Charts[i] && FNC2_Chosen == 0) {
 Numba = "Cookie_FNC2"
@@ -3656,6 +4246,24 @@ TheSecondImage.src = FNC1Preview
 }
 if(i == 2) {
 TheThirdImage.src = FNC1Preview
+}
+if(i == 3) {
+SetImage(FNC1Preview, "4th")
+}
+if(i == 4) {
+SetImage(FNC1Preview, "5th")
+}
+if(i == 5) {
+SetImage(FNC1Preview, "6th")
+}
+if(i == 6) {
+SetImage(FNC1Preview, "7th")
+}
+if(i == 7) {
+SetImage(FNC1Preview, "8th")
+}
+if(i == 8) {
+SetImage(FNC1Preview, "9th")
 }
 }
 else if(Cookie_FNC3 == Charts[i] && FNC3_Chosen == 0) {
@@ -3670,6 +4278,24 @@ TheSecondImage.src = FNC1Preview
 if(i == 2) {
 TheThirdImage.src = FNC1Preview
 }
+if(i == 3) {
+SetImage(FNC1Preview, "4th")
+}
+if(i == 4) {
+SetImage(FNC1Preview, "5th")
+}
+if(i == 5) {
+SetImage(FNC1Preview, "6th")
+}
+if(i == 6) {
+SetImage(FNC1Preview, "7th")
+}
+if(i == 7) {
+SetImage(FNC1Preview, "8th")
+}
+if(i == 8) {
+SetImage(FNC1Preview, "9th")
+}
 }
 else if(Cookie_FNC4 == Charts[i] && FNC4_Chosen == 0) {
 Numba = "Cookie_FNC4"
@@ -3682,6 +4308,24 @@ TheSecondImage.src = FNC1Preview
 }
 if(i == 2) {
 TheThirdImage.src = FNC1Preview
+}
+if(i == 3) {
+SetImage(FNC1Preview, "4th")
+}
+if(i == 4) {
+SetImage(FNC1Preview, "5th")
+}
+if(i == 5) {
+SetImage(FNC1Preview, "6th")
+}
+if(i == 6) {
+SetImage(FNC1Preview, "7th")
+}
+if(i == 7) {
+SetImage(FNC1Preview, "8th")
+}
+if(i == 8) {
+SetImage(FNC1Preview, "9th")
 }
 }
 else if(Cookie_FNC5 == Charts[i] && FNC5_Chosen == 0) {
@@ -3696,6 +4340,24 @@ TheSecondImage.src = FNC1Preview
 if(i == 2) {
 TheThirdImage.src = FNC1Preview
 }
+if(i == 3) {
+SetImage(FNC1Preview, "4th")
+}
+if(i == 4) {
+SetImage(FNC1Preview, "5th")
+}
+if(i == 5) {
+SetImage(FNC1Preview, "6th")
+}
+if(i == 6) {
+SetImage(FNC1Preview, "7th")
+}
+if(i == 7) {
+SetImage(FNC1Preview, "8th")
+}
+if(i == 8) {
+SetImage(FNC1Preview, "9th")
+}
 }
 else if(Cookie_FNC6 == Charts[i] && FNC6_Chosen == 0) {
 Numba = "Cookie_FNC6"
@@ -3708,6 +4370,24 @@ TheSecondImage.src = FNC1Preview
 }
 if(i == 2) {
 TheThirdImage.src = FNC1Preview
+}
+if(i == 3) {
+SetImage(FNC1Preview, "4th")
+}
+if(i == 4) {
+SetImage(FNC1Preview, "5th")
+}
+if(i == 5) {
+SetImage(FNC1Preview, "6th")
+}
+if(i == 6) {
+SetImage(FNC1Preview, "7th")
+}
+if(i == 7) {
+SetImage(FNC1Preview, "8th")
+}
+if(i == 8) {
+SetImage(FNC1Preview, "9th")
 }
 }
 else if(Cookie_CNNDebate == Charts[i] && CNNDebate_Chosen == 0) {
@@ -3722,6 +4402,24 @@ TheSecondImage.src = CNNDebatePreview
 if(i == 2) {
 TheThirdImage.src = CNNDebatePreview
 }
+if(i == 3) {
+SetImage(CNNDebatePreview, "4th")
+}
+if(i == 4) {
+SetImage(CNNDebatePreview, "5th")
+}
+if(i == 5) {
+SetImage(CNNDebatePreview, "6th")
+}
+if(i == 6) {
+SetImage(CNNDebatePreview, "7th")
+}
+if(i == 7) {
+SetImage(CNNDebatePreview, "8th")
+}
+if(i == 8) {
+SetImage(CNNDebatePreview, "9th")
+}
 }
 else if(Cookie_TWiT == Charts[i] && TWiT_Chosen == 0) {
 Numba = "Cookie_TWiT"
@@ -3734,6 +4432,24 @@ TheSecondImage.src = TWiTPreview
 }
 if(i == 2) {
 TheThirdImage.src = TWiTPreview
+}
+if(i == 3) {
+SetImage(TWiTPreview, "4th")
+}
+if(i == 4) {
+SetImage(TWiTPreview, "5th")
+}
+if(i == 5) {
+SetImage(TWiTPreview, "6th")
+}
+if(i == 6) {
+SetImage(TWiTPreview, "7th")
+}
+if(i == 7) {
+SetImage(TWiTPreview, "8th")
+}
+if(i == 8) {
+SetImage(TWiTPreview, "9th")
 }
 }
 else if(Cookie_TWiT_alt == Charts[i] && TWiT_alt_Chosen == 0) {
@@ -3748,6 +4464,24 @@ TheSecondImage.src = TWiTPreview
 if(i == 2) {
 TheThirdImage.src = TWiTPreview
 }
+if(i == 3) {
+SetImage(TWiTPreview, "4th")
+}
+if(i == 4) {
+SetImage(TWiTPreview, "5th")
+}
+if(i == 5) {
+SetImage(TWiTPreview, "6th")
+}
+if(i == 6) {
+SetImage(TWiTPreview, "7th")
+}
+if(i == 7) {
+SetImage(TWiTPreview, "8th")
+}
+if(i == 8) {
+SetImage(TWiTPreview, "9th")
+}
 }
 else if(Cookie_TWiT_HD == Charts[i] && TWiT_HD_Chosen == 0) {
 Numba = "Cookie_TWiT_HD"
@@ -3760,6 +4494,24 @@ TheSecondImage.src = TWiTPreview
 }
 if(i == 2) {
 TheThirdImage.src = TWiTPreview
+}
+if(i == 3) {
+SetImage(TWiTPreview, "4th")
+}
+if(i == 4) {
+SetImage(TWiTPreview, "5th")
+}
+if(i == 5) {
+SetImage(TWiTPreview, "6th")
+}
+if(i == 6) {
+SetImage(TWiTPreview, "7th")
+}
+if(i == 7) {
+SetImage(TWiTPreview, "8th")
+}
+if(i == 8) {
+SetImage(TWiTPreview, "9th")
 }
 }
 else if(Cookie_TWiT_alt_HD == Charts[i] && TWiT_alt_HD_Chosen == 0) {
@@ -3774,6 +4526,24 @@ TheSecondImage.src = TWiTPreview
 if(i == 2) {
 TheThirdImage.src = TWiTPreview
 }
+if(i == 3) {
+SetImage(TWiTPreview, "4th")
+}
+if(i == 4) {
+SetImage(TWiTPreview, "5th")
+}
+if(i == 5) {
+SetImage(TWiTPreview, "6th")
+}
+if(i == 6) {
+SetImage(TWiTPreview, "7th")
+}
+if(i == 7) {
+SetImage(TWiTPreview, "8th")
+}
+if(i == 8) {
+SetImage(TWiTPreview, "9th")
+}
 }
 else if(Cookie_AFA == Charts[i] && AFA_Chosen == 0) {
 Numba = "Cookie_AFA"
@@ -3786,6 +4556,24 @@ TheSecondImage.src = AFAPreview
 }
 if(i == 2) {
 TheThirdImage.src = AFAPreview
+}
+if(i == 3) {
+SetImage(AFAPreview, "4th")
+}
+if(i == 4) {
+SetImage(AFAPreview, "5th")
+}
+if(i == 5) {
+SetImage(AFAPreview, "6th")
+}
+if(i == 6) {
+SetImage(AFAPreview, "7th")
+}
+if(i == 7) {
+SetImage(AFAPreview, "8th")
+}
+if(i == 8) {
+SetImage(AFAPreview, "9th")
 }
 }
 else if(Cookie_TBN == Charts[i] && TBN_Chosen == 0) {
@@ -3800,6 +4588,24 @@ TheSecondImage.src = TBNPreview
 if(i == 2) {
 TheThirdImage.src = TBNPreview
 }
+if(i == 3) {
+SetImage(TBNPreview, "4th")
+}
+if(i == 4) {
+SetImage(TBNPreview, "5th")
+}
+if(i == 5) {
+SetImage(TBNPreview, "6th")
+}
+if(i == 6) {
+SetImage(TBNPreview, "7th")
+}
+if(i == 7) {
+SetImage(TBNPreview, "8th")
+}
+if(i == 8) {
+SetImage(TBNPreview, "9th")
+}
 }
 else if(Cookie_TCT == Charts[i] && TCT_Chosen == 0) {
 Numba = "Cookie_TCT"
@@ -3812,6 +4618,24 @@ TheSecondImage.src = TCTPreview
 }
 if(i == 2) {
 TheThirdImage.src = TCTPreview
+}
+if(i == 3) {
+SetImage(TCTPreview, "4th")
+}
+if(i == 4) {
+SetImage(TCTPreview, "5th")
+}
+if(i == 5) {
+SetImage(TCTPreview, "6th")
+}
+if(i == 6) {
+SetImage(TCTPreview, "7th")
+}
+if(i == 7) {
+SetImage(TCTPreview, "8th")
+}
+if(i == 8) {
+SetImage(TCTPreview, "9th")
 }
 }
 else if(Cookie_TCT_Kids == Charts[i] && TCT_Kids_Chosen == 0) {
@@ -3826,6 +4650,24 @@ TheSecondImage.src = TCT_KidsPreview
 if(i == 2) {
 TheThirdImage.src = TCT_KidsPreview
 }
+if(i == 3) {
+SetImage(TCT_KidsPreview, "4th")
+}
+if(i == 4) {
+SetImage(TCT_KidsPreview, "5th")
+}
+if(i == 5) {
+SetImage(TCT_KidsPreview, "6th")
+}
+if(i == 6) {
+SetImage(TCT_KidsPreview, "7th")
+}
+if(i == 7) {
+SetImage(TCT_KidsPreview, "8th")
+}
+if(i == 8) {
+SetImage(TCT_kidsPreview, "9th")
+}
 }
 else if(Cookie_NRB == Charts[i] && NRB_Chosen == 0) {
 Numba = "Cookie_NRB"
@@ -3838,6 +4680,24 @@ TheSecondImage.src = NRBPreview
 }
 if(i == 2) {
 TheThirdImage.src = NRBPreview
+}
+if(i == 3) {
+SetImage(NRBPreview, "4th")
+}
+if(i == 4) {
+SetImage(NRBPreview, "5th")
+}
+if(i == 5) {
+SetImage(NRBPreview, "6th")
+}
+if(i == 6) {
+SetImage(NRBPreview, "7th")
+}
+if(i == 7) {
+SetImage(NRBPreview, "8th")
+}
+if(i == 8) {
+SetImage(NRBPreview, "9th")
 }
 }
 else if(Cookie_JUCE == Charts[i] && NRB_Chosen == 0) {
@@ -3852,6 +4712,24 @@ TheSecondImage.src = JUCEPreview
 if(i == 2) {
 TheThirdImage.src = JUCEPreview
 }
+if(i == 3) {
+SetImage(JUCEPreview, "4th")
+}
+if(i == 4) {
+SetImage(JUCEPreview, "5th")
+}
+if(i == 5) {
+SetImage(JUCEPreview, "6th")
+}
+if(i == 6) {
+SetImage(JUCEPreview, "7th")
+}
+if(i == 7) {
+SetImage(JUCEPreview, "8th")
+}
+if(i == 8) {
+SetImage(JUCEPreview, "9th")
+}
 }
 else if(Cookie_JUCE_RU == Charts[i] && JUCE_RU_Chosen == 0) {
 Numba = "Cookie_JUCE_RU"
@@ -3864,6 +4742,24 @@ TheSecondImage.src = JUCE_RUPreview
 }
 if(i == 2) {
 TheThirdImage.src = JUCE_RUPreview
+}
+if(i == 3) {
+SetImage(JUCE_RuPreview, "4th")
+}
+if(i == 4) {
+SetImage(JUCE_RuPreview, "5th")
+}
+if(i == 5) {
+SetImage(JUCE_RuPreview, "6th")
+}
+if(i == 6) {
+SetImage(JUCE_RuPreview, "7th")
+}
+if(i == 7) {
+SetImage(JUCE_RuPreview, "8th")
+}
+if(i == 8) {
+SetImage(JUCE_RuPreview, "9th")
 }
 }
 else if(Cookie_CHHTV == Charts[i] && CHHTV_Chosen == 0) {
@@ -3878,6 +4774,24 @@ TheSecondImage.src = CHHTVPreview
 if(i == 2) {
 TheThirdImage.src = CHHTVPreview
 }
+if(i == 3) {
+SetImage(CHHTVPreview, "4th")
+}
+if(i == 4) {
+SetImage(CHHTVPreview, "5th")
+}
+if(i == 5) {
+SetImage(CHHTVPreview, "6th")
+}
+if(i == 6) {
+SetImage(CHHTVPreview, "7th")
+}
+if(i == 7) {
+SetImage(CHHTVPreview, "8th")
+}
+if(i == 8) {
+SetImage(CHHTVPreview, "9th")
+}
 }
 else if(Cookie_YesTV == Charts[i] && YesTV_Chosen == 0) {
 Numba = "Cookie_YesTV"
@@ -3890,6 +4804,24 @@ TheSecondImage.src = YesTVPreview
 }
 if(i == 2) {
 TheThirdImage.src = YesTVPreview
+}
+if(i == 3) {
+SetImage(YesTVPreview, "4th")
+}
+if(i == 4) {
+SetImage(YesTVPreview, "5th")
+}
+if(i == 5) {
+SetImage(YesTVPreview, "6th")
+}
+if(i == 6) {
+SetImage(YesTVPreview, "7th")
+}
+if(i == 7) {
+SetImage(YesTVPreview, "8th")
+}
+if(i == 8) {
+SetImage(YesTVPreview, "9th")
 }
 }
 else if(Cookie_Bloomberg == Charts[i] && Bloomberg_Chosen == 0) {
@@ -3904,6 +4836,24 @@ TheSecondImage.src = BloombergPreview
 if(i == 2) {
 TheThirdImage.src = BloombergPreview
 }
+if(i == 3) {
+SetImage(BloombergPreview, "4th")
+}
+if(i == 4) {
+SetImage(BloombergPreview, "5th")
+}
+if(i == 5) {
+SetImage(BloombergPreview, "6th")
+}
+if(i == 6) {
+SetImage(BloombergPreview, "7th")
+}
+if(i == 7) {
+SetImage(BloombergPreview, "8th")
+}
+if(i == 8) {
+SetImage(BloombergPreview, "9th")
+}
 }
 else if(Cookie_ACC == Charts[i] && ACC_Chosen == 0) {
 Numba = "Cookie_ACC"
@@ -3916,6 +4866,24 @@ TheSecondImage.src = ACCPreview
 }
 if(i == 2) {
 TheThirdImage.src = ACCPreview
+}
+if(i == 3) {
+SetImage(ACCPreview, "4th")
+}
+if(i == 4) {
+SetImage(ACCPreview, "5th")
+}
+if(i == 5) {
+SetImage(ACCPreview, "6th")
+}
+if(i == 6) {
+SetImage(ACCPreview, "7th")
+}
+if(i == 7) {
+SetImage(ACCPreview, "8th")
+}
+if(i == 8) {
+SetImage(ACCPreview, "9th")
 }
 }
 else if(Cookie_SEC1 == Charts[i] && SEC1_Chosen == 0) {
@@ -3930,6 +4898,24 @@ TheSecondImage.src = SEC1Preview
 if(i == 2) {
 TheThirdImage.src = SEC1Preview
 }
+if(i == 3) {
+SetImage(SEC1Preview, "4th")
+}
+if(i == 4) {
+SetImage(SEC1Preview, "5th")
+}
+if(i == 5) {
+SetImage(SEC1Preview, "6th")
+}
+if(i == 6) {
+SetImage(SEC1Preview, "7th")
+}
+if(i == 7) {
+SetImage(SEC1Preview, "8th")
+}
+if(i == 8) {
+SetImage(SEC1Preview, "9th")
+}
 }
 else if(Cookie_SEC2 == Charts[i] && SEC2_Chosen == 0) {
 Numba = "Cookie_SEC2"
@@ -3942,6 +4928,24 @@ TheSecondImage.src = SEC1Preview
 }
 if(i == 2) {
 TheThirdImage.src = SEC1Preview
+}
+if(i == 3) {
+SetImage(SEC1Preview, "4th")
+}
+if(i == 4) {
+SetImage(SEC1Preview, "5th")
+}
+if(i == 5) {
+SetImage(SEC1Preview, "6th")
+}
+if(i == 6) {
+SetImage(SEC1Preview, "7th")
+}
+if(i == 7) {
+SetImage(SEC1Preview, "8th")
+}
+if(i == 8) {
+SetImage(SEC1Preview, "9th")
 }
 }
 else if(Cookie_SEC3 == Charts[i] && SEC3_Chosen == 0) {
@@ -3956,6 +4960,24 @@ TheSecondImage.src = SEC1Preview
 if(i == 2) {
 TheThirdImage.src = SEC1Preview
 }
+if(i == 3) {
+SetImage(SEC1Preview, "4th")
+}
+if(i == 4) {
+SetImage(SEC1Preview, "5th")
+}
+if(i == 5) {
+SetImage(SEC1Preview, "6th")
+}
+if(i == 6) {
+SetImage(SEC1Preview, "7th")
+}
+if(i == 7) {
+SetImage(SEC1Preview, "8th")
+}
+if(i == 8) {
+SetImage(SEC1Preview, "9th")
+}
 }
 else if(Cookie_CBK1 == Charts[i] && CBK1_Chosen == 0) {
 Numba = "Cookie_CBK1"
@@ -3968,6 +4990,24 @@ TheSecondImage.src = CBK1Preview
 }
 if(i == 2) {
 TheThirdImage.src = CBK1Preview
+}
+if(i == 3) {
+SetImage(CBK1Preview, "4th")
+}
+if(i == 4) {
+SetImage(CBK1Preview, "5th")
+}
+if(i == 5) {
+SetImage(CBK1Preview, "6th")
+}
+if(i == 6) {
+SetImage(CBK1Preview, "7th")
+}
+if(i == 7) {
+SetImage(CBK1Preview, "8th")
+}
+if(i == 8) {
+SetImage(CBK1Preview, "9th")
 }
 }
 else if(Cookie_CBK2 == Charts[i] && CBK2_Chosen == 0) {
@@ -3982,6 +5022,24 @@ TheSecondImage.src = CBK1Preview
 if(i == 2) {
 TheThirdImage.src = CBK1Preview
 }
+if(i == 3) {
+SetImage(CBK1Preview, "4th")
+}
+if(i == 4) {
+SetImage(CBK1Preview, "5th")
+}
+if(i == 5) {
+SetImage(CBK1Preview, "6th")
+}
+if(i == 6) {
+SetImage(CBK1Preview, "7th")
+}
+if(i == 7) {
+SetImage(CBK1Preview, "8th")
+}
+if(i == 8) {
+SetImage(CBK1Preview, "9th")
+}
 }
 else if(Cookie_TheFan1 == Charts[i] && TheFan1_Chosen == 0) {
 Numba = "Cookie_TheFan1"
@@ -3994,6 +5052,24 @@ TheSecondImage.src = TheFan1Preview
 }
 if(i == 2) {
 TheThirdImage.src = TheFan1Preview
+}
+if(i == 3) {
+SetImage(TheFan1Preview, "4th")
+}
+if(i == 4) {
+SetImage(TheFan1Preview, "5th")
+}
+if(i == 5) {
+SetImage(TheFan1Preview, "6th")
+}
+if(i == 6) {
+SetImage(TheFan1Preview, "7th")
+}
+if(i == 7) {
+SetImage(TheFan1Preview, "8th")
+}
+if(i == 8) {
+SetImage(TheFan1Preview, "9th")
 }
 }
 else if(Cookie_TheFan2 == Charts[i] && TheFan2_Chosen == 0) {
@@ -4008,6 +5084,24 @@ TheSecondImage.src = TheFan2Preview
 if(i == 2) {
 TheThirdImage.src = TheFan2Preview
 }
+if(i == 3) {
+SetImage(TheFan2Preview, "4th")
+}
+if(i == 4) {
+SetImage(TheFan2Preview, "5th")
+}
+if(i == 5) {
+SetImage(TheFan2Preview, "6th")
+}
+if(i == 6) {
+SetImage(TheFan2Preview, "7th")
+}
+if(i == 7) {
+SetImage(TheFan2Preview, "8th")
+}
+if(i == 8) {
+SetImage(TheFan2Preview, "9th")
+}
 }
 else if(Cookie_ESPN3 == Charts[i] && ESPN3_Chosen == 0) {
 Numba = "Cookie_ESPN3"
@@ -4020,6 +5114,24 @@ TheSecondImage.src = ESPN3Preview
 }
 if(i == 2) {
 TheThirdImage.src = ESPN3Preview
+}
+if(i == 3) {
+SetImage(ESPN3Preview, "4th")
+}
+if(i == 4) {
+SetImage(ESPN3Preview, "5th")
+}
+if(i == 5) {
+SetImage(ESPN3Preview, "6th")
+}
+if(i == 6) {
+SetImage(ESPN3Preview, "7th")
+}
+if(i == 7) {
+SetImage(ESPN3Preview, "8th")
+}
+if(i == 8) {
+SetImage(ESPN3Preview, "9th")
 }
 }
 else if(Cookie_Daystar == Charts[i] && Daystar_Chosen == 0) {
@@ -4034,6 +5146,24 @@ TheSecondImage.src = DaystarPreview
 if(i == 2) {
 TheThirdImage.src = DaystarPreview
 }
+if(i == 3) {
+SetImage(DaystarPreview, "4th")
+}
+if(i == 4) {
+SetImage(DaystarPreview, "5th")
+}
+if(i == 5) {
+SetImage(DaystarPreview, "6th")
+}
+if(i == 6) {
+SetImage(DaystarPreview, "7th")
+}
+if(i == 7) {
+SetImage(DaystarPreview, "8th")
+}
+if(i == 8) {
+SetImage(DaystarPreview, "9th")
+}
 }
 else if(Cookie_CBKHD == Charts[i] && CBKHD_Chosen == 0) {
 Numba = "Cookie_CBKHD"
@@ -4046,6 +5176,24 @@ TheSecondImage.src = CBK1Preview
 }
 if(i == 2) {
 TheThirdImage.src = CBK1Preview
+}
+if(i == 3) {
+SetImage(CBK1Preview, "4th")
+}
+if(i == 4) {
+SetImage(CBK1Preview, "5th")
+}
+if(i == 5) {
+SetImage(CBK1Preview, "6th")
+}
+if(i == 6) {
+SetImage(CBK1Preview, "7th")
+}
+if(i == 7) {
+SetImage(CBK1Preview, "8th")
+}
+if(i == 8) {
+SetImage(CBK1Preview, "9th")
 }
 }
 else if(Cookie_BYUTV == Charts[i] && BYUTV_Chosen == 0) {
@@ -4060,6 +5208,24 @@ TheSecondImage.src = BYUTVPreview
 if(i == 2) {
 TheThirdImage.src = BYUTVPreview
 }
+if(i == 3) {
+SetImage(BYUTVPreview, "4th")
+}
+if(i == 4) {
+SetImage(BYUTVPreview, "5th")
+}
+if(i == 5) {
+SetImage(BYUTVPreview, "6th")
+}
+if(i == 6) {
+SetImage(BYUTVPreview, "7th")
+}
+if(i == 7) {
+SetImage(BYUTVPreview, "8th")
+}
+if(i == 8) {
+SetImage(BYUTVPreview, "9th")
+}
 }
 else if(Cookie_BYUTVIHD == Charts[i] && BYUTVIHD_Chosen == 0) {
 Numba = "Cookie_BYUTVIHD"
@@ -4072,6 +5238,24 @@ TheSecondImage.src = BYUTVPreview
 }
 if(i == 2) {
 TheThirdImage.src = BYUTVPreview
+}
+if(i == 3) {
+SetImage(BYUTVPreview, "4th")
+}
+if(i == 4) {
+SetImage(BYUTVPreview, "5th")
+}
+if(i == 5) {
+SetImage(BYUTVPreview, "6th")
+}
+if(i == 6) {
+SetImage(BYUTVPreview, "7th")
+}
+if(i == 7) {
+SetImage(BYUTVPreview, "8th")
+}
+if(i == 8) {
+SetImage(BYUTVPreview, "9th")
 }
 }
 else if(Cookie_VEVO == Charts[i] && VEVO_Chosen == 0) {
@@ -4086,6 +5270,24 @@ TheSecondImage.src = VEVOPreview
 if(i == 2) {
 TheThirdImage.src = VEVOPreview
 }
+if(i == 3) {
+SetImage(VEVOPreview, "4th")
+}
+if(i == 4) {
+SetImage(VEVOPreview, "5th")
+}
+if(i == 5) {
+SetImage(VEVOPreview, "6th")
+}
+if(i == 6) {
+SetImage(VEVOPreview, "7th")
+}
+if(i == 7) {
+SetImage(VEVOPreview, "8th")
+}
+if(i == 8) {
+SetImage(VEVOPreview, "9th")
+}
 }
 else if(Cookie_VEVO2 == Charts[i] && VEVO2_Chosen == 0) {
 Numba = "Cookie_VEVO2"
@@ -4098,6 +5300,24 @@ TheSecondImage.src = VEVO2Preview
 }
 if(i == 2) {
 TheThirdImage.src = VEVO2Preview
+}
+if(i == 3) {
+SetImage(VEVO2Preview, "4th")
+}
+if(i == 4) {
+SetImage(VEVO2Preview, "5th")
+}
+if(i == 5) {
+SetImage(VEVO2Preview, "6th")
+}
+if(i == 6) {
+SetImage(VEVO2Preview, "7th")
+}
+if(i == 7) {
+SetImage(VEVO2Preview, "8th")
+}
+if(i == 8) {
+SetImage(VEVO2Preview, "9th")
 }
 }
 else if(Cookie_VEVO3 == Charts[i] && VEVO3_Chosen == 0) {
@@ -4112,6 +5332,24 @@ TheSecondImage.src = VEVO3Preview
 if(i == 2) {
 TheThirdImage.src = VEVO3Preview
 }
+if(i == 3) {
+SetImage(VEVO3Preview, "4th")
+}
+if(i == 4) {
+SetImage(VEVO3Preview, "5th")
+}
+if(i == 5) {
+SetImage(VEVO3Preview, "6th")
+}
+if(i == 6) {
+SetImage(VEVO3Preview, "7th")
+}
+if(i == 7) {
+SetImage(VEVO3Preview, "8th")
+}
+if(i == 8) {
+SetImage(VEVO3Preview, "9th")
+}
 }
 else if(Cookie_RadioU == Charts[i] && RadioU_Chosen == 0) {
 Numba = "Cookie_RadioU"
@@ -4124,6 +5362,24 @@ TheSecondImage.src = RadioUPreview
 }
 if(i == 2) {
 TheThirdImage.src = RadioUPreview
+}
+if(i == 3) {
+SetImage(RadioUPreview, "4th")
+}
+if(i == 4) {
+SetImage(RadioUPreview, "5th")
+}
+if(i == 5) {
+SetImage(RadioUPreview, "6th")
+}
+if(i == 6) {
+SetImage(RadioUPreview, "7th")
+}
+if(i == 7) {
+SetImage(RadioUPreview, "8th")
+}
+if(i == 8) {
+SetImage(RadioUPreview, "9th")
 }
 }
 else if(Cookie_Spirit == Charts[i] && Spirit_Chosen == 0) {
@@ -4138,6 +5394,24 @@ TheSecondImage.src = SpiritPreview
 if(i == 2) {
 TheThirdImage.src = SpiritPreview
 }
+if(i == 3) {
+SetImage(SpiritPreview, "4th")
+}
+if(i == 4) {
+SetImage(SpiritPreview, "5th")
+}
+if(i == 5) {
+SetImage(SpiritPreview, "6th")
+}
+if(i == 6) {
+SetImage(SpiritPreview, "7th")
+}
+if(i == 7) {
+SetImage(SpiritPreview, "8th")
+}
+if(i == 8) {
+SetImage(SpiritPreview, "9th")
+}
 }
 else if(Cookie_Family == Charts[i] && Family_Chosen == 0) {
 Numba = "Cookie_Family"
@@ -4150,6 +5424,24 @@ TheSecondImage.src = FamilyPreview
 }
 if(i == 2) {
 TheThirdImage.src = FamilyPreview
+}
+if(i == 3) {
+SetImage(FamilyPreview, "4th")
+}
+if(i == 4) {
+SetImage(FamilyPreview, "5th")
+}
+if(i == 5) {
+SetImage(FamilyPreview, "6th")
+}
+if(i == 6) {
+SetImage(FamilyPreview, "7th")
+}
+if(i == 7) {
+SetImage(FamilyPreview, "8th")
+}
+if(i == 8) {
+SetImage(FamilyPreview, "9th")
 }
 }
 else if(Cookie_Rap == Charts[i] && Rap_Chosen == 0) {
@@ -4164,12 +5456,30 @@ TheSecondImage.src = RapPreview
 if(i == 2) {
 TheThirdImage.src = RapPreview
 }
+if(i == 3) {
+SetImage(RapPreview, "4th")
+}
+if(i == 4) {
+SetImage(RapPreview, "5th")
+}
+if(i == 5) {
+SetImage(RapPreview, "6th")
+}
+if(i == 6) {
+SetImage(RapPreview, "7th")
+}
+if(i == 7) {
+SetImage(RapPreview, "8th")
+}
+if(i == 8) {
+SetImage(RapPreview, "9th")
+}
 }
 Numbar[i] = Numba
 CurrentNumber = i + 1
 //console.log(i)
 //console.log(Numbar[i])
-console.log(Numbar[i] + " is channel number " + CurrentNumber + " with " + Charts[i] + " seconds watched.")
+//console.error(Numbar[i] + " is channel number " + CurrentNumber + " with " + Charts[i] + " seconds watched.")
 }
 }
 setInterval(Track, 1000);
