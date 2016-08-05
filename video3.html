@@ -1931,7 +1931,7 @@ Here Is Something. Else.
 Numbar = new Array;
 var show = 1
 var table = document.getElementsByTagName("table");
-var arrows = document.getElementsByTagName("table");
+var arrows = document.getElementsByTagName("arrows");
 right_arrow = document.getElementById("RightPic")
 left_arrow = document.getElementById("LeftPic")
 table = table[0]
@@ -2267,7 +2267,6 @@ video = document.getElementsByTagName("video");
 video = video[0]
 video.id = "video-on"
 }
-TuneTo(parseInt(getCookie("liptvnum"))/10)
 function TuneTo(num) {
 document.cookie="liptvnum=" + num * 10
 console.log(getCookie("liptvnum"))
@@ -2890,7 +2889,7 @@ FirstRightPicShown = document.getElementById("FirstRightPic")
 
 FirstLeftPic = document.getElementById("FirstLeftPic-hidden")
 FirstLeftPicShown = document.getElementById("FirstLeftPic")
-
+hideshow()
 if(BigGuide != null) {
 BigGuide.id = "WholeGuide-show"
 show = 1
@@ -3121,24 +3120,6 @@ if(SmallText6 != null) {
 SmallText6.id = "SmallText6"
 show = 0
 }
-
-if(FirstRightPicShown != null) {
-FirstRightPicShown.id = "FirstRightPic-hidden"
-show = 1
-}
-if(FirstRightPic != null) {
-FirstRightPic.id = "FirstRightPic"
-show = 0
-}
-if(FirstLeftPicShown != null) {
-FirstLeftPicShown.id = "FirstLeftPic-hidden"
-show = 1
-}
-if(FirstLeftPic != null) {
-FirstLeftPic.id = "FirstLeftPic"
-show = 0
-}
-//hideshow()
 console.log(show)
 }
 function FlipChannel() {
@@ -3471,7 +3452,8 @@ Cookie_VEVO3 = getCookie("VEVO3")
 Cookie_RadioU = getCookie("RadioU")
 Cookie_Spirit = getCookie("Spirit")
 Cookie_Family = getCookie("Family")
-Cookie_Rap = getCookie("KHZTV")
+Cookie_Rap = getCookie("Rap")
+Cookie_KHZTV = getCookie("KHZTV")
 //Charts
 Cookies = [Cookie_ABC_News, Cookie_ABC_News_HD, Cookie_ABC_News_2, Cookie_ABC_News_HD_2, Cookie_ABC_News_3, Cookie_ABC_News_HD_3, Cookie_ABC_News_4, Cookie_ABC_News_HD_4, Cookie_ABC_News_5, Cookie_ABC_News_HD_5, Cookie_CBSN, Cookie_CBSNHD, Cookie_Newsmax, Cookie_Newsmax_HD, Cookie_Shift, Cookie_Shift_HD, Cookie_msnbc, Cookie_NBC_News, Cookie_NBC_News_HD, Cookie_France_24, Cookie_RT_News, Cookie_RT_News_HD, Cookie_CBN_News, Cookie_Fox_News_Talk, Cookie_FNC1, Cookie_FNC2, Cookie_FNC3, Cookie_FNC4, Cookie_FNC5, Cookie_FNC6, Cookie_CNNDebate, Cookie_TWiT, Cookie_TWiT_alt, Cookie_TWiT_HD, Cookie_TWiT_alt_HD, Cookie_AFA, Cookie_TBN, Cookie_TCT, Cookie_TCT_Family, Cookie_TCT_Kids, Cookie_NRB, Cookie_JUCE, Cookie_JUCE_RU, Cookie_CHHTV, Cookie_YesTV, Cookie_Bloomberg, Cookie_ACC, Cookie_SEC1, Cookie_SEC2, Cookie_SEC3, Cookie_CBK1, Cookie_CBK2, Cookie_TheFan1, Cookie_TheFan2, Cookie_ESPN3, Cookie_Daystar, Cookie_CBKHD, Cookie_BYUTV, Cookie_BYUTVI, Cookie_BYUTVHD, Cookie_BYUTVIHD, Cookie_VEVO, Cookie_VEVO2, Cookie_VEVO3, Cookie_RadioU, Cookie_Spirit, Cookie_Family, Cookie_Rap]
 //console.error("Cookies: " + Cookies)
@@ -3541,7 +3523,7 @@ ESPN3_Chosen = 0
 Daystar_Chosen = 0
 CBKHD_Chosen = 0
 BYUTV_Chosen = 0
-BYUTVIHD_Chosen = 0
+BYUTVI_Chosen = 0
 VEVO_Chosen = 0
 VEVO2_Chosen = 0
 VEVO3_Chosen = 0
@@ -3549,6 +3531,7 @@ RadioU_Chosen = 0
 Spirit_Chosen = 0
 Family_Chosen = 0
 Rap_Chosen = 0
+KHZTV_Chosen = 0
 }
 if(FirstImage) {
 TheFirstImage = FirstImage
@@ -3605,31 +3588,31 @@ else if(Cookie_ABC_News_HD == Charts[i] && ABC_News_HD_Chosen == 0) {
 Numba = "ABC_News_HD"
 ABC_News_HD_Chosen = 1
 if(i == 0) {
-SetImage(ABC_NewsPreview, "1st")
+SetImage(ABC_NewsPreview, "1st", "ABC News Digital HD", 901)
 }
 if(i == 1) {
-SetImage(ABC_NewsPreview, "2nd")
+SetImage(ABC_NewsPreview, "2nd", "ABC News Digital HD", 901)
 }
 if(i == 2) {
-SetImage(ABC_NewsPreview, "3rd")
+SetImage(ABC_NewsPreview, "3rd", "ABC News Digital HD", 901)
 }
 if(i == 3) {
-SetImage(ABC_NewsPreview, "4th")
+SetImage(ABC_NewsPreview, "4th", "ABC News Digital HD", 901)
 }
 if(i == 4) {
-SetImage(ABC_NewsPreview, "5th")
+SetImage(ABC_NewsPreview, "5th", "ABC News Digital HD", 901)
 }
 if(i == 5) {
-SetImage(ABC_NewsPreview, "6th")
+SetImage(ABC_NewsPreview, "6th", "ABC News Digital HD", 901)
 }
 if(i == 6) {
-SetImage(ABC_NewsPreview, "7th")
+SetImage(ABC_NewsPreview, "7th", "ABC News Digital HD", 901)
 }
 if(i == 7) {
-SetImage(ABC_NewsPreview, "8th")
+SetImage(ABC_NewsPreview, "8th", "ABC News Digital HD", 901)
 }
 if(i == 8) {
-SetImage(ABC_NewsPreview, "9th")
+SetImage(ABC_NewsPreview, "9th", "ABC News Digital HD", 901)
 }
 }
 else if(Cookie_ABC_News_2 == Charts[i] && ABC_News_2_Chosen == 0) {
@@ -3668,31 +3651,31 @@ else if(Cookie_ABC_News_HD_2 == Charts[i] && ABC_News_HD_2_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_2"
 ABC_News_HD_2_Chosen = 1
 if(i == 0) {
-SetImage(ABC_NewsPreview, "1st")
+SetImage(ABC_NewsPreview, "1st", "ABC News Digital 2 HD", 901.2)
 }
 if(i == 1) {
-SetImage(ABC_NewsPreview, "2nd")
+SetImage(ABC_NewsPreview, "2nd", "ABC News Digital 2 HD", 901.2)
 }
 if(i == 2) {
-SetImage(ABC_NewsPreview, "3rd")
+SetImage(ABC_NewsPreview, "3rd", "ABC News Digital 2 HD", 901.2)
 }
 if(i == 3) {
-SetImage(ABC_NewsPreview, "4th")
+SetImage(ABC_NewsPreview, "4th", "ABC News Digital 2 HD", 901.2)
 }
 if(i == 4) {
-SetImage(ABC_NewsPreview, "5th")
+SetImage(ABC_NewsPreview, "5th", "ABC News Digital 2 HD", 901.2)
 }
 if(i == 5) {
-SetImage(ABC_NewsPreview, "6th")
+SetImage(ABC_NewsPreview, "6th", "ABC News Digital 2 HD", 901.2)
 }
 if(i == 6) {
-SetImage(ABC_NewsPreview, "7th")
+SetImage(ABC_NewsPreview, "7th", "ABC News Digital 2 HD", 901.2)
 }
 if(i == 7) {
-SetImage(ABC_NewsPreview, "8th")
+SetImage(ABC_NewsPreview, "8th", "ABC News Digital 2 HD", 901.2)
 }
 if(i == 8) {
-SetImage(ABC_NewsPreview, "9th")
+SetImage(ABC_NewsPreview, "9th", "ABC News Digital 2 HD", 901.2)
 }
 }
 else if(Cookie_ABC_News_3 == Charts[i] && ABC_News_3_Chosen == 0) {
@@ -3730,31 +3713,31 @@ else if(Cookie_ABC_News_HD_3 == Charts[i] && ABC_News_HD_3_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_3"
 ABC_News_HD_3_Chosen = 1
 if(i == 0) {
-SetImage(ABC_NewsPreview, "1st")
+SetImage(ABC_NewsPreview, "1st", "ABC News Digital 3 HD", 901.3)
 }
 if(i == 1) {
-SetImage(ABC_NewsPreview, "2nd")
+SetImage(ABC_NewsPreview, "2nd", "ABC News Digital 3 HD", 901.3)
 }
 if(i == 2) {
-SetImage(ABC_NewsPreview, "3rd")
+SetImage(ABC_NewsPreview, "3rd", "ABC News Digital 3 HD", 901.3)
 }
 if(i == 3) {
-SetImage(ABC_NewsPreview, "4th")
+SetImage(ABC_NewsPreview, "4th", "ABC News Digital 3 HD", 901.3)
 }
 if(i == 4) {
-SetImage(ABC_NewsPreview, "5th")
+SetImage(ABC_NewsPreview, "5th", "ABC News Digital 3 HD", 901.3)
 }
 if(i == 5) {
-SetImage(ABC_NewsPreview, "6th")
+SetImage(ABC_NewsPreview, "6th", "ABC News Digital 3 HD", 901.3)
 }
 if(i == 6) {
-SetImage(ABC_NewsPreview, "7th")
+SetImage(ABC_NewsPreview, "7th", "ABC News Digital 3 HD", 901.3)
 }
 if(i == 7) {
-SetImage(ABC_NewsPreview, "8th")
+SetImage(ABC_NewsPreview, "8th", "ABC News Digital 3 HD", 901.3)
 }
 if(i == 8) {
-SetImage(ABC_NewsPreview, "9th")
+SetImage(ABC_NewsPreview, "9th", "ABC News Digital 3 HD", 901.3)
 }
 }
 else if(Cookie_ABC_News_4 == Charts[i] && ABC_News_4_Chosen == 0) {
@@ -3792,31 +3775,31 @@ else if(Cookie_ABC_News_HD_4 == Charts[i] && ABC_News_HD_4_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_4"
 ABC_News_HD_4_Chosen = 1
 if(i == 0) {
-SetImage(ABC_NewsPreview, "1st")
+SetImage(ABC_NewsPreview, "1st", "ABC News Digital 4 HD", 901.4)
 }
 if(i == 1) {
-SetImage(ABC_NewsPreview, "2nd")
+SetImage(ABC_NewsPreview, "2nd", "ABC News Digital 4 HD", 901.4)
 }
 if(i == 2) {
-SetImage(ABC_NewsPreview, "3rd")
+SetImage(ABC_NewsPreview, "3rd", "ABC News Digital 4 HD", 901.4)
 }
 if(i == 3) {
-SetImage(ABC_NewsPreview, "4th")
+SetImage(ABC_NewsPreview, "4th", "ABC News Digital 4 HD", 901.4)
 }
 if(i == 4) {
-SetImage(ABC_NewsPreview, "5th")
+SetImage(ABC_NewsPreview, "5th", "ABC News Digital 4 HD", 901.4)
 }
 if(i == 5) {
-SetImage(ABC_NewsPreview, "6th")
+SetImage(ABC_NewsPreview, "6th", "ABC News Digital 4 HD", 901.4)
 }
 if(i == 6) {
-SetImage(ABC_NewsPreview, "7th")
+SetImage(ABC_NewsPreview, "7th", "ABC News Digital 4 HD", 901.4)
 }
 if(i == 7) {
-SetImage(ABC_NewsPreview, "8th")
+SetImage(ABC_NewsPreview, "8th", "ABC News Digital 4 HD", 901.4)
 }
 if(i == 8) {
-SetImage(ABC_NewsPreview, "9th")
+SetImage(ABC_NewsPreview, "9th", "ABC News Digital 4 HD", 901.4)
 }
 }
 else if(Cookie_ABC_News_5 == Charts[i] && ABC_News_5_Chosen == 0) {
@@ -3854,31 +3837,31 @@ else if(Cookie_ABC_News_HD_5 == Charts[i] && ABC_News_HD_5_Chosen == 0) {
 Numba = "Cookie_ABC_News_HD_5"
 ABC_News_HD_5_Chosen = 1
 if(i == 0) {
-SetImage(ABC_NewsPreview, "1st")
+SetImage(ABC_NewsPreview, "1st", "ABC News Digital 5 HD", 901.5)
 }
 if(i == 1) {
-SetImage(ABC_NewsPreview, "2nd")
+SetImage(ABC_NewsPreview, "2nd", "ABC News Digital 5 HD", 901.5)
 }
 if(i == 2) {
-SetImage(ABC_NewsPreview, "3rd")
+SetImage(ABC_NewsPreview, "3rd", "ABC News Digital 5 HD", 901.5)
 }
 if(i == 3) {
-SetImage(ABC_NewsPreview, "4th")
+SetImage(ABC_NewsPreview, "4th", "ABC News Digital 5 HD", 901.5)
 }
 if(i == 4) {
-SetImage(ABC_NewsPreview, "5th")
+SetImage(ABC_NewsPreview, "5th", "ABC News Digital 5 HD", 901.5)
 }
 if(i == 5) {
-SetImage(ABC_NewsPreview, "6th")
+SetImage(ABC_NewsPreview, "6th", "ABC News Digital 5 HD", 901.5)
 }
 if(i == 6) {
-SetImage(ABC_NewsPreview, "7th")
+SetImage(ABC_NewsPreview, "7th", "ABC News Digital 5 HD", 901.5)
 }
 if(i == 7) {
-SetImage(ABC_NewsPreview, "8th")
+SetImage(ABC_NewsPreview, "8th", "ABC News Digital 5 HD", 901.5)
 }
 if(i == 8) {
-SetImage(ABC_NewsPreview, "9th")
+SetImage(ABC_NewsPreview, "9th", "ABC News Digital 5 HD", 901.5)
 }
 }
 else if(Cookie_CBSN == Charts[i] && CBSN_Chosen == 0) {
@@ -3916,31 +3899,31 @@ else if(Cookie_CBSNHD == Charts[i] && CBSNHD_Chosen == 0) {
 Numba = "Cookie_CBSNHD"
 CBSNHD_Chosen = 1
 if(i == 0) {
-SetImage(CBSNPreview, "1st")
+SetImage(CBSNPreview, "1st", "CBSNHD", 902)
 }
 if(i == 1) {
-SetImage(CBSNPreview, "2nd")
+SetImage(CBSNPreview, "2nd", "CBSNHD", 902)
 }
 if(i == 2) {
-SetImage(CBSNPreview, "3rd")
+SetImage(CBSNPreview, "3rd", "CBSNHD", 902)
 }
 if(i == 3) {
-SetImage(CBSNPreview, "4th")
+SetImage(CBSNPreview, "4th", "CBSNHD", 902)
 }
 if(i == 4) {
-SetImage(CBSNPreview, "5th")
+SetImage(CBSNPreview, "5th", "CBSNHD", 902)
 }
 if(i == 5) {
-SetImage(CBSNPreview, "6th")
+SetImage(CBSNPreview, "6th", "CBSNHD", 902)
 }
 if(i == 6) {
-SetImage(CBSNPreview, "7th")
+SetImage(CBSNPreview, "7th", "CBSNHD", 902)
 }
 if(i == 7) {
-SetImage(CBSNPreview, "8th")
+SetImage(CBSNPreview, "8th", "CBSNHD", 902)
 }
 if(i == 8) {
-SetImage(CBSNPreview, "9th")
+SetImage(CBSNPreview, "9th", "CBSNHD", 902)
 }
 }
 else if(Cookie_Newsmax == Charts[i] && Newsmax_Chosen == 0) {
@@ -3978,31 +3961,31 @@ else if(Cookie_Newsmax_HD == Charts[i] && Newsmax_HD_Chosen == 0) {
 Numba = "Cookie_Newsmax_HD"
 Newsmax_HD_Chosen = 1
 if(i == 0) {
-SetImage(Newsmax_TVPreview, "1st")
+SetImage(Newsmax_TVPreview, "1st", "Newsmax TV HD", 903)
 }
 if(i == 1) {
-SetImage(Newsmax_TVPreview, "2nd")
+SetImage(Newsmax_TVPreview, "2nd", "Newsmax TV HD", 903)
 }
 if(i == 2) {
-SetImage(Newsmax_TVPreview, "3rd")
+SetImage(Newsmax_TVPreview, "3rd", "Newsmax TV HD", 903)
 }
 if(i == 3) {
-SetImage(Newsmax_TVPreview, "4th")
+SetImage(Newsmax_TVPreview, "4th", "Newsmax TV HD", 903)
 }
 if(i == 4) {
-SetImage(Newsmax_TVPreview, "5th")
+SetImage(Newsmax_TVPreview, "5th", "Newsmax TV HD", 903)
 }
 if(i == 5) {
-SetImage(Newsmax_TVPreview, "6th")
+SetImage(Newsmax_TVPreview, "6th", "Newsmax TV HD", 903)
 }
 if(i == 6) {
-SetImage(Newsmax_TVPreview, "7th")
+SetImage(Newsmax_TVPreview, "7th", "Newsmax TV HD", 903)
 }
 if(i == 7) {
-SetImage(Newsmax_TVPreview, "8th")
+SetImage(Newsmax_TVPreview, "8th", "Newsmax TV HD", 903)
 }
 if(i == 8) {
-SetImage(Newsmax_TVPreview, "9th")
+SetImage(Newsmax_TVPreview, "9th", "Newsmax TV HD", 903)
 }
 }
 else if(Cookie_Shift == Charts[i] && Shift_Chosen == 0) {
@@ -4040,13 +4023,31 @@ else if(Cookie_Shift_HD == Charts[i] && Shift_HD_Chosen == 0) {
 Numba = "Cookie_Shift_HD"
 Shift_HD_Chosen = 1
 if(i == 0) {
-SetImage(Shift_by_msnbcPreview, "1st")
+SetImage(Shift_by_msnbcPreview, "1st", "Shift by msnbc HD", 904)
 }
 if(i == 1) {
-SetImage(Shift_by_msnbcPreview, "2nd")
+SetImage(Shift_by_msnbcPreview, "2nd", "Shift by msnbc HD", 904)
 }
 if(i == 2) {
-SetImage(Shift_by_msnbcPreview, "3rd")
+SetImage(Shift_by_msnbcPreview, "3rd", "Shift by msnbc HD", 904)
+}
+if(i == 3) {
+SetImage(Shift_by_msnbcPreview, "4th", "Shift by msnbc HD", 904)
+}
+if(i == 4) {
+SetImage(Shift_by_msnbcPreview, "5th", "Shift by msnbc HD", 904)
+}
+if(i == 5) {
+SetImage(Shift_by_msnbcPreview, "6th", "Shift by msnbc HD", 904)
+}
+if(i == 6) {
+SetImage(Shift_by_msnbcPreview, "7th", "Shift by msnbc HD", 904)
+}
+if(i == 7) {
+SetImage(Shift_by_msnbcPreview, "8th", "Shift by msnbc HD", 904)
+}
+if(i == 8) {
+SetImage(Shift_by_msnbcPreview, "9th", "Shift by msnbc HD", 904)
 }
 }
 else if(Cookie_msnbc == Charts[i] && msnbc_Chosen == 0) {
@@ -4115,31 +4116,31 @@ else if(Cookie_NBC_News_HD == Charts[i] && NBC_News_HD_Chosen == 0) {
 Numba = "Cookie_NBC_News_HD"
 NBC_News_HD_Chosen = 1
 if(i == 0) {
-SetImage(NBC_NewsPreview, "1st")
+SetImage(NBC_NewsPreview, "1st", "NBC News Live Event HD", 904.3)
 }
 if(i == 1) {
-SetImage(NBC_NewsPreview, "2nd")
+SetImage(NBC_NewsPreview, "2nd", "NBC News Live Event HD", 904.3)
 }
 if(i == 2) {
-SetImage(NBC_NewsPreview, "3rd")
+SetImage(NBC_NewsPreview, "3rd", "NBC News Live Event HD", 904.3)
 }
 if(i == 3) {
-SetImage(NBC_NewsPreview, "4th")
+SetImage(NBC_NewsPreview, "4th", "NBC News Live Event HD", 904.3)
 }
 if(i == 4) {
-SetImage(NBC_NewsPreview, "5th")
+SetImage(NBC_NewsPreview, "5th", "NBC News Live Event HD", 904.3)
 }
 if(i == 5) {
-SetImage(NBC_NewsPreview, "6th")
+SetImage(NBC_NewsPreview, "6th", "NBC News Live Event HD", 904.3)
 }
 if(i == 6) {
-SetImage(NBC_NewsPreview, "7th")
+SetImage(NBC_NewsPreview, "7th", "NBC News Live Event HD", 904.3)
 }
 if(i == 7) {
-SetImage(NBC_NewsPreview, "8th")
+SetImage(NBC_NewsPreview, "8th", "NBC News Live Event HD", 904.3)
 }
 if(i == 8) {
-SetImage(NBC_NewsPreview, "9th")
+SetImage(NBC_NewsPreview, "9th", "NBC News Live Event HD", 904.3)
 }
 }
 else if(Cookie_France_24 == Charts[i] && France_24_Chosen == 0) {
@@ -4208,31 +4209,31 @@ else if(Cookie_RT_News_HD == Charts[i] && RT_News_HD_Chosen == 0) {
 Numba = "Cookie_RT_News_HD"
 RT_News_HD_Chosen = 1
 if(i == 0) {
-SetImage(RT_NewsPreview, "1st")
+SetImage(RT_NewsPreview, "1st", "RT News HD", 906)
 }
 if(i == 1) {
-SetImage(RT_NewsPreview, "2nd")
+SetImage(RT_NewsPreview, "2nd", "RT News HD", 906)
 }
 if(i == 2) {
-SetImage(RT_NewsPreview, "3rd")
+SetImage(RT_NewsPreview, "3rd", "RT News HD", 906)
 }
 if(i == 3) {
-SetImage(RT_NewsPreview, "4th")
+SetImage(RT_NewsPreview, "4th", "RT News HD", 906)
 }
 if(i == 4) {
-SetImage(RT_NewsPreview, "5th")
+SetImage(RT_NewsPreview, "5th", "RT News HD", 906)
 }
 if(i == 5) {
-SetImage(RT_NewsPreview, "6th")
+SetImage(RT_NewsPreview, "6th", "RT News HD", 906)
 }
 if(i == 6) {
-SetImage(RT_NewsPreview, "7th")
+SetImage(RT_NewsPreview, "7th", "RT News HD", 906)
 }
 if(i == 7) {
-SetImage(RT_NewsPreview, "8th")
+SetImage(RT_NewsPreview, "8th", "RT News HD", 906)
 }
 if(i == 8) {
-SetImage(RT_NewsPreview, "9th")
+SetImage(RT_NewsPreview, "9th", "RT News HD", 906)
 }
 }
 else if(Cookie_CBN_News == Charts[i] && CBN_News_Chosen == 0) {
@@ -4620,22 +4621,22 @@ if(i == 2) {
 TheThirdImage.src = TWiTPreview
 }
 if(i == 3) {
-SetImage(TWiTPreview, "4th")
+SetImage(TWiTPreview, "4th", "TWiT HD", 910)
 }
 if(i == 4) {
-SetImage(TWiTPreview, "5th")
+SetImage(TWiTPreview, "5th", "TWiT HD", 910)
 }
 if(i == 5) {
-SetImage(TWiTPreview, "6th")
+SetImage(TWiTPreview, "6th", "TWiT HD", 910)
 }
 if(i == 6) {
-SetImage(TWiTPreview, "7th")
+SetImage(TWiTPreview, "7th", "TWiT HD", 910)
 }
 if(i == 7) {
-SetImage(TWiTPreview, "8th")
+SetImage(TWiTPreview, "8th", "TWiT HD", 910)
 }
 if(i == 8) {
-SetImage(TWiTPreview, "9th")
+SetImage(TWiTPreview, "9th", "TWiT HD", 910)
 }
 }
 else if(Cookie_TWiT_alt_HD == Charts[i] && TWiT_alt_HD_Chosen == 0) {
@@ -4651,22 +4652,22 @@ if(i == 2) {
 TheThirdImage.src = TWiTPreview
 }
 if(i == 3) {
-SetImage(TWiTPreview, "4th")
+SetImage(TWiTPreview, "4th", "TWiT alt HD", 911)
 }
 if(i == 4) {
-SetImage(TWiTPreview, "5th")
+SetImage(TWiTPreview, "5th", "TWiT alt HD", 911)
 }
 if(i == 5) {
-SetImage(TWiTPreview, "6th")
+SetImage(TWiTPreview, "6th", "TWiT alt HD", 911)
 }
 if(i == 6) {
-SetImage(TWiTPreview, "7th")
+SetImage(TWiTPreview, "7th", "TWiT alt HD", 911)
 }
 if(i == 7) {
-SetImage(TWiTPreview, "8th")
+SetImage(TWiTPreview, "8th", "TWiT alt HD", 911)
 }
 if(i == 8) {
-SetImage(TWiTPreview, "9th")
+SetImage(TWiTPreview, "9th", "TWiT alt HD", 911)
 }
 }
 else if(Cookie_AFA == Charts[i] && AFA_Chosen == 0) {
@@ -4868,22 +4869,22 @@ if(i == 2) {
 TheThirdImage.src = JUCEPreview
 }
 if(i == 3) {
-SetImage(JUCEPreview, "4th")
+SetImage(JUCEPreview, "4th", "JUCE TV", 30)
 }
 if(i == 4) {
-SetImage(JUCEPreview, "5th")
+SetImage(JUCEPreview, "5th", "JUCE TV", 30)
 }
 if(i == 5) {
-SetImage(JUCEPreview, "6th")
+SetImage(JUCEPreview, "6th", "JUCE TV", 30)
 }
 if(i == 6) {
-SetImage(JUCEPreview, "7th")
+SetImage(JUCEPreview, "7th", "JUCE TV", 30)
 }
 if(i == 7) {
-SetImage(JUCEPreview, "8th")
+SetImage(JUCEPreview, "8th", "JUCE TV", 30)
 }
 if(i == 8) {
-SetImage(JUCEPreview, "9th")
+SetImage(JUCEPreview, "9th", "JUCE TV", 30)
 }
 }
 else if(Cookie_JUCE_RU == Charts[i] && JUCE_RU_Chosen == 0) {
@@ -4899,22 +4900,22 @@ if(i == 2) {
 TheThirdImage.src = JUCE_RUPreview
 }
 if(i == 3) {
-SetImage(JUCE_RuPreview, "4th")
+SetImage(JUCE_RuPreview, "4th", "JUCE TV Russia", 31)
 }
 if(i == 4) {
-SetImage(JUCE_RuPreview, "5th")
+SetImage(JUCE_RuPreview, "5th", "JUCE TV Russia", 31)
 }
 if(i == 5) {
-SetImage(JUCE_RuPreview, "6th")
+SetImage(JUCE_RuPreview, "6th", "JUCE TV Russia", 31)
 }
 if(i == 6) {
-SetImage(JUCE_RuPreview, "7th")
+SetImage(JUCE_RuPreview, "7th", "JUCE TV Russia", 31)
 }
 if(i == 7) {
-SetImage(JUCE_RuPreview, "8th")
+SetImage(JUCE_RuPreview, "8th", "JUCE TV Russia", 31)
 }
 if(i == 8) {
-SetImage(JUCE_RuPreview, "9th")
+SetImage(JUCE_RuPreview, "9th", "JUCE TV Russia", 31)
 }
 }
 else if(Cookie_CHHTV == Charts[i] && CHHTV_Chosen == 0) {
@@ -4930,22 +4931,22 @@ if(i == 2) {
 TheThirdImage.src = CHHTVPreview
 }
 if(i == 3) {
-SetImage(CHHTVPreview, "4th")
+SetImage(CHHTVPreview, "4th", "Christian Hip Hop TV", 32)
 }
 if(i == 4) {
-SetImage(CHHTVPreview, "5th")
+SetImage(CHHTVPreview, "5th", "Christian Hip Hop TV", 32)
 }
 if(i == 5) {
-SetImage(CHHTVPreview, "6th")
+SetImage(CHHTVPreview, "6th", "Christian Hip Hop TV", 32)
 }
 if(i == 6) {
-SetImage(CHHTVPreview, "7th")
+SetImage(CHHTVPreview, "7th", "Christian Hip Hop TV", 32)
 }
 if(i == 7) {
-SetImage(CHHTVPreview, "8th")
+SetImage(CHHTVPreview, "8th", "Christian Hip Hop TV", 32)
 }
 if(i == 8) {
-SetImage(CHHTVPreview, "9th")
+SetImage(CHHTVPreview, "9th", "Christian Hip Hop TV", 32)
 }
 }
 else if(Cookie_YesTV == Charts[i] && YesTV_Chosen == 0) {
@@ -4961,22 +4962,22 @@ if(i == 2) {
 TheThirdImage.src = YesTVPreview
 }
 if(i == 3) {
-SetImage(YesTVPreview, "4th")
+SetImage(YesTVPreview, "4th", "Yes TV", 40)
 }
 if(i == 4) {
-SetImage(YesTVPreview, "5th")
+SetImage(YesTVPreview, "5th", "Yes TV", 40)
 }
 if(i == 5) {
-SetImage(YesTVPreview, "6th")
+SetImage(YesTVPreview, "6th", "Yes TV", 40)
 }
 if(i == 6) {
-SetImage(YesTVPreview, "7th")
+SetImage(YesTVPreview, "7th", "Yes TV", 40)
 }
 if(i == 7) {
-SetImage(YesTVPreview, "8th")
+SetImage(YesTVPreview, "8th", "Yes TV", 40)
 }
 if(i == 8) {
-SetImage(YesTVPreview, "9th")
+SetImage(YesTVPreview, "9th", "Yes TV", 40)
 }
 }
 else if(Cookie_Bloomberg == Charts[i] && Bloomberg_Chosen == 0) {
@@ -4992,22 +4993,22 @@ if(i == 2) {
 TheThirdImage.src = BloombergPreview
 }
 if(i == 3) {
-SetImage(BloombergPreview, "4th")
+SetImage(BloombergPreview, "4th", "Bloomberg", 50)
 }
 if(i == 4) {
-SetImage(BloombergPreview, "5th")
+SetImage(BloombergPreview, "5th", "Bloomberg", 50)
 }
 if(i == 5) {
-SetImage(BloombergPreview, "6th")
+SetImage(BloombergPreview, "6th", "Bloomberg", 50)
 }
 if(i == 6) {
-SetImage(BloombergPreview, "7th")
+SetImage(BloombergPreview, "7th", "Bloomberg", 50)
 }
 if(i == 7) {
-SetImage(BloombergPreview, "8th")
+SetImage(BloombergPreview, "8th", "Bloomberg", 50)
 }
 if(i == 8) {
-SetImage(BloombergPreview, "9th")
+SetImage(BloombergPreview, "9th", "Bloomberg", 50)
 }
 }
 else if(Cookie_ACC == Charts[i] && ACC_Chosen == 0) {
@@ -5023,22 +5024,22 @@ if(i == 2) {
 TheThirdImage.src = ACCPreview
 }
 if(i == 3) {
-SetImage(ACCPreview, "4th")
+SetImage(ACCPreview, "4th", "ACC Network", 60)
 }
 if(i == 4) {
-SetImage(ACCPreview, "5th")
+SetImage(ACCPreview, "5th", "ACC Network", 60)
 }
 if(i == 5) {
-SetImage(ACCPreview, "6th")
+SetImage(ACCPreview, "6th", "ACC Network", 60)
 }
 if(i == 6) {
-SetImage(ACCPreview, "7th")
+SetImage(ACCPreview, "7th", "ACC Network", 60)
 }
 if(i == 7) {
-SetImage(ACCPreview, "8th")
+SetImage(ACCPreview, "8th", "ACC Network", 60)
 }
 if(i == 8) {
-SetImage(ACCPreview, "9th")
+SetImage(ACCPreview, "9th", "ACC Network", 60)
 }
 }
 else if(Cookie_SEC1 == Charts[i] && SEC1_Chosen == 0) {
@@ -5054,22 +5055,22 @@ if(i == 2) {
 TheThirdImage.src = SEC1Preview
 }
 if(i == 3) {
-SetImage(SEC1Preview, "4th")
+SetImage(SEC1Preview, "4th", "SEC on CBS", 61)
 }
 if(i == 4) {
-SetImage(SEC1Preview, "5th")
+SetImage(SEC1Preview, "5th", "SEC on CBS", 61)
 }
 if(i == 5) {
-SetImage(SEC1Preview, "6th")
+SetImage(SEC1Preview, "6th", "SEC on CBS", 61)
 }
 if(i == 6) {
-SetImage(SEC1Preview, "7th")
+SetImage(SEC1Preview, "7th", "SEC on CBS", 61)
 }
 if(i == 7) {
-SetImage(SEC1Preview, "8th")
+SetImage(SEC1Preview, "8th", "SEC on CBS", 61)
 }
 if(i == 8) {
-SetImage(SEC1Preview, "9th")
+SetImage(SEC1Preview, "9th", "SEC on CBS", 61)
 }
 }
 else if(Cookie_SEC2 == Charts[i] && SEC2_Chosen == 0) {
@@ -5085,22 +5086,22 @@ if(i == 2) {
 TheThirdImage.src = SEC1Preview
 }
 if(i == 3) {
-SetImage(SEC1Preview, "4th")
+SetImage(SEC1Preview, "4th", "SEC on CBS", 62)
 }
 if(i == 4) {
-SetImage(SEC1Preview, "5th")
+SetImage(SEC1Preview, "5th", "SEC on CBS", 62)
 }
 if(i == 5) {
-SetImage(SEC1Preview, "6th")
+SetImage(SEC1Preview, "6th", "SEC on CBS", 62)
 }
 if(i == 6) {
-SetImage(SEC1Preview, "7th")
+SetImage(SEC1Preview, "7th", "SEC on CBS", 62)
 }
 if(i == 7) {
-SetImage(SEC1Preview, "8th")
+SetImage(SEC1Preview, "8th", "SEC on CBS", 62)
 }
 if(i == 8) {
-SetImage(SEC1Preview, "9th")
+SetImage(SEC1Preview, "9th", "SEC on CBS", 62)
 }
 }
 else if(Cookie_SEC3 == Charts[i] && SEC3_Chosen == 0) {
@@ -5116,22 +5117,22 @@ if(i == 2) {
 TheThirdImage.src = SEC1Preview
 }
 if(i == 3) {
-SetImage(SEC1Preview, "4th")
+SetImage(SEC1Preview, "4th", "SEC on CBS", 63)
 }
 if(i == 4) {
-SetImage(SEC1Preview, "5th")
+SetImage(SEC1Preview, "5th", "SEC on CBS", 63)
 }
 if(i == 5) {
-SetImage(SEC1Preview, "6th")
+SetImage(SEC1Preview, "6th", "SEC on CBS", 63)
 }
 if(i == 6) {
-SetImage(SEC1Preview, "7th")
+SetImage(SEC1Preview, "7th", "SEC on CBS", 63)
 }
 if(i == 7) {
-SetImage(SEC1Preview, "8th")
+SetImage(SEC1Preview, "8th", "SEC on CBS", 63)
 }
 if(i == 8) {
-SetImage(SEC1Preview, "9th")
+SetImage(SEC1Preview, "9th", "SEC on CBS", 63)
 }
 }
 else if(Cookie_CBK1 == Charts[i] && CBK1_Chosen == 0) {
@@ -5147,22 +5148,22 @@ if(i == 2) {
 TheThirdImage.src = CBK1Preview
 }
 if(i == 3) {
-SetImage(CBK1Preview, "4th")
+SetImage(CBK1Preview, "4th", "NCAA Basketball on CBS", 64)
 }
 if(i == 4) {
-SetImage(CBK1Preview, "5th")
+SetImage(CBK1Preview, "5th", "NCAA Basketball on CBS", 64)
 }
 if(i == 5) {
-SetImage(CBK1Preview, "6th")
+SetImage(CBK1Preview, "6th", "NCAA Basketball on CBS", 64)
 }
 if(i == 6) {
-SetImage(CBK1Preview, "7th")
+SetImage(CBK1Preview, "7th", "NCAA Basketball on CBS", 64)
 }
 if(i == 7) {
-SetImage(CBK1Preview, "8th")
+SetImage(CBK1Preview, "8th", "NCAA Basketball on CBS", 64)
 }
 if(i == 8) {
-SetImage(CBK1Preview, "9th")
+SetImage(CBK1Preview, "9th", "NCAA Basketball on CBS", 64)
 }
 }
 else if(Cookie_CBK2 == Charts[i] && CBK2_Chosen == 0) {
@@ -5178,22 +5179,22 @@ if(i == 2) {
 TheThirdImage.src = CBK1Preview
 }
 if(i == 3) {
-SetImage(CBK1Preview, "4th")
+SetImage(CBK1Preview, "4th", "NCAA Basketball on CBS", 65)
 }
 if(i == 4) {
-SetImage(CBK1Preview, "5th")
+SetImage(CBK1Preview, "5th", "NCAA Basketball on CBS", 65)
 }
 if(i == 5) {
-SetImage(CBK1Preview, "6th")
+SetImage(CBK1Preview, "6th", "NCAA Basketball on CBS", 65)
 }
 if(i == 6) {
-SetImage(CBK1Preview, "7th")
+SetImage(CBK1Preview, "7th", "NCAA Basketball on CBS", 65)
 }
 if(i == 7) {
-SetImage(CBK1Preview, "8th")
+SetImage(CBK1Preview, "8th", "NCAA Basketball on CBS", 65)
 }
 if(i == 8) {
-SetImage(CBK1Preview, "9th")
+SetImage(CBK1Preview, "9th", "NCAA Basketball on CBS", 65)
 }
 }
 else if(Cookie_TheFan1 == Charts[i] && TheFan1_Chosen == 0) {
@@ -5209,22 +5210,22 @@ if(i == 2) {
 TheThirdImage.src = TheFan1Preview
 }
 if(i == 3) {
-SetImage(TheFan1Preview, "4th")
+SetImage(TheFan1Preview, "4th", "106.7 The Fan", 66)
 }
 if(i == 4) {
-SetImage(TheFan1Preview, "5th")
+SetImage(TheFan1Preview, "5th", "106.7 The Fan", 66)
 }
 if(i == 5) {
-SetImage(TheFan1Preview, "6th")
+SetImage(TheFan1Preview, "6th", "106.7 The Fan", 66)
 }
 if(i == 6) {
-SetImage(TheFan1Preview, "7th")
+SetImage(TheFan1Preview, "7th", "106.7 The Fan", 66)
 }
 if(i == 7) {
-SetImage(TheFan1Preview, "8th")
+SetImage(TheFan1Preview, "8th", "106.7 The Fan", 66)
 }
 if(i == 8) {
-SetImage(TheFan1Preview, "9th")
+SetImage(TheFan1Preview, "9th", "106.7 The Fan", 66)
 }
 }
 else if(Cookie_TheFan2 == Charts[i] && TheFan2_Chosen == 0) {
@@ -5240,22 +5241,22 @@ if(i == 2) {
 TheThirdImage.src = TheFan2Preview
 }
 if(i == 3) {
-SetImage(TheFan2Preview, "4th")
+SetImage(TheFan2Preview, "4th", "105.7 The Fan", 67)
 }
 if(i == 4) {
-SetImage(TheFan2Preview, "5th")
+SetImage(TheFan2Preview, "5th", "105.7 The Fan", 67)
 }
 if(i == 5) {
-SetImage(TheFan2Preview, "6th")
+SetImage(TheFan2Preview, "6th", "105.7 The Fan", 67)
 }
 if(i == 6) {
-SetImage(TheFan2Preview, "7th")
+SetImage(TheFan2Preview, "7th", "105.7 The Fan", 67)
 }
 if(i == 7) {
-SetImage(TheFan2Preview, "8th")
+SetImage(TheFan2Preview, "8th", "105.7 The Fan", 67)
 }
 if(i == 8) {
-SetImage(TheFan2Preview, "9th")
+SetImage(TheFan2Preview, "9th", "105.7 The Fan", 67)
 }
 }
 else if(Cookie_ESPN3 == Charts[i] && ESPN3_Chosen == 0) {
@@ -5271,22 +5272,22 @@ if(i == 2) {
 TheThirdImage.src = ESPN3Preview
 }
 if(i == 3) {
-SetImage(ESPN3Preview, "4th")
+SetImage(ESPN3Preview, "4th", "ESPN3", 68)
 }
 if(i == 4) {
-SetImage(ESPN3Preview, "5th")
+SetImage(ESPN3Preview, "5th", "ESPN3", 68)
 }
 if(i == 5) {
-SetImage(ESPN3Preview, "6th")
+SetImage(ESPN3Preview, "6th", "ESPN3", 68)
 }
 if(i == 6) {
-SetImage(ESPN3Preview, "7th")
+SetImage(ESPN3Preview, "7th", "ESPN3", 68)
 }
 if(i == 7) {
-SetImage(ESPN3Preview, "8th")
+SetImage(ESPN3Preview, "8th", "ESPN3", 68)
 }
 if(i == 8) {
-SetImage(ESPN3Preview, "9th")
+SetImage(ESPN3Preview, "9th", "ESPN3", 68)
 }
 }
 else if(Cookie_Daystar == Charts[i] && Daystar_Chosen == 0) {
@@ -5302,22 +5303,22 @@ if(i == 2) {
 TheThirdImage.src = DaystarPreview
 }
 if(i == 3) {
-SetImage(DaystarPreview, "4th")
+SetImage(DaystarPreview, "4th", "Daystar", 964)
 }
 if(i == 4) {
-SetImage(DaystarPreview, "5th")
+SetImage(DaystarPreview, "5th", "Daystar", 964)
 }
 if(i == 5) {
-SetImage(DaystarPreview, "6th")
+SetImage(DaystarPreview, "6th", "Daystar", 964)
 }
 if(i == 6) {
-SetImage(DaystarPreview, "7th")
+SetImage(DaystarPreview, "7th", "Daystar", 964)
 }
 if(i == 7) {
-SetImage(DaystarPreview, "8th")
+SetImage(DaystarPreview, "8th", "Daystar", 964)
 }
 if(i == 8) {
-SetImage(DaystarPreview, "9th")
+SetImage(DaystarPreview, "9th", "Daystar", 964)
 }
 }
 else if(Cookie_CBKHD == Charts[i] && CBKHD_Chosen == 0) {
@@ -5364,25 +5365,25 @@ if(i == 2) {
 TheThirdImage.src = BYUTVPreview
 }
 if(i == 3) {
-SetImage(BYUTVPreview, "4th")
+SetImage(BYUTVPreview, "4th", "BYU TV", 71)
 }
 if(i == 4) {
-SetImage(BYUTVPreview, "5th")
+SetImage(BYUTVPreview, "5th", "BYU TV", 71)
 }
 if(i == 5) {
-SetImage(BYUTVPreview, "6th")
+SetImage(BYUTVPreview, "6th", "BYU TV", 71)
 }
 if(i == 6) {
-SetImage(BYUTVPreview, "7th")
+SetImage(BYUTVPreview, "7th", "BYU TV", 71)
 }
 if(i == 7) {
-SetImage(BYUTVPreview, "8th")
+SetImage(BYUTVPreview, "8th", "BYU TV", 71)
 }
 if(i == 8) {
-SetImage(BYUTVPreview, "9th")
+SetImage(BYUTVPreview, "9th", "BYU TV", 71)
 }
 }
-else if(Cookie_BYUTVIHD == Charts[i] && BYUTVIHD_Chosen == 0) {
+else if(Cookie_BYUTVI == Charts[i] && BYUTVI_Chosen == 0) {
 Numba = "Cookie_BYUTVIHD"
 BYUTVIHD_Chosen = 1
 if(i == 0) {
@@ -5395,22 +5396,22 @@ if(i == 2) {
 TheThirdImage.src = BYUTVPreview
 }
 if(i == 3) {
-SetImage(BYUTVPreview, "4th")
+SetImage(BYUTVPreview, "4th", "BYU TV International", 72)
 }
 if(i == 4) {
-SetImage(BYUTVPreview, "5th")
+SetImage(BYUTVPreview, "5th", "BYU TV International", 72)
 }
 if(i == 5) {
-SetImage(BYUTVPreview, "6th")
+SetImage(BYUTVPreview, "6th", "BYU TV International", 72)
 }
 if(i == 6) {
-SetImage(BYUTVPreview, "7th")
+SetImage(BYUTVPreview, "7th", "BYU TV International", 72)
 }
 if(i == 7) {
-SetImage(BYUTVPreview, "8th")
+SetImage(BYUTVPreview, "8th", "BYU TV International", 72)
 }
 if(i == 8) {
-SetImage(BYUTVPreview, "9th")
+SetImage(BYUTVPreview, "9th", "BYU TV International", 72)
 }
 }
 else if(Cookie_VEVO == Charts[i] && VEVO_Chosen == 0) {
@@ -5426,22 +5427,22 @@ if(i == 2) {
 TheThirdImage.src = VEVOPreview
 }
 if(i == 3) {
-SetImage(VEVOPreview, "4th")
+SetImage(VEVOPreview, "4th", "VEVO Hits", 73)
 }
 if(i == 4) {
-SetImage(VEVOPreview, "5th")
+SetImage(VEVOPreview, "5th", "VEVO Hits", 73)
 }
 if(i == 5) {
-SetImage(VEVOPreview, "6th")
+SetImage(VEVOPreview, "6th", "VEVO Hits", 73)
 }
 if(i == 6) {
-SetImage(VEVOPreview, "7th")
+SetImage(VEVOPreview, "7th", "VEVO Hits", 73)
 }
 if(i == 7) {
-SetImage(VEVOPreview, "8th")
+SetImage(VEVOPreview, "8th", "VEVO Hits", 73)
 }
 if(i == 8) {
-SetImage(VEVOPreview, "9th")
+SetImage(VEVOPreview, "9th", "VEVO Hits", 73)
 }
 }
 else if(Cookie_VEVO2 == Charts[i] && VEVO2_Chosen == 0) {
@@ -5457,22 +5458,22 @@ if(i == 2) {
 TheThirdImage.src = VEVO2Preview
 }
 if(i == 3) {
-SetImage(VEVO2Preview, "4th")
+SetImage(VEVO2Preview, "4th", "VEVO Nashville", 74)
 }
 if(i == 4) {
-SetImage(VEVO2Preview, "5th")
+SetImage(VEVO2Preview, "5th", "VEVO Nashville", 74)
 }
 if(i == 5) {
-SetImage(VEVO2Preview, "6th")
+SetImage(VEVO2Preview, "6th", "VEVO Nashville", 74)
 }
 if(i == 6) {
-SetImage(VEVO2Preview, "7th")
+SetImage(VEVO2Preview, "7th", "VEVO Nashville", 74)
 }
 if(i == 7) {
-SetImage(VEVO2Preview, "8th")
+SetImage(VEVO2Preview, "8th", "VEVO Nashville", 74)
 }
 if(i == 8) {
-SetImage(VEVO2Preview, "9th")
+SetImage(VEVO2Preview, "9th", "VEVO Nashville", 74)
 }
 }
 else if(Cookie_VEVO3 == Charts[i] && VEVO3_Chosen == 0) {
@@ -5488,22 +5489,22 @@ if(i == 2) {
 TheThirdImage.src = VEVO3Preview
 }
 if(i == 3) {
-SetImage(VEVO3Preview, "4th")
+SetImage(VEVO3Preview, "4th", "VEVO Flow", 75)
 }
 if(i == 4) {
-SetImage(VEVO3Preview, "5th")
+SetImage(VEVO3Preview, "5th", "VEVO Flow", 75)
 }
 if(i == 5) {
-SetImage(VEVO3Preview, "6th")
+SetImage(VEVO3Preview, "6th", "VEVO Flow", 75)
 }
 if(i == 6) {
-SetImage(VEVO3Preview, "7th")
+SetImage(VEVO3Preview, "7th", "VEVO Flow", 75)
 }
 if(i == 7) {
-SetImage(VEVO3Preview, "8th")
+SetImage(VEVO3Preview, "8th", "VEVO Flow", 75)
 }
 if(i == 8) {
-SetImage(VEVO3Preview, "9th")
+SetImage(VEVO3Preview, "9th", "VEVO Flow", 75)
 }
 }
 else if(Cookie_RadioU == Charts[i] && RadioU_Chosen == 0) {
@@ -5519,22 +5520,22 @@ if(i == 2) {
 TheThirdImage.src = RadioUPreview
 }
 if(i == 3) {
-SetImage(RadioUPreview, "4th")
+SetImage(RadioUPreview, "4th", "RadioU", 76)
 }
 if(i == 4) {
-SetImage(RadioUPreview, "5th")
+SetImage(RadioUPreview, "5th", "RadioU", 76)
 }
 if(i == 5) {
-SetImage(RadioUPreview, "6th")
+SetImage(RadioUPreview, "6th", "RadioU", 76)
 }
 if(i == 6) {
-SetImage(RadioUPreview, "7th")
+SetImage(RadioUPreview, "7th", "RadioU", 76)
 }
 if(i == 7) {
-SetImage(RadioUPreview, "8th")
+SetImage(RadioUPreview, "8th", "RadioU", 76)
 }
 if(i == 8) {
-SetImage(RadioUPreview, "9th")
+SetImage(RadioUPreview, "9th", "RadioU", 76)
 }
 }
 else if(Cookie_Spirit == Charts[i] && Spirit_Chosen == 0) {
@@ -5550,22 +5551,22 @@ if(i == 2) {
 TheThirdImage.src = SpiritPreview
 }
 if(i == 3) {
-SetImage(SpiritPreview, "4th")
+SetImage(SpiritPreview, "4th", "Spirit Television", 77)
 }
 if(i == 4) {
-SetImage(SpiritPreview, "5th")
+SetImage(SpiritPreview, "5th", "Spirit Television", 77)
 }
 if(i == 5) {
-SetImage(SpiritPreview, "6th")
+SetImage(SpiritPreview, "6th", "Spirit Television", 77)
 }
 if(i == 6) {
-SetImage(SpiritPreview, "7th")
+SetImage(SpiritPreview, "7th", "Spirit Television", 77)
 }
 if(i == 7) {
-SetImage(SpiritPreview, "8th")
+SetImage(SpiritPreview, "8th", "Spirit Television", 77)
 }
 if(i == 8) {
-SetImage(SpiritPreview, "9th")
+SetImage(SpiritPreview, "9th", "Spirit Television", 77)
 }
 }
 else if(Cookie_Family == Charts[i] && Family_Chosen == 0) {
@@ -5581,22 +5582,22 @@ if(i == 2) {
 TheThirdImage.src = FamilyPreview
 }
 if(i == 3) {
-SetImage(FamilyPreview, "4th")
+SetImage(FamilyPreview, "4th", "Family Friendly Entertainment", 78)
 }
 if(i == 4) {
-SetImage(FamilyPreview, "5th")
+SetImage(FamilyPreview, "5th", "Family Friendly Entertainment", 78)
 }
 if(i == 5) {
-SetImage(FamilyPreview, "6th")
+SetImage(FamilyPreview, "6th", "Family Friendly Entertainment", 78)
 }
 if(i == 6) {
-SetImage(FamilyPreview, "7th")
+SetImage(FamilyPreview, "7th", "Family Friendly Entertainment", 78)
 }
 if(i == 7) {
-SetImage(FamilyPreview, "8th")
+SetImage(FamilyPreview, "8th", "Family Friendly Entertainment", 78)
 }
 if(i == 8) {
-SetImage(FamilyPreview, "9th")
+SetImage(FamilyPreview, "9th", "Family Friendly Entertainment", 78)
 }
 }
 else if(Cookie_Rap == Charts[i] && Rap_Chosen == 0) {
@@ -5612,24 +5613,56 @@ if(i == 2) {
 TheThirdImage.src = RapPreview
 }
 if(i == 3) {
-SetImage(RapPreview, "4th")
+SetImage(RapPreview, "4th", "Rap Ressurection", 79)
 }
 if(i == 4) {
-SetImage(RapPreview, "5th")
+SetImage(RapPreview, "5th", "Rap Ressurection", 79)
 }
 if(i == 5) {
-SetImage(RapPreview, "6th")
+SetImage(RapPreview, "6th", "Rap Ressurection", 79)
 }
 if(i == 6) {
-SetImage(RapPreview, "7th")
+SetImage(RapPreview, "7th", "Rap Ressurection", 79)
 }
 if(i == 7) {
-SetImage(RapPreview, "8th")
+SetImage(RapPreview, "8th", "Rap Ressurection", 79)
 }
 if(i == 8) {
-SetImage(RapPreview, "9th")
+SetImage(RapPreview, "9th", "Rap Ressurection", 79)
 }
 }
+else if(Cookie_KHZTV == Charts[i] && KHZTV_Chosen == 0) {
+Numba = "Cookie_KHZTV"
+KHZTV_Chosen = 1
+if(i == 0) {
+TheFirstImage.src = KHZTVPreview
+}
+if(i == 1) {
+TheSecondImage.src = KHZTVPreview
+}
+if(i == 2) {
+TheThirdImage.src = KHZTVPreview
+}
+if(i == 3) {
+SetImage(RapPreview, "4th", "KHZTV", 90)
+}
+if(i == 4) {
+SetImage(RapPreview, "5th", "KHZTV", 90)
+}
+if(i == 5) {
+SetImage(RapPreview, "6th", "KHZTV", 90)
+}
+if(i == 6) {
+SetImage(RapPreview, "7th", "KHZTV", 90)
+}
+if(i == 7) {
+SetImage(RapPreview, "8th", "KHZTV", 90)
+}
+if(i == 8) {
+SetImage(RapPreview, "9th", "KHZTV", 90)
+}
+}
+//console.log(Numbar)
 Numbar[i] = Numba
 CurrentNumber = i + 1
 //console.log(i)
@@ -5638,4 +5671,5 @@ CurrentNumber = i + 1
 }
 }
 setInterval(Track, 1000);
+TuneTo(parseInt(getCookie("liptvnum"))/10)
 </script>
