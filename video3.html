@@ -2534,7 +2534,7 @@ CurrentChannel = "Euro"
 }
 if(num == 102) {
 PlayVideo(Olympics)
-CurrentChannel = "Olympic"
+CurrentChannel = "Olympics"
 }
 }
 function TuneFrom() {
@@ -3439,7 +3439,7 @@ Cookie_BBCNews = getCookie("BBCNews")
 Cookie_Euro = getCookie("Euro")
 Cookie_Olympics = getCookie("Olympics")
 //Charts
-Cookies = [Cookie_ABC_News, Cookie_ABC_News_HD, Cookie_ABC_News_2, Cookie_ABC_News_HD_2, Cookie_ABC_News_3, Cookie_ABC_News_HD_3, Cookie_ABC_News_4, Cookie_ABC_News_HD_4, Cookie_ABC_News_5, Cookie_ABC_News_HD_5, Cookie_CBSN, Cookie_CBSNHD, Cookie_Newsmax, Cookie_Newsmax_HD, Cookie_Shift, Cookie_Shift_HD, Cookie_msnbc, Cookie_NBC_News, Cookie_NBC_News_HD, Cookie_France_24, Cookie_RT_News, Cookie_RT_News_HD, Cookie_CBN_News, Cookie_Fox_News_Talk, Cookie_FNC1, Cookie_FNC2, Cookie_FNC3, Cookie_FNC4, Cookie_FNC5, Cookie_FNC6, Cookie_CNNDebate, Cookie_TWiT, Cookie_TWiT_alt, Cookie_TWiT_HD, Cookie_TWiT_alt_HD, Cookie_AFA, Cookie_TBN, Cookie_TCT, Cookie_TCT_Family, Cookie_TCT_Kids, Cookie_NRB, Cookie_JUCE, Cookie_JUCE_RU, Cookie_CHHTV, Cookie_YesTV, Cookie_Bloomberg, Cookie_ACC, Cookie_SEC1, Cookie_SEC2, Cookie_SEC3, Cookie_CBK1, Cookie_CBK2, Cookie_TheFan1, Cookie_TheFan2, Cookie_ESPN3, Cookie_Daystar, Cookie_CBKHD, Cookie_BYUTV, Cookie_BYUTVI, Cookie_BYUTVHD, Cookie_BYUTVIHD, Cookie_VEVO, Cookie_VEVO2, Cookie_VEVO3, Cookie_RadioU, Cookie_Spirit, Cookie_Family, Cookie_Rap]
+Cookies = [Cookie_ABC_News, Cookie_ABC_News_HD, Cookie_ABC_News_2, Cookie_ABC_News_HD_2, Cookie_ABC_News_3, Cookie_ABC_News_HD_3, Cookie_ABC_News_4, Cookie_ABC_News_HD_4, Cookie_ABC_News_5, Cookie_ABC_News_HD_5, Cookie_CBSN, Cookie_CBSNHD, Cookie_Newsmax, Cookie_Newsmax_HD, Cookie_Shift, Cookie_Shift_HD, Cookie_msnbc, Cookie_NBC_News, Cookie_NBC_News_HD, Cookie_France_24, Cookie_RT_News, Cookie_RT_News_HD, Cookie_CBN_News, Cookie_Fox_News_Talk, Cookie_FNC1, Cookie_FNC2, Cookie_FNC3, Cookie_FNC4, Cookie_FNC5, Cookie_FNC6, Cookie_CNNDebate, Cookie_TWiT, Cookie_TWiT_alt, Cookie_TWiT_HD, Cookie_TWiT_alt_HD, Cookie_AFA, Cookie_TBN, Cookie_TCT, Cookie_TCT_Family, Cookie_TCT_Kids, Cookie_NRB, Cookie_JUCE, Cookie_JUCE_RU, Cookie_CHHTV, Cookie_YesTV, Cookie_Bloomberg, Cookie_ACC, Cookie_SEC1, Cookie_SEC2, Cookie_SEC3, Cookie_CBK1, Cookie_CBK2, Cookie_TheFan1, Cookie_TheFan2, Cookie_ESPN3, Cookie_Daystar, Cookie_CBKHD, Cookie_BYUTV, Cookie_BYUTVI, Cookie_BYUTVHD, Cookie_BYUTVIHD, Cookie_VEVO, Cookie_VEVO2, Cookie_VEVO3, Cookie_RadioU, Cookie_Spirit, Cookie_Family, Cookie_Rap, Cookie_KHZTV, Cookie_BBCNews, Cookie_Euro, Cookie_Olympics]
 //console.error("Cookies: " + Cookies)
 Charts = Cookies.sort(function(a, b){return b-a});
 //console.error("Charts: " + Charts)
@@ -3893,7 +3893,7 @@ SetImage(EuroPreview, i, "Euro", 101)
 else if(Cookie_Olympics == Charts[i] && Olympics_Chosen == 0) {
 Numba = "Cookie_Olympics"
 Olympics_Chosen = 1
-SetImage(OlympicsPreview, i, "Olympics", 102)
+SetImage(OlympicsPreview, i, "Olympic Channel", 102)
 }
 //console.log(Numbar)
 Numbar[i] = Numba
