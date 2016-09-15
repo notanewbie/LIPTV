@@ -584,7 +584,7 @@ left:0%;
 width: 100%;
 height: 100%;
 background-image: url(50.png);
-z-index: 1
+z-index: 1;
 font-family: generic-family;
 font-size: 2vw;
 }
@@ -3178,6 +3178,12 @@ TheSmallImage1 = SmallImage1Shown
 }
 SmallText1 = document.getElementById("SmallText1-hidden")
 SmallText1Shown = document.getElementById("SmallText1")
+if(SmallImage1) {
+TheSmallImage1 = SmallImage1
+}
+else {
+TheSmallImage1 = SmallImage1Shown
+}
 if(SmallText1) {
 TheSmallText1 = SmallText1
 }
@@ -3760,7 +3766,7 @@ SetImage(JUCEPreview, i, "JUCE TV", 30)
 else if(Cookie_JUCE_RU == Charts[i] && JUCE_RU_Chosen == 0) {
 Numba = "Cookie_JUCE_RU"
 JUCE_RU_Chosen = 1
-SetImage(JUCE_RuPreview, i, "JUCE TV Russia", 31)
+SetImage(JUCE_RUPreview, i, "JUCE TV Russia", 31)
 }
 else if(Cookie_CHHTV == Charts[i] && CHHTV_Chosen == 0) {
 Numba = "Cookie_CHHTV"
@@ -3830,7 +3836,7 @@ SetImage(DaystarPreview, i, "Daystar", 964)
 else if(Cookie_CBKHD == Charts[i] && CBKHD_Chosen == 0) {
 Numba = "Cookie_CBKHD"
 CBKHD_Chosen = 1
-SetImage(CBK1Preview, "4th")
+SetImage(CBK1Preview, i, "NCAA Basketball on CBS HD", 965)
 }
 else if(Cookie_BYUTV == Charts[i] && BYUTV_Chosen == 0) {
 Numba = "Cookie_BYUTV"
