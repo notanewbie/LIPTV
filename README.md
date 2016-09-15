@@ -7,7 +7,9 @@ LIPTV supports:
 
 Firefox for Mac OS X* (Current Version Not Tested)
 
-Safari Mac OS X
+Safari for Mac OS X
+
+Microsoft Edge for Windows 10
 
 *Requires VLC w/ VLC Web Plugin
 
