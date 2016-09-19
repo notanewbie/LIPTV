@@ -3930,6 +3930,9 @@ setInterval(Track, 1000);
 if(getCookie("liptvnum") == "NaN") {
 	TuneTo(Math.floor(Math.random() * 81))
 }
+if(getCookie("liptvnum") == false) {
+	TuneTo(Math.floor(Math.random() * 81))
+}
 else {
 	TuneTo(parseInt(getCookie("liptvnum"))/10)
 }
